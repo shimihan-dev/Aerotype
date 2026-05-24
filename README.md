@@ -127,7 +127,7 @@ Aerotype/
 | `index.html` | HTML5 구조. 헤더, 검색/필터, 카드 그리드, 모달 포함 |
 | `styles.css` | CSS3 스타일. 반응형 디자인, 다크모드 준비 |
 | `script.js` | Vanilla JavaScript. 데이터 로드, 검색/필터, 이벤트 처리 |
-| `aircraftTypes.json` | 항공기 기종 데이터. 25개 샘플 기종 포함 |
+| `aircraftTypes.json` | 항공기 기종 데이터. 103개 샘플 기종 포함 |
 
 ## 📊 데이터 구조
 
@@ -271,7 +271,7 @@ Aerotype/
   - URL 라우팅 (예: /aircraft/A380)
 
 - [ ] **데이터 추가**
-  - 더 많은 항공기 기종 추가 (현재 25개)
+  - 더 많은 항공기 기종 추가 (현재 103개)
   - 이미지/사진 추가
   - 유명한 항공사별 운항 기종 정보
 
