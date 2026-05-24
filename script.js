@@ -22,13 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
  */
 async function initializeApp() {
     try {
-        // JSON 파일에서 항공기 데이터 로드
-        const response = await fetch('./data/aircraftTypes.json');
-        if (!response.ok) {
-            throw new Error('데이터 로드 실패');
+        // 전역 변수에서 데이터 로드 (data/aircrafts.js)
+        if (typeof window.aircraftData !== 'undefined') {
+            allAircraftData = window.aircraftData;
+        } else {
+            throw new Error('데이터를 찾을 수 없습니다.');
         }
-        const data = await response.json();
-        allAircraftData = data.aircraftTypes;
         filteredAircraftData = [...allAircraftData];
 
         // 이벤트 리스너 등록
@@ -255,6 +254,39 @@ function showAircraftDetail(aircraft) {
     const modal = document.getElementById('detailModal');
     const modalBody = document.getElementById('modalBody');
 
+    let variantsHTML = '';
+    if (aircraft.isGroup && aircraft.variants && aircraft.variants.length > 0) {
+        variantsHTML = `
+        <div class="detail-section">
+            <div class="detail-section-title">🔀 세부 기종 (Variants)</div>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; margin-top: 0.5rem; font-size: 0.9rem;">
+                    <thead>
+                        <tr style="background-color: #f1f3f4; text-align: left;">
+                            <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">기종명</th>
+                            <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">좌석 수</th>
+                            <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">항속거리</th>
+                            <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">첫 비행</th>
+                            <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">상태</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        ${aircraft.variants.map(v => `
+                        <tr style="border-bottom: 1px solid #eee;">
+                            <td style="padding: 0.5rem; font-weight: 500;">${v.typeName}</td>
+                            <td style="padding: 0.5rem;">${v.seatsTypical}명</td>
+                            <td style="padding: 0.5rem;">${v.range.toLocaleString()}km</td>
+                            <td style="padding: 0.5rem;">${v.firstFlight}년</td>
+                            <td style="padding: 0.5rem;"><span class="card-status ${getStatusClass(v.productionStatus)}" style="font-size:0.75rem; padding: 0.2rem 0.5rem;">${translateStatus(v.productionStatus)}</span></td>
+                        </tr>
+                        `).join('')}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        `;
+    }
+
     // 모달 HTML 생성
     modalBody.innerHTML = `
         <div class="modal-header">
@@ -302,6 +334,8 @@ function showAircraftDetail(aircraft) {
                 </div>
             </div>
         </div>
+
+        ${variantsHTML}
 
         <div class="detail-section">
             <div class="detail-section-title">🔧 기술 정보</div>
