@@ -1,0 +1,35 @@
+# IDE 및 에디터
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Node.js (향후 npm/yarn 사용 시)
+node_modules/
+package-lock.json
+yarn.lock
+dist/
+build/
+
+# Python 캐시
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 환경 변수
+.env
+.env.local
+.env.*.local
+
+# 로그 파일
+*.log
+npm-debug.log*
+
+# 로컬 테스트 파일
+test-local/
+temp/
+
+# OS 파일
+Thumbs.db

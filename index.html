@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroType - 항공기 기종 사전</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">✈️ AeroType</h1>
+            <p class="subtitle">항공기 기종 데이터 사전</p>
+        </div>
+    </header>
+
+    <!-- 메인 컨테이너 -->
+    <main class="main-container">
+        <!-- 필터 및 검색 섹션 -->
+        <section class="filters-section">
+            <!-- 검색창 -->
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    class="search-input"
+                    placeholder="기종명으로 검색... (예: A320, 777, CRJ900)"
+                    aria-label="항공기 기종 검색"
+                >
+                <span class="search-icon">🔍</span>
+            </div>
+
+            <!-- 제조사 필터 -->
+            <div class="manufacturer-filters">
+                <label class="filter-title">제조사</label>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="All">
+                        모두 보기
+                    </button>
+                    <button class="filter-btn" data-filter="Airbus">
+                        Airbus
+                    </button>
+                    <button class="filter-btn" data-filter="Boeing">
+                        Boeing
+                    </button>
+                    <button class="filter-btn" data-filter="Bombardier">
+                        Bombardier
+                    </button>
+                    <button class="filter-btn" data-filter="Cessna">
+                        Cessna
+                    </button>
+                    <button class="filter-btn" data-filter="Embraer">
+                        Embraer
+                    </button>
+                </div>
+            </div>
+
+            <!-- 결과 수 표시 -->
+            <div class="results-info">
+                <p id="resultsCount">항공기 기종 25개를 찾았습니다.</p>
+            </div>
+        </section>
+
+        <!-- 항공기 카드 그리드 -->
+        <section class="aircraft-grid" id="aircraftGrid">
+            <!-- 카드는 JavaScript로 동적 생성 -->
+        </section>
+
+        <!-- 검색 결과 없음 메시지 -->
+        <section class="no-results" id="noResults" style="display: none;">
+            <p>해당하는 항공기 기종을 찾을 수 없습니다.</p>
+            <p>다른 검색어나 필터를 시도해주세요.</p>
+        </section>
+    </main>
+
+    <!-- 상세 정보 모달 -->
+    <div class="modal" id="detailModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal" aria-label="상세 정보 닫기">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- 상세 정보는 JavaScript로 동적 생성 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer class="footer">
+        <p>AeroType © 2024 | 항공 데이터 기반 서비스 프로젝트</p>
+        <p class="footer-note">
+            ⚠️ 이 데이터는 학습 및 개발 목적의 샘플입니다. 
+            실제 항공 운항에 사용하시려면 공식 자료를 확인하세요.
+        </p>
+    </footer>
+
+    <!-- JavaScript 파일 -->
+    <script src="script.js"></script>
+</body>
+</html>
