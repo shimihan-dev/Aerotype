@@ -89,7 +89,7 @@ const aircraftData = [
         seatsTypical: 107,
         range: 5850,
         firstFlight: 2002,
-        productionStatus: "Active",
+        productionStatus: "Retired",
         variants: []
     },
     {
@@ -104,7 +104,7 @@ const aircraftData = [
         seatsTypical: 156,
         range: 6850,
         firstFlight: 1995,
-        productionStatus: "Active",
+        productionStatus: "Retired",
         variants: []
     },
     {
@@ -119,7 +119,7 @@ const aircraftData = [
         seatsTypical: 194,
         range: 6300,
         firstFlight: 1987,
-        productionStatus: "Active",
+        productionStatus: "Retired",
         variants: []
     },
     {
@@ -134,7 +134,7 @@ const aircraftData = [
         seatsTypical: 236,
         range: 5600,
         firstFlight: 1993,
-        productionStatus: "Active",
+        productionStatus: "Retired",
         variants: []
     },
 
