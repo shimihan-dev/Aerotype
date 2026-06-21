@@ -498,7 +498,7 @@ const aircraftData = [
         classification: "Regional Jet",
         engines: 2,
         seatsTypical: 70,
-        range: 5926,
+        range: 3620,
         firstFlight: 1991,
         productionStatus: "Retired",
         variants: [
