@@ -264,7 +264,7 @@ function showAircraftDetail(aircraft) {
                     <thead>
                         <tr style="background-color: #f1f3f4; text-align: left;">
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">기종명</th>
-                            <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">좌석 수</th>
+                            <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">좌석 수 / 적재중량</th>
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">항속거리</th>
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">첫 비행</th>
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">상태</th>
@@ -274,7 +274,7 @@ function showAircraftDetail(aircraft) {
                         ${aircraft.variants.map(v => `
                         <tr style="border-bottom: 1px solid #eee;">
                             <td style="padding: 0.5rem; font-weight: 500;">${v.typeName}</td>
-                            <td style="padding: 0.5rem;">${v.seatsTypical}명</td>
+                            <td style="padding: 0.5rem;">${v.isCargo ? v.seatsTypical + 't' : v.seatsTypical + '명'}</td>
                             <td style="padding: 0.5rem;">${v.range.toLocaleString()}km</td>
                             <td style="padding: 0.5rem;">${v.firstFlight}년</td>
                             <td style="padding: 0.5rem;"><span class="card-status ${getStatusClass(v.productionStatus)}" style="font-size:0.75rem; padding: 0.2rem 0.5rem;">${translateStatus(v.productionStatus)}</span></td>

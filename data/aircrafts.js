@@ -52,7 +52,7 @@ const aircraftData = [
             { id: "A300B4", typeName: "A300B4", seatsTypical: 251, range: 5375, firstFlight: 1974, productionStatus: "Retired" },
             { id: "A300-600", typeName: "A300-600", seatsTypical: 266, range: 7500, firstFlight: 1983, productionStatus: "Retired" },
             { id: "A300-600R", typeName: "A300-600R", seatsTypical: 266, range: 7700, firstFlight: 1988, productionStatus: "Retired" },
-            { id: "A300-600F", typeName: "A300-600F (화물기)", seatsTypical: 0, range: 4850, firstFlight: 1993, productionStatus: "Retired" }
+            { id: "A300-600F", typeName: "A300-600F (화물기)", seatsTypical: 54, range: 4850, firstFlight: 1993, productionStatus: "Retired", isCargo: true }
         ]
     },
 
@@ -385,7 +385,7 @@ const aircraftData = [
             { id: "B747-400", typeName: "747-400", seatsTypical: 416, range: 13450, firstFlight: 1988, productionStatus: "Retired" },
             { id: "B747-400ER", typeName: "747-400ER", seatsTypical: 416, range: 14200, firstFlight: 2002, productionStatus: "Retired" },
             { id: "B747-8I", typeName: "747-8 Intercontinental", seatsTypical: 467, range: 14815, firstFlight: 2011, productionStatus: "Retired" },
-            { id: "B747-8F", typeName: "747-8F (화물기)", seatsTypical: 0, range: 8130, firstFlight: 2010, productionStatus: "Retired" }
+            { id: "B747-8F", typeName: "747-8F (화물기)", seatsTypical: 134, range: 8130, firstFlight: 2010, productionStatus: "Retired", isCargo: true }
         ]
     },
 
@@ -447,14 +447,14 @@ const aircraftData = [
         firstFlight: 1994,
         productionStatus: "Active",
         variants: [
-            { id: "B777-200", typeName: "777-200", seatsTypical: 305, range: 9700, firstFlight: 1994, productionStatus: "Retired" },
-            { id: "B777-200ER", typeName: "777-200ER", seatsTypical: 314, range: 13080, firstFlight: 1997, productionStatus: "Active" },
-            { id: "B777-200LR", typeName: "777-200LR", seatsTypical: 317, range: 15843, firstFlight: 2005, productionStatus: "Active" },
-            { id: "B777-300", typeName: "777-300", seatsTypical: 368, range: 11121, firstFlight: 1998, productionStatus: "Retired" },
-            { id: "B777-300ER", typeName: "777-300ER", seatsTypical: 396, range: 13650, firstFlight: 2003, productionStatus: "Active" },
-            { id: "B777F", typeName: "777F (화물기)", seatsTypical: 0, range: 9200, firstFlight: 2008, productionStatus: "Active" },
-            { id: "B777-8", typeName: "777-8 (777X)", seatsTypical: 384, range: 16170, firstFlight: 2024, productionStatus: "Development" },
-            { id: "B777-9", typeName: "777-9 (777X)", seatsTypical: 426, range: 13500, firstFlight: 2020, productionStatus: "Development" }
+            { id: "B777-200", typeName: "777-200", seatsTypical: 305, range: 9700, firstFlight: 1994, productionStatus: "Retired", isCargo: false },
+            { id: "B777-200ER", typeName: "777-200ER", seatsTypical: 314, range: 13080, firstFlight: 1997, productionStatus: "Retired", isCargo: false },
+            { id: "B777-200LR", typeName: "777-200LR", seatsTypical: 317, range: 15843, firstFlight: 2005, productionStatus: "Retired", isCargo: false },
+            { id: "B777-300", typeName: "777-300", seatsTypical: 368, range: 11121, firstFlight: 1998, productionStatus: "Retired", isCargo: false },
+            { id: "B777-300ER", typeName: "777-300ER", seatsTypical: 396, range: 13650, firstFlight: 2003, productionStatus: "Retired", isCargo: false },
+            { id: "B777F", typeName: "777F (화물기)", seatsTypical: 102, range: 9200, firstFlight: 2008, productionStatus: "Active", isCargo: true },
+            { id: "B777-8", typeName: "777-8 (777X)", seatsTypical: 384, range: 16170, firstFlight: 2024, productionStatus: "Development", isCargo: false },
+            { id: "B777-9", typeName: "777-9 (777X)", seatsTypical: 426, range: 13500, firstFlight: 2020, productionStatus: "Development", isCargo: false }
         ]
     },
 
