@@ -200,10 +200,12 @@ const aircraftData = [
         firstFlight: 1992,
         productionStatus: "Active",
         variants: [
-            { id: "A330-200", typeName: "A330-200", seatsTypical: 247, range: 13450, firstFlight: 1997, productionStatus: "Active" },
-            { id: "A330-300", typeName: "A330-300", seatsTypical: 295, range: 11750, firstFlight: 1992, productionStatus: "Active" },
-            { id: "A330-800neo", typeName: "A330-800neo", seatsTypical: 257, range: 15094, firstFlight: 2018, productionStatus: "Active" },
-            { id: "A330-900neo", typeName: "A330-900neo", seatsTypical: 287, range: 13334, firstFlight: 2017, productionStatus: "Active" }
+            // 1세대 (A330ceo) — 단종
+            { id: "A330-200", typeName: "A330-200 (1세대)", seatsTypical: 247, range: 13450, firstFlight: 1997, productionStatus: "Retired" },
+            { id: "A330-300", typeName: "A330-300 (1세대)", seatsTypical: 295, range: 11750, firstFlight: 1992, productionStatus: "Retired" },
+            // 2세대 (A330neo) — 현재 생산 중
+            { id: "A330-800neo", typeName: "A330-800neo (2세대)", seatsTypical: 257, range: 15094, firstFlight: 2018, productionStatus: "Active" },
+            { id: "A330-900neo", typeName: "A330-900neo (2세대)", seatsTypical: 287, range: 13334, firstFlight: 2017, productionStatus: "Active" }
         ]
     },
 
