@@ -427,7 +427,8 @@ const aircraftData = [
             { id: "B767-200", typeName: "767-200", seatsTypical: 216, range: 7200, firstFlight: 1981, productionStatus: "Retired" },
             { id: "B767-200ER", typeName: "767-200ER", seatsTypical: 224, range: 12200, firstFlight: 1984, productionStatus: "Retired" },
             { id: "B767-300", typeName: "767-300", seatsTypical: 269, range: 7200, firstFlight: 1986, productionStatus: "Retired" },
-            { id: "B767-300ER", typeName: "767-300ER", seatsTypical: 269, range: 11070, firstFlight: 1988, productionStatus: "Active" },
+            { id: "B767-300ER", typeName: "767-300ER", seatsTypical: 269, range: 11070, firstFlight: 1988, productionStatus: "Retired" },
+            { id: "B767-300F", typeName: "767-300F (화물기)", seatsTypical: 52, range: 6025, firstFlight: 1995, productionStatus: "Active", isCargo: true },
             { id: "B767-400ER", typeName: "767-400ER", seatsTypical: 304, range: 10415, firstFlight: 2000, productionStatus: "Retired" }
         ]
     },
