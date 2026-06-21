@@ -173,16 +173,20 @@ const aircraftData = [
         id: "a321neo",
         manufacturer: "Airbus",
         familyName: "A320neo Family",
-        isGroup: false,
+        isGroup: true,
         modelName: "A321neo",
-        series: "A321neo",
+        series: "A321neo Family",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 244,
+        seatsTypical: 206,
         range: 7400,
-        firstFlight: 2017,
+        firstFlight: 2016,
         productionStatus: "Active",
-        variants: []
+        variants: [
+            { id: "A321neo", typeName: "A321neo (기본형)", seatsTypical: 206, range: 6500, firstFlight: 2016, productionStatus: "Active", isCargo: false },
+            { id: "A321LR", typeName: "A321LR", seatsTypical: 206, range: 7400, firstFlight: 2018, productionStatus: "Active", isCargo: false },
+            { id: "A321XLR", typeName: "A321XLR", seatsTypical: 206, range: 8700, firstFlight: 2024, productionStatus: "Active", isCargo: false }
+        ]
     },
 
     // A330 Family (그룹 카드)
