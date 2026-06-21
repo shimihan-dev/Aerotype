@@ -353,9 +353,9 @@ const aircraftData = [
             { id: "B737-500", typeName: "737-500 (Classic)", seatsTypical: 132, range: 5200, firstFlight: 1989, productionStatus: "Retired" },
             // NG
             { id: "B737-600", typeName: "737-600 (NG)", seatsTypical: 130, range: 5648, firstFlight: 1998, productionStatus: "Retired" },
-            { id: "B737-700", typeName: "737-700 (NG)", seatsTypical: 149, range: 6370, firstFlight: 1997, productionStatus: "Active" },
-            { id: "B737-800", typeName: "737-800 (NG)", seatsTypical: 189, range: 5765, firstFlight: 1997, productionStatus: "Active" },
-            { id: "B737-900ER", typeName: "737-900ER (NG)", seatsTypical: 220, range: 5925, firstFlight: 2006, productionStatus: "Active" },
+            { id: "B737-700", typeName: "737-700 (NG)", seatsTypical: 149, range: 6370, firstFlight: 1997, productionStatus: "Retired" },
+            { id: "B737-800", typeName: "737-800 (NG)", seatsTypical: 189, range: 5765, firstFlight: 1997, productionStatus: "Retired" },
+            { id: "B737-900ER", typeName: "737-900ER (NG)", seatsTypical: 220, range: 5925, firstFlight: 2006, productionStatus: "Retired" },
             // MAX
             { id: "B737-MAX7", typeName: "737 MAX 7", seatsTypical: 172, range: 7130, firstFlight: 2018, productionStatus: "Active" },
             { id: "B737-MAX8", typeName: "737 MAX 8", seatsTypical: 189, range: 6570, firstFlight: 2016, productionStatus: "Active" },
