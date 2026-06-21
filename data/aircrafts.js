@@ -247,6 +247,7 @@ const aircraftData = [
         productionStatus: "Active",
         variants: [
             { id: "A350-900", typeName: "A350-900", seatsTypical: 325, range: 15000, firstFlight: 2013, productionStatus: "Active" },
+            { id: "A350-900ULR", typeName: "A350-900ULR", seatsTypical: 253, range: 18000, firstFlight: 2018, productionStatus: "Active" },
             { id: "A350-1000", typeName: "A350-1000", seatsTypical: 369, range: 16100, firstFlight: 2016, productionStatus: "Active" }
         ]
     },
