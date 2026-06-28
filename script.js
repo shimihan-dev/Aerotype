@@ -37,6 +37,24 @@ async function initializeApp() {
         renderAircraftCards();
         updateResultsCount();
 
+        // URL 파라미터 확인 및 특정 기종 모달 자동 노출 처리 (예: ?id=B787-9)
+        const urlParams = new URLSearchParams(window.location.search);
+        const targetId = urlParams.get('id');
+        if (targetId) {
+            const targetIdLower = targetId.toLowerCase();
+            // 1. 메인 그룹 기종 ID가 일치하거나
+            // 2. 메인 기종 모델명(modelName)이 일치하거나
+            // 3. 세부 기종(variants) 중 ID가 일치하는 항공기 검색
+            const found = allAircraftData.find(a => 
+                (a.id && a.id.toLowerCase() === targetIdLower) ||
+                (a.modelName && a.modelName.toLowerCase() === targetIdLower) ||
+                (a.variants && a.variants.some(v => v.id && v.id.toLowerCase() === targetIdLower))
+            );
+            if (found) {
+                showAircraftDetail(found);
+            }
+        }
+
         console.log(`✈️ AeroType 초기화 완료. 총 ${allAircraftData.length}개 항공기 로드됨`);
     } catch (error) {
         console.error('초기화 오류:', error);
