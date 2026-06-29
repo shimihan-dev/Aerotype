@@ -277,6 +277,26 @@ const aircraftData = [
         variants: []
     },
 
+    // ATR Family (그룹 카드)
+    {
+        id: "atr-family",
+        manufacturer: "Airbus",
+        familyName: "ATR Series",
+        isGroup: true,
+        modelName: "ATR",
+        series: "ATR Series",
+        classification: "Turboprop",
+        engines: 2,
+        seatsTypical: 72,
+        range: 1528,
+        firstFlight: 1984,
+        productionStatus: "Active",
+        variants: [
+            { id: "ATR42", typeName: "ATR 42", seatsTypical: 48, range: 1326, firstFlight: 1984, productionStatus: "Active", isCargo: false },
+            { id: "ATR72", typeName: "ATR 72", seatsTypical: 72, range: 1528, firstFlight: 1988, productionStatus: "Active", isCargo: false }
+        ]
+    },
+
     // ===== Boeing =====
 
     // 707 Family (그룹 카드)
