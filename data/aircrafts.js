@@ -283,7 +283,7 @@ const aircraftData = [
         manufacturer: "Airbus",
         familyName: "ATR Series",
         isGroup: true,
-        modelName: "ATR",
+        modelName: "ATR 42/72",
         series: "ATR Series",
         classification: "Turboprop",
         engines: 2,
