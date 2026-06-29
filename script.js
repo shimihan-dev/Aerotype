@@ -56,6 +56,25 @@ async function initializeApp() {
                 ))
             );
 
+            // Bombardier Dash 8 / Q-series 전용 소프트 매칭 예외 처리 (Dash-8, Q100~Q400 키워드 지원)
+            if (!found) {
+                const isDash8Query = targetIdLower.includes("dash-8") || 
+                                     targetIdLower.includes("dash 8") || 
+                                     targetIdLower.includes("dash8") || 
+                                     targetIdLower.includes("q400") || 
+                                     targetIdLower.includes("q300") || 
+                                     targetIdLower.includes("q200") || 
+                                     targetIdLower.includes("q100") || 
+                                     targetIdLower.includes("dh4") ||
+                                     targetIdLower.includes("dh3") ||
+                                     targetIdLower.includes("dh2") ||
+                                     targetIdLower.includes("dh1");
+                                     
+                if (isDash8Query) {
+                    found = allAircraftData.find(a => a.id === "dash-8-family");
+                }
+            }
+
             // 매칭되는 기종을 찾지 못했을 때의 소프트 매칭 (특수문자/공백 제거 비교)
             if (!found) {
                 const cleanTarget = targetIdLower.replace(/[^a-z0-9]/g, '');
