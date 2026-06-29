@@ -1,36 +1,24 @@
 const aircraftData = [
     // ===== Airbus =====
 
-    // A220 Family (개별 카드)
+    // A220 Family (그룹 카드)
     {
-        id: "a220-100",
+        id: "a220-family",
         manufacturer: "Airbus",
         familyName: "A220 Family",
-        isGroup: false,
-        modelName: "A220-100",
-        series: "A220-100",
+        isGroup: true,
+        modelName: "A220",
+        series: "A220 Family",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 120,
-        range: 5460,
+        seatsTypical: 135,
+        range: 6297,
         firstFlight: 2013,
         productionStatus: "Active",
-        variants: []
-    },
-    {
-        id: "a220-300",
-        manufacturer: "Airbus",
-        familyName: "A220 Family",
-        isGroup: false,
-        modelName: "A220-300",
-        series: "A220-300",
-        classification: "Narrow-body",
-        engines: 2,
-        seatsTypical: 149,
-        range: 6297,
-        firstFlight: 2015,
-        productionStatus: "Active",
-        variants: []
+        variants: [
+            { id: "A220-100", typeName: "A220-100", seatsTypical: 120, range: 5460, firstFlight: 2013, productionStatus: "Active", isCargo: false },
+            { id: "A220-300", typeName: "A220-300", seatsTypical: 149, range: 6297, firstFlight: 2015, productionStatus: "Active", isCargo: false }
+        ]
     },
 
     // A300 Family (그룹 카드)
@@ -202,14 +190,30 @@ const aircraftData = [
         seatsTypical: 295,
         range: 13450,
         firstFlight: 1992,
+        productionStatus: "Retired",
+        variants: [
+            { id: "A330-200", typeName: "A330-200 (ceo)", seatsTypical: 247, range: 13450, firstFlight: 1997, productionStatus: "Retired" },
+            { id: "A330-300", typeName: "A330-300 (ceo)", seatsTypical: 295, range: 11750, firstFlight: 1992, productionStatus: "Retired" }
+        ]
+    },
+
+    // A330neo Family (그룹 카드)
+    {
+        id: "a330neo-family",
+        manufacturer: "Airbus",
+        familyName: "A330neo Family",
+        isGroup: true,
+        modelName: "A330neo",
+        series: "A330neo Family",
+        classification: "Wide-body",
+        engines: 2,
+        seatsTypical: 287,
+        range: 15094,
+        firstFlight: 2017,
         productionStatus: "Active",
         variants: [
-            // 1세대 (A330ceo) — 단종
-            { id: "A330-200", typeName: "A330-200 (1세대)", seatsTypical: 247, range: 13450, firstFlight: 1997, productionStatus: "Retired" },
-            { id: "A330-300", typeName: "A330-300 (1세대)", seatsTypical: 295, range: 11750, firstFlight: 1992, productionStatus: "Retired" },
-            // 2세대 (A330neo) — 현재 생산 중
-            { id: "A330-800neo", typeName: "A330-800neo (2세대)", seatsTypical: 257, range: 15094, firstFlight: 2018, productionStatus: "Active" },
-            { id: "A330-900neo", typeName: "A330-900neo (2세대)", seatsTypical: 287, range: 13334, firstFlight: 2017, productionStatus: "Active" }
+            { id: "A330-800neo", typeName: "A330-800neo", seatsTypical: 257, range: 15094, firstFlight: 2018, productionStatus: "Active" },
+            { id: "A330-900neo", typeName: "A330-900neo", seatsTypical: 287, range: 13334, firstFlight: 2017, productionStatus: "Active" }
         ]
     },
 
