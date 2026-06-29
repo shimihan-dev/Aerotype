@@ -510,6 +510,28 @@ const aircraftData = [
         ]
     },
 
+    // Dash 8 Family (그룹 카드)
+    {
+        id: "dash-8-family",
+        manufacturer: "Bombardier",
+        familyName: "Dash 8 Series",
+        isGroup: true,
+        modelName: "Dash 8",
+        series: "Dash 8 Series",
+        classification: "Turboprop",
+        engines: 2,
+        seatsTypical: 78,
+        range: 2040,
+        firstFlight: 1983,
+        productionStatus: "Active",
+        variants: [
+            { id: "Dash8-100", typeName: "Dash 8-100", seatsTypical: 37, range: 1889, firstFlight: 1983, productionStatus: "Retired" },
+            { id: "Dash8-200", typeName: "Dash 8-200", seatsTypical: 37, range: 1713, firstFlight: 1995, productionStatus: "Retired" },
+            { id: "Dash8-300", typeName: "Dash 8-300", seatsTypical: 50, range: 1558, firstFlight: 1987, productionStatus: "Retired" },
+            { id: "Dash8-400", typeName: "Dash 8-400 (Q400)", seatsTypical: 78, range: 2040, firstFlight: 1998, productionStatus: "Active" }
+        ]
+    },
+
     // ===== Embraer =====
 
     // ERJ Family (그룹 카드) — 신규 추가
