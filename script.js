@@ -46,7 +46,7 @@ async function initializeApp() {
             // 2. 메인 기종 모델명(modelName)이 일치하거나
             // 3. 메인 기종의 시리즈명(series)이 일치하거나
             // 4. 세부 기종(variants) 중 ID나 typeName이 일치하는 항공기 검색
-            const found = allAircraftData.find(a => 
+            let found = allAircraftData.find(a => 
                 (a.id && a.id.toLowerCase() === targetIdLower) ||
                 (a.modelName && a.modelName.toLowerCase() === targetIdLower) ||
                 (a.series && a.series.toLowerCase() === targetIdLower) ||
@@ -55,6 +55,29 @@ async function initializeApp() {
                     (v.typeName && v.typeName.toLowerCase() === targetIdLower)
                 ))
             );
+
+            // 매칭되는 기종을 찾지 못했을 때의 소프트 매칭 (특수문자/공백 제거 비교)
+            if (!found) {
+                const cleanTarget = targetIdLower.replace(/[^a-z0-9]/g, '');
+                if (cleanTarget) {
+                    found = allAircraftData.find(a => {
+                        const cleanId = (a.id || "").toLowerCase().replace(/[^a-z0-9]/g, '');
+                        const cleanModel = (a.modelName || "").toLowerCase().replace(/[^a-z0-9]/g, '');
+                        const cleanSeries = (a.series || "").toLowerCase().replace(/[^a-z0-9]/g, '');
+                        
+                        if (cleanId === cleanTarget || cleanModel === cleanTarget || cleanSeries === cleanTarget) {
+                            return true;
+                        }
+                        
+                        return a.variants && a.variants.some(v => {
+                            const cleanVId = (v.id || "").toLowerCase().replace(/[^a-z0-9]/g, '');
+                            const cleanVTypeName = (v.typeName || "").toLowerCase().replace(/[^a-z0-9]/g, '');
+                            return cleanVId === cleanTarget || cleanVTypeName.includes(cleanTarget) || cleanTarget.includes(cleanVId);
+                        });
+                    });
+                }
+            }
+
             if (found) {
                 showAircraftDetail(found);
             }
