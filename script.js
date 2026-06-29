@@ -44,11 +44,16 @@ async function initializeApp() {
             const targetIdLower = targetId.toLowerCase();
             // 1. 메인 그룹 기종 ID가 일치하거나
             // 2. 메인 기종 모델명(modelName)이 일치하거나
-            // 3. 세부 기종(variants) 중 ID가 일치하는 항공기 검색
+            // 3. 메인 기종의 시리즈명(series)이 일치하거나
+            // 4. 세부 기종(variants) 중 ID나 typeName이 일치하는 항공기 검색
             const found = allAircraftData.find(a => 
                 (a.id && a.id.toLowerCase() === targetIdLower) ||
                 (a.modelName && a.modelName.toLowerCase() === targetIdLower) ||
-                (a.variants && a.variants.some(v => v.id && v.id.toLowerCase() === targetIdLower))
+                (a.series && a.series.toLowerCase() === targetIdLower) ||
+                (a.variants && a.variants.some(v => 
+                    (v.id && v.id.toLowerCase() === targetIdLower) ||
+                    (v.typeName && v.typeName.toLowerCase() === targetIdLower)
+                ))
             );
             if (found) {
                 showAircraftDetail(found);
