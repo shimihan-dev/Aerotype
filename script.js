@@ -75,23 +75,42 @@ async function initializeApp() {
                 }
             }
 
-            // 매칭되는 기종을 찾지 못했을 때의 소프트 매칭 (특수문자/공백 제거 비교)
+            // 매칭되는 기종을 찾지 못했을 때의 소프트 매칭 (특수문자/공백 제거 비교 및 제조사 접두사 제거 비교)
             if (!found) {
-                const cleanTarget = targetIdLower.replace(/[^a-z0-9]/g, '');
+                let cleanTarget = targetIdLower.replace(/[^a-z0-9]/g, '');
+                
+                // 제조사 접두사 제거 (예: airbusa330 -> a330, boeing777 -> b777)
+                const targetWithoutManufacturer = cleanTarget
+                    .replace(/^airbus/, '')
+                    .replace(/^boeing/, 'b')
+                    .replace(/^bombardier/, '')
+                    .replace(/^embraer/, 'e');
+
                 if (cleanTarget) {
                     found = allAircraftData.find(a => {
                         const cleanId = (a.id || "").toLowerCase().replace(/[^a-z0-9]/g, '');
                         const cleanModel = (a.modelName || "").toLowerCase().replace(/[^a-z0-9]/g, '');
                         const cleanSeries = (a.series || "").toLowerCase().replace(/[^a-z0-9]/g, '');
                         
-                        if (cleanId === cleanTarget || cleanModel === cleanTarget || cleanSeries === cleanTarget) {
+                        // 1. 단순 일치 비교
+                        if (cleanId === cleanTarget || cleanModel === cleanTarget || cleanSeries === cleanTarget ||
+                            cleanId === targetWithoutManufacturer || cleanModel === targetWithoutManufacturer || cleanSeries === targetWithoutManufacturer) {
                             return true;
                         }
                         
+                        // 2. 포함 관계 비교 (예: "a330"이 "airbusa330"에 포함되는지 등)
+                        if (cleanTarget.includes(cleanModel) || targetWithoutManufacturer.includes(cleanModel) ||
+                            cleanModel.includes(cleanTarget) || cleanModel.includes(targetWithoutManufacturer)) {
+                            return true;
+                        }
+                        
+                        // 3. Variants 내 기종 비교
                         return a.variants && a.variants.some(v => {
                             const cleanVId = (v.id || "").toLowerCase().replace(/[^a-z0-9]/g, '');
                             const cleanVTypeName = (v.typeName || "").toLowerCase().replace(/[^a-z0-9]/g, '');
-                            return cleanVId === cleanTarget || cleanVTypeName.includes(cleanTarget) || cleanTarget.includes(cleanVId);
+                            return cleanVId === cleanTarget || cleanVId === targetWithoutManufacturer || 
+                                   cleanVTypeName.includes(cleanTarget) || cleanVTypeName.includes(targetWithoutManufacturer) ||
+                                   cleanTarget.includes(cleanVId) || targetWithoutManufacturer.includes(cleanVId);
                         });
                     });
                 }
