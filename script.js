@@ -260,9 +260,13 @@ function createAircraftCard(aircraft) {
     const statusClass = getStatusClass(aircraft.productionStatus);
 
     // 카드 HTML 생성
+    const imageHTML = aircraft.imageUrl ? `<img src="${aircraft.imageUrl}" alt="${aircraft.modelName} 사진" class="card-image">` : `<div class="card-image-placeholder">✈️</div>`;
+
     card.innerHTML = `
-        <div class="card-manufacturer">${aircraft.manufacturer}</div>
-        <div class="card-model">${aircraft.modelName}</div>
+        ${imageHTML}
+        <div class="card-content">
+            <div class="card-manufacturer">${aircraft.manufacturer}</div>
+            <div class="card-model">${aircraft.modelName}</div>
         <div class="card-series">${aircraft.series}</div>
         
         <div class="card-specs">
@@ -290,6 +294,7 @@ function createAircraftCard(aircraft) {
 
         <div class="card-footer">
             클릭하여 상세 정보 보기
+        </div>
         </div>
     `;
 
@@ -372,7 +377,10 @@ function showAircraftDetail(aircraft) {
     }
 
     // 모달 HTML 생성
+    const modalImageHTML = aircraft.imageUrl ? `<img src="${aircraft.imageUrl}" alt="${aircraft.modelName} 사진" class="modal-image">` : `<div class="modal-image-placeholder">✈️</div>`;
+
     modalBody.innerHTML = `
+        ${modalImageHTML}
         <div class="modal-header">
             <div class="modal-manufacturer">${aircraft.manufacturer}</div>
             <div class="modal-model">${aircraft.modelName}</div>
