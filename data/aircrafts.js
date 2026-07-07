@@ -4,7 +4,7 @@ const aircraftData = [
     // A220 Family (그룹 카드)
     {
         id: "a220-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Airbus_A220-300.jpg/500px-Airbus_A220-300.jpg",
+        imageUrl: "images/A220-300.jpg",
         manufacturer: "Airbus",
         familyName: "A220 Family",
         isGroup: true,
@@ -102,7 +102,7 @@ const aircraftData = [
     },
     {
         id: "a320",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Air_New_Zealand_Airbus_A320-232_ZK-OAB_in_Christchurch.jpg/500px-Air_New_Zealand_Airbus_A320-232_ZK-OAB_in_Christchurch.jpg",
+        imageUrl: "images/a320-200.jpg",
         manufacturer: "Airbus",
         familyName: "A320 Family",
         isGroup: false,
@@ -136,7 +136,7 @@ const aircraftData = [
     // A320neo Family (개별 카드 — 예외 처리)
     {
         id: "a319neo",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/China_Southern_A319neo.jpg/500px-China_Southern_A319neo.jpg",
+        imageUrl: "images/a319neo.jpeg",
         manufacturer: "Airbus",
         familyName: "A320neo Family",
         isGroup: false,
