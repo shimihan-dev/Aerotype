@@ -152,7 +152,7 @@ const aircraftData = [
     },
     {
         id: "a320neo",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Lufthansa_A320neo_D-AINA_in_Munich_%28cropped%29.jpg/500px-Lufthansa_A320neo_D-AINA_in_Munich_%28cropped%29.jpg",
+        imageUrl: "images/a320neo.jpg",
         manufacturer: "Airbus",
         familyName: "A320neo Family",
         isGroup: false,
@@ -295,7 +295,7 @@ const aircraftData = [
     // ATR Family (그룹 카드)
     {
         id: "atr-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Air_New_Zealand_Link_ATR-72-600_ZK-MVA.jpg/500px-Air_New_Zealand_Link_ATR-72-600_ZK-MVA.jpg",
+        imageUrl: "images/tarom_skyteam.jpg",
         manufacturer: "Airbus",
         familyName: "ATR Series",
         isGroup: true,
@@ -318,7 +318,7 @@ const aircraftData = [
     // 707 Family (그룹 카드)
     {
         id: "b707-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Boeing_707_Pan_Am_at_ZRH_%281%29.jpg/500px-Boeing_707_Pan_Am_at_ZRH_%281%29.jpg",
+        imageUrl: "images/northwest_707.jpg",
         manufacturer: "Boeing",
         familyName: "707 Family",
         isGroup: true,
