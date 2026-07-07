@@ -722,6 +722,53 @@ const aircraftData = [
             { id: "E190-E2", typeName: "E190-E2", seatsTypical: 114, range: 5278, firstFlight: 2016, productionStatus: "Active" },
             { id: "E195-E2", typeName: "E195-E2", seatsTypical: 146, range: 4815, firstFlight: 2017, productionStatus: "Active" }
         ]
+    },
+
+    // ===== McDonnell Douglas =====
+
+    // MD-11 Family (그룹 카드)
+    {
+        id: "md-11-family",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/FedEx_Express_McDonnell_Douglas_MD-11_N605FE_NRT_2011-09-17.jpg/500px-FedEx_Express_McDonnell_Douglas_MD-11_N605FE_NRT_2011-09-17.jpg",
+        manufacturer: "McDonnell Douglas",
+        familyName: "MD-11 Family",
+        isGroup: true,
+        modelName: "MD-11",
+        series: "MD-11 Family",
+        classification: "Wide-body",
+        engines: 3,
+        seatsTypical: 298,
+        range: 12670,
+        firstFlight: 1990,
+        productionStatus: "Retired",
+        variants: [
+            { id: "MD-11P", typeName: "MD-11 (여객형)", seatsTypical: 298, range: 12670, firstFlight: 1990, productionStatus: "Retired", isCargo: false },
+            { id: "MD-11F", typeName: "MD-11F (화물기)", seatsTypical: 93, range: 7240, firstFlight: 1991, productionStatus: "Retired", isCargo: true }
+        ]
+    },
+
+    // MD-80 / MD-90 Series (그룹 카드)
+    {
+        id: "md-80-family",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Delta_Air_Lines_McDonnell_Douglas_MD-88_N935DL_LGA_2013-10-23.jpg/500px-Delta_Air_Lines_McDonnell_Douglas_MD-88_N935DL_LGA_2013-10-23.jpg",
+        manufacturer: "McDonnell Douglas",
+        familyName: "MD-80 / MD-90 Series",
+        isGroup: true,
+        modelName: "MD-80 / MD-90",
+        series: "MD-80/90 Series",
+        classification: "Narrow-body",
+        engines: 2,
+        seatsTypical: 155,
+        range: 3800,
+        firstFlight: 1979,
+        productionStatus: "Retired",
+        variants: [
+            { id: "MD-81", typeName: "MD-81", seatsTypical: 155, range: 2900, firstFlight: 1979, productionStatus: "Retired" },
+            { id: "MD-82", typeName: "MD-82", seatsTypical: 155, range: 3800, firstFlight: 1980, productionStatus: "Retired" },
+            { id: "MD-83", typeName: "MD-83", seatsTypical: 155, range: 4600, firstFlight: 1984, productionStatus: "Retired" },
+            { id: "MD-88", typeName: "MD-88", seatsTypical: 155, range: 4850, firstFlight: 1987, productionStatus: "Retired" },
+            { id: "MD-90", typeName: "MD-90", seatsTypical: 172, range: 4445, firstFlight: 1993, productionStatus: "Retired" }
+        ]
     }
 ];
 
