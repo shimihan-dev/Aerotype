@@ -377,35 +377,88 @@ const aircraftData = [
         ]
     },
 
-    // 737 Family (그룹 카드 — 세부 기종 확장)
+    // 1. 737 Original (그룹 카드)
     {
-        id: "b737-family",
+        id: "b737-original",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Lufthansa_Boeing_737-130_D-ABED_Annegret_at_Hamburg_Airport.jpg/500px-Lufthansa_Boeing_737-130_D-ABED_Annegret_at_Hamburg_Airport.jpg",
+        manufacturer: "Boeing",
+        familyName: "737 Original",
+        isGroup: true,
+        modelName: "737 Original",
+        series: "737-100 / -200",
+        classification: "Narrow-body",
+        engines: 2,
+        seatsTypical: 115,
+        range: 4260,
+        firstFlight: 1967,
+        productionStatus: "Retired",
+        variants: [
+            { id: "B737-100", typeName: "737-100", seatsTypical: 103, range: 3440, firstFlight: 1967, productionStatus: "Retired" },
+            { id: "B737-200", typeName: "737-200", seatsTypical: 136, range: 4260, firstFlight: 1968, productionStatus: "Retired" }
+        ]
+    },
+
+    // 2. 737 Classic (그룹 카드)
+    {
+        id: "b737-classic",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/United_Airlines_Boeing_737-300_N371UA_SFO_%28cropped%29.jpg/500px-United_Airlines_Boeing_737-300_N371UA_SFO_%28cropped%29.jpg",
+        manufacturer: "Boeing",
+        familyName: "737 Classic",
+        isGroup: true,
+        modelName: "737 Classic",
+        series: "737 Classic (-300/-400/-500)",
+        classification: "Narrow-body",
+        engines: 2,
+        seatsTypical: 149,
+        range: 5200,
+        firstFlight: 1984,
+        productionStatus: "Retired",
+        variants: [
+            { id: "B737-300", typeName: "737-300", seatsTypical: 149, range: 4400, firstFlight: 1984, productionStatus: "Retired" },
+            { id: "B737-400", typeName: "737-400", seatsTypical: 168, range: 5000, firstFlight: 1988, productionStatus: "Retired" },
+            { id: "B737-500", typeName: "737-500", seatsTypical: 132, range: 5200, firstFlight: 1989, productionStatus: "Retired" }
+        ]
+    },
+
+    // 3. 737 NG (그룹 카드)
+    {
+        id: "b737-ng",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Southwest_Airlines_Boeing_737-800_N8645A.jpg/500px-Southwest_Airlines_Boeing_737-800_N8645A.jpg",
         manufacturer: "Boeing",
-        familyName: "737 Family",
+        familyName: "737 NG",
         isGroup: true,
-        modelName: "737",
-        series: "737 Family",
+        modelName: "737 NG",
+        series: "737 Next Generation (-600~-900)",
+        classification: "Narrow-body",
+        engines: 2,
+        seatsTypical: 162,
+        range: 6370,
+        firstFlight: 1997,
+        productionStatus: "Retired",
+        variants: [
+            { id: "B737-600", typeName: "737-600", seatsTypical: 130, range: 5648, firstFlight: 1998, productionStatus: "Retired" },
+            { id: "B737-700", typeName: "737-700", seatsTypical: 149, range: 6370, firstFlight: 1997, productionStatus: "Retired" },
+            { id: "B737-800", typeName: "737-800", seatsTypical: 189, range: 5765, firstFlight: 1997, productionStatus: "Retired" },
+            { id: "B737-900ER", typeName: "737-900ER", seatsTypical: 220, range: 5925, firstFlight: 2006, productionStatus: "Retired" }
+        ]
+    },
+
+    // 4. 737 MAX (그룹 카드)
+    {
+        id: "b737-max",
+        imageUrl: "images/737max8.jpg",
+        manufacturer: "Boeing",
+        familyName: "737 MAX",
+        isGroup: true,
+        modelName: "737 MAX",
+        series: "737 MAX 7/8/9/10",
         classification: "Narrow-body",
         engines: 2,
         seatsTypical: 189,
         range: 6570,
-        firstFlight: 1967,
+        firstFlight: 2016,
         productionStatus: "Active",
         variants: [
-            // Original
-            { id: "B737-100", typeName: "737-100", seatsTypical: 103, range: 3440, firstFlight: 1967, productionStatus: "Retired" },
-            { id: "B737-200", typeName: "737-200", seatsTypical: 136, range: 4260, firstFlight: 1968, productionStatus: "Retired" },
-            // Classic
-            { id: "B737-300", typeName: "737-300 (Classic)", seatsTypical: 149, range: 4400, firstFlight: 1984, productionStatus: "Retired" },
-            { id: "B737-400", typeName: "737-400 (Classic)", seatsTypical: 168, range: 5000, firstFlight: 1988, productionStatus: "Retired" },
-            { id: "B737-500", typeName: "737-500 (Classic)", seatsTypical: 132, range: 5200, firstFlight: 1989, productionStatus: "Retired" },
-            // NG
-            { id: "B737-600", typeName: "737-600 (NG)", seatsTypical: 130, range: 5648, firstFlight: 1998, productionStatus: "Retired" },
-            { id: "B737-700", typeName: "737-700 (NG)", seatsTypical: 149, range: 6370, firstFlight: 1997, productionStatus: "Retired" },
-            { id: "B737-800", typeName: "737-800 (NG)", seatsTypical: 189, range: 5765, firstFlight: 1997, productionStatus: "Retired" },
-            { id: "B737-900ER", typeName: "737-900ER (NG)", seatsTypical: 220, range: 5925, firstFlight: 2006, productionStatus: "Retired" },
-            // MAX
             { id: "B737-MAX7", typeName: "737 MAX 7", seatsTypical: 172, range: 7130, firstFlight: 2018, productionStatus: "Active" },
             { id: "B737-MAX8", typeName: "737 MAX 8", seatsTypical: 189, range: 6570, firstFlight: 2016, productionStatus: "Active" },
             { id: "B737-MAX9", typeName: "737 MAX 9", seatsTypical: 220, range: 6570, firstFlight: 2020, productionStatus: "Active" },
