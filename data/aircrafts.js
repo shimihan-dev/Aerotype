@@ -538,7 +538,7 @@ const aircraftData = [
         ]
     },
 
-    // 777 Family (그룹 카드 — 777X 포함 확장)
+    // 777 Family (클래식 기종 및 화물기)
     {
         id: "b777-family",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/American_Airlines_Boeing_777-300_N718AN.jpg/500px-American_Airlines_Boeing_777-300_N718AN.jpg",
@@ -550,7 +550,7 @@ const aircraftData = [
         classification: "Wide-body",
         engines: 2,
         seatsTypical: 368,
-        range: 14685,
+        range: 13650,
         firstFlight: 1994,
         productionStatus: "Active",
         variants: [
@@ -559,9 +559,28 @@ const aircraftData = [
             { id: "B777-200LR", typeName: "777-200LR", seatsTypical: 317, range: 15843, firstFlight: 2005, productionStatus: "Retired", isCargo: false },
             { id: "B777-300", typeName: "777-300", seatsTypical: 368, range: 11121, firstFlight: 1998, productionStatus: "Retired", isCargo: false },
             { id: "B777-300ER", typeName: "777-300ER", seatsTypical: 396, range: 13650, firstFlight: 2003, productionStatus: "Retired", isCargo: false },
-            { id: "B777F", typeName: "777F (화물기)", seatsTypical: 102, range: 9200, firstFlight: 2008, productionStatus: "Active", isCargo: true },
-            { id: "B777-8", typeName: "777-8 (777X)", seatsTypical: 384, range: 16170, firstFlight: 2024, productionStatus: "Development", isCargo: false },
-            { id: "B777-9", typeName: "777-9 (777X)", seatsTypical: 426, range: 13500, firstFlight: 2020, productionStatus: "Development", isCargo: false }
+            { id: "B777F", typeName: "777F (화물기)", seatsTypical: 102, range: 9200, firstFlight: 2008, productionStatus: "Active", isCargo: true }
+        ]
+    },
+
+    // 777X Family (차세대 접이식 wingtip 기종)
+    {
+        id: "b777x-family",
+        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Boeing_777-9_N779XW_at_Singapore_Airshow_2022_01.jpg/500px-Boeing_777-9_N779XW_at_Singapore_Airshow_2022_01.jpg",
+        manufacturer: "Boeing",
+        familyName: "777X Family",
+        isGroup: true,
+        modelName: "777X",
+        series: "777X (777-8 / -9)",
+        classification: "Wide-body",
+        engines: 2,
+        seatsTypical: 426,
+        range: 16170,
+        firstFlight: 2020,
+        productionStatus: "Development",
+        variants: [
+            { id: "B777-8", typeName: "777-8", seatsTypical: 384, range: 16170, firstFlight: 2024, productionStatus: "Development", isCargo: false },
+            { id: "B777-9", typeName: "777-9", seatsTypical: 426, range: 13500, firstFlight: 2020, productionStatus: "Development", isCargo: false }
         ]
     },
 
