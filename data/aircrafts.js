@@ -541,7 +541,7 @@ const aircraftData = [
     // 767 Family (그룹 카드)
     {
         id: "b767-family",
-        photoVariant: "B767-300 (HL7528)",
+        photoVariant: "B767-300(non-ER)",
         imageUrl: "images/b767-family.jpg",
         manufacturer: "Boeing",
         familyName: "767 Family",
