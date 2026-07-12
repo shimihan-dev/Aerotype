@@ -190,7 +190,7 @@ const aircraftData = [
     // A330 Family (그룹 카드)
     {
         id: "a330-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Lufthansa_Airbus_A330-300_D-AIKB_FRA_2012-07-20_%28cropped%29.png/500px-Lufthansa_Airbus_A330-300_D-AIKB_FRA_2012-07-20_%28cropped%29.png",
+        imageUrl: "images/a330-family.jpg",
         manufacturer: "Airbus",
         familyName: "A330 Family",
         isGroup: true,
@@ -211,7 +211,7 @@ const aircraftData = [
     // A330neo Family (그룹 카드)
     {
         id: "a330neo-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/TAP_Air_Portugal%2C_CS-TUD%2C_Airbus_A330-941_%2849563229656%29.jpg/500px-TAP_Air_Portugal%2C_CS-TUD%2C_Airbus_A330-941_%2849563229656%29.jpg",
+        imageUrl: "images/a330neo-family.webp",
         manufacturer: "Airbus",
         familyName: "A330neo Family",
         isGroup: true,
@@ -232,7 +232,7 @@ const aircraftData = [
     // A340 Family (그룹 카드) — 신규 추가
     {
         id: "a340-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Lufthansa_Airbus_A340-642_D-AIHF_at_Frankfurt_Airport.jpg/500px-Lufthansa_Airbus_A340-642_D-AIHF_at_Frankfurt_Airport.jpg",
+        imageUrl: "images/a340-family.webp",
         manufacturer: "Airbus",
         familyName: "A340 Family",
         isGroup: true,
@@ -255,7 +255,7 @@ const aircraftData = [
     // A350 Family (그룹 카드)
     {
         id: "a350-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/A350_of_Lufthansa.jpg/500px-A350_of_Lufthansa.jpg",
+        imageUrl: "images/a350-family.webp",
         manufacturer: "Airbus",
         familyName: "A350 Family",
         isGroup: true,
@@ -277,7 +277,7 @@ const aircraftData = [
     // A380 (단일 기종)
     {
         id: "a380",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Emirates_A380_A6-EDS_at_SFO.jpg/500px-Emirates_A380_A6-EDS_at_SFO.jpg",
+        imageUrl: "images/a380.jpg",
         manufacturer: "Airbus",
         familyName: "A380",
         isGroup: false,
@@ -341,7 +341,7 @@ const aircraftData = [
     // 717 (단일 기종)
     {
         id: "b717",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Hawaiian_Airlines_Boeing_717-200_HNL.jpg/500px-Hawaiian_Airlines_Boeing_717-200_HNL.jpg",
+        imageUrl: "images/b717.jpg",
         manufacturer: "Boeing",
         familyName: "717",
         isGroup: false,
