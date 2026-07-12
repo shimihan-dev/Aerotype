@@ -729,7 +729,7 @@ const aircraftData = [
     // MD-11 Family (그룹 카드)
     {
         id: "md-11-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/FedEx_Express_McDonnell_Douglas_MD-11_N605FE_NRT_2011-09-17.jpg/500px-FedEx_Express_McDonnell_Douglas_MD-11_N605FE_NRT_2011-09-17.jpg",
+        imageUrl: "images/md-11-family.jpg",
         manufacturer: "McDonnell Douglas",
         familyName: "MD-11 Family",
         isGroup: true,
