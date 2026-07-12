@@ -359,7 +359,7 @@ const aircraftData = [
     // 727 Family (그룹 카드)
     {
         id: "b727-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/American_Airlines_Boeing_727-200_Silagi.jpg/500px-American_Airlines_Boeing_727-200_Silagi.jpg",
+        imageUrl: "images/b727-family.webp",
         manufacturer: "Boeing",
         familyName: "727 Family",
         isGroup: true,
@@ -380,7 +380,7 @@ const aircraftData = [
     // 1. 737 Original (그룹 카드)
     {
         id: "b737-original",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Lufthansa_Boeing_737-130_D-ABED_Annegret_at_Hamburg_Airport.jpg/500px-Lufthansa_Boeing_737-130_D-ABED_Annegret_at_Hamburg_Airport.jpg",
+        imageUrl: "images/b737-original.webp",
         manufacturer: "Boeing",
         familyName: "737 Original",
         isGroup: true,
@@ -401,7 +401,7 @@ const aircraftData = [
     // 2. 737 Classic (그룹 카드)
     {
         id: "b737-classic",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/United_Airlines_Boeing_737-300_N371UA_SFO_%28cropped%29.jpg/500px-United_Airlines_Boeing_737-300_N371UA_SFO_%28cropped%29.jpg",
+        imageUrl: "images/b737-classic.jpg",
         manufacturer: "Boeing",
         familyName: "737 Classic",
         isGroup: true,
@@ -423,7 +423,7 @@ const aircraftData = [
     // 3. 737 NG (그룹 카드)
     {
         id: "b737-ng",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Southwest_Airlines_Boeing_737-800_N8645A.jpg/500px-Southwest_Airlines_Boeing_737-800_N8645A.jpg",
+        imageUrl: "images/b737-ng.jpg",
         manufacturer: "Boeing",
         familyName: "737 NG",
         isGroup: true,
