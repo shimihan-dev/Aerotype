@@ -566,7 +566,7 @@ const aircraftData = [
     // 777X Family (차세대 접이식 wingtip 기종)
     {
         id: "b777x-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Boeing_777-9_N779XW_at_Singapore_Airshow_2022_01.jpg/500px-Boeing_777-9_N779XW_at_Singapore_Airshow_2022_01.jpg",
+        imageUrl: "images/b777x-family.jpg",
         manufacturer: "Boeing",
         familyName: "777X Family",
         isGroup: true,
@@ -587,7 +587,7 @@ const aircraftData = [
     // 787 Dreamliner (그룹 카드)
     {
         id: "b787-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/All_Nippon_Airways_Boeing_787-8_Dreamliner_JA801A_OKJ_in_flight.jpg/500px-All_Nippon_Airways_Boeing_787-8_Dreamliner_JA801A_OKJ_in_flight.jpg",
+        imageUrl: "images/b787-family.jpg",
         manufacturer: "Boeing",
         familyName: "787 Dreamliner",
         isGroup: true,
