@@ -4,6 +4,7 @@ const aircraftData = [
     // A220 Family (그룹 카드)
     {
         id: "a220-family",
+        photoVariant: "A220-300",
         imageUrl: "images/A220-300.jpg",
         manufacturer: "Airbus",
         familyName: "A220 Family",
@@ -25,6 +26,7 @@ const aircraftData = [
     // A300 Family (그룹 카드)
     {
         id: "a300-family",
+        photoVariant: "A300-600R",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Iran_Air_Airbus_A300-605R%3B_EP-IBD%40FRA%3B06.07.2011_603ks_%285915220574%29.jpg/500px-Iran_Air_Airbus_A300-605R%3B_EP-IBD%40FRA%3B06.07.2011_603ks_%285915220574%29.jpg",
         manufacturer: "Airbus",
         familyName: "A300 Family",
@@ -49,6 +51,7 @@ const aircraftData = [
     // A310 Family (그룹 카드)
     {
         id: "a310-family",
+        photoVariant: "A310",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Air_Transat_A310_%28C-GTSF%29_%40_LHR%2C_Aug_2009.jpg/500px-Air_Transat_A310_%28C-GTSF%29_%40_LHR%2C_Aug_2009.jpg",
         manufacturer: "Airbus",
         familyName: "A310 Family",
@@ -70,6 +73,7 @@ const aircraftData = [
     // A320 Family (개별 카드 — 예외 처리)
     {
         id: "a318",
+        photoVariant: "A318",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/F-GUGI_CDG_%2849806325246%29.jpg/500px-F-GUGI_CDG_%2849806325246%29.jpg",
         manufacturer: "Airbus",
         familyName: "A320 Family",
@@ -86,6 +90,7 @@ const aircraftData = [
     },
     {
         id: "a319",
+        photoVariant: "A319",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/United_Airbus_A319_%2813942617705%29.jpg/500px-United_Airbus_A319_%2813942617705%29.jpg",
         manufacturer: "Airbus",
         familyName: "A320 Family",
@@ -102,6 +107,7 @@ const aircraftData = [
     },
     {
         id: "a320",
+        photoVariant: "A320-200",
         imageUrl: "images/a320-200.jpg",
         manufacturer: "Airbus",
         familyName: "A320 Family",
@@ -118,6 +124,7 @@ const aircraftData = [
     },
     {
         id: "a321",
+        photoVariant: "A321-200",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Airbus_A321-231%28w%29_%E2%80%98N915US%E2%80%99_American_Airlines_%2828442733186%29.jpg/500px-Airbus_A321-231%28w%29_%E2%80%98N915US%E2%80%99_American_Airlines_%2828442733186%29.jpg",
         manufacturer: "Airbus",
         familyName: "A320 Family",
@@ -136,6 +143,7 @@ const aircraftData = [
     // A320neo Family (개별 카드 — 예외 처리)
     {
         id: "a319neo",
+        photoVariant: "A319neo",
         imageUrl: "images/a319neo.jpeg",
         manufacturer: "Airbus",
         familyName: "A320neo Family",
@@ -152,6 +160,7 @@ const aircraftData = [
     },
     {
         id: "a320neo",
+        photoVariant: "A320neo",
         imageUrl: "images/a320neo.jpg",
         manufacturer: "Airbus",
         familyName: "A320neo Family",
@@ -168,6 +177,7 @@ const aircraftData = [
     },
     {
         id: "a321neo",
+        photoVariant: "A321neo",
         imageUrl: "images/a321neo.jpg",
         manufacturer: "Airbus",
         familyName: "A320neo Family",
@@ -190,6 +200,7 @@ const aircraftData = [
     // A330 Family (그룹 카드)
     {
         id: "a330-family",
+        photoVariant: "A330-300",
         imageUrl: "images/a330-family.jpg",
         manufacturer: "Airbus",
         familyName: "A330 Family",
@@ -211,6 +222,7 @@ const aircraftData = [
     // A330neo Family (그룹 카드)
     {
         id: "a330neo-family",
+        photoVariant: "A330-900neo",
         imageUrl: "images/a330neo-family.webp",
         manufacturer: "Airbus",
         familyName: "A330neo Family",
@@ -232,6 +244,7 @@ const aircraftData = [
     // A340 Family (그룹 카드) — 신규 추가
     {
         id: "a340-family",
+        photoVariant: "A340-600",
         imageUrl: "images/a340-family.webp",
         manufacturer: "Airbus",
         familyName: "A340 Family",
@@ -255,6 +268,7 @@ const aircraftData = [
     // A350 Family (그룹 카드)
     {
         id: "a350-family",
+        photoVariant: "A350-900",
         imageUrl: "images/a350-family.webp",
         manufacturer: "Airbus",
         familyName: "A350 Family",
@@ -277,6 +291,7 @@ const aircraftData = [
     // A380 (단일 기종)
     {
         id: "a380",
+        photoVariant: "A380-800",
         imageUrl: "images/a380.jpg",
         manufacturer: "Airbus",
         familyName: "A380",
@@ -295,6 +310,7 @@ const aircraftData = [
     // ATR Family (그룹 카드)
     {
         id: "atr-family",
+        photoVariant: "ATR 72",
         imageUrl: "images/tarom_skyteam.jpg",
         manufacturer: "Airbus",
         familyName: "ATR Series",
@@ -318,6 +334,7 @@ const aircraftData = [
     // 707 Family (그룹 카드)
     {
         id: "b707-family",
+        photoVariant: "B707-320B",
         imageUrl: "images/northwest_707.jpg",
         manufacturer: "Boeing",
         familyName: "707 Family",
@@ -341,6 +358,7 @@ const aircraftData = [
     // 717 (단일 기종)
     {
         id: "b717",
+        photoVariant: "B717-200",
         imageUrl: "images/b717.jpg",
         manufacturer: "Boeing",
         familyName: "717",
@@ -359,6 +377,7 @@ const aircraftData = [
     // 727 Family (그룹 카드)
     {
         id: "b727-family",
+        photoVariant: "B727-200",
         imageUrl: "images/b727-family.webp",
         manufacturer: "Boeing",
         familyName: "727 Family",
@@ -380,6 +399,7 @@ const aircraftData = [
     // 1. 737 Original (그룹 카드)
     {
         id: "b737-original",
+        photoVariant: "B737-200",
         imageUrl: "images/b737-original.webp",
         manufacturer: "Boeing",
         familyName: "737 Original",
@@ -401,6 +421,7 @@ const aircraftData = [
     // 2. 737 Classic (그룹 카드)
     {
         id: "b737-classic",
+        photoVariant: "B737-300",
         imageUrl: "images/b737-classic.jpg",
         manufacturer: "Boeing",
         familyName: "737 Classic",
@@ -423,6 +444,7 @@ const aircraftData = [
     // 3. 737 NG (그룹 카드)
     {
         id: "b737-ng",
+        photoVariant: "B737-800",
         imageUrl: "images/b737-ng.jpg",
         manufacturer: "Boeing",
         familyName: "737 NG",
@@ -446,6 +468,7 @@ const aircraftData = [
     // 4. 737 MAX (그룹 카드)
     {
         id: "b737-max",
+        photoVariant: "B737 MAX 8",
         imageUrl: "images/737max8.jpg",
         manufacturer: "Boeing",
         familyName: "737 MAX",
@@ -469,6 +492,7 @@ const aircraftData = [
     // 747 Family (그룹 카드)
     {
         id: "b747-family",
+        photoVariant: "B747-8I",
         imageUrl: "images/b747-family.jpg",
         manufacturer: "Boeing",
         familyName: "747 Family",
@@ -495,6 +519,7 @@ const aircraftData = [
     // 757 Family (그룹 카드)
     {
         id: "b757-family",
+        photoVariant: "B757-200",
         imageUrl: "images/b757-family.webp",
         manufacturer: "Boeing",
         familyName: "757 Family",
@@ -516,6 +541,7 @@ const aircraftData = [
     // 767 Family (그룹 카드)
     {
         id: "b767-family",
+        photoVariant: "B767-300ER",
         imageUrl: "images/b767-family.jpg",
         manufacturer: "Boeing",
         familyName: "767 Family",
@@ -541,6 +567,7 @@ const aircraftData = [
     // 777 Family (클래식 기종 및 화물기)
     {
         id: "b777-family",
+        photoVariant: "B777-300ER",
         imageUrl: "images/b777-family.jpg",
         manufacturer: "Boeing",
         familyName: "777 Family",
@@ -566,6 +593,7 @@ const aircraftData = [
     // 777X Family (차세대 접이식 wingtip 기종)
     {
         id: "b777x-family",
+        photoVariant: "B777-9",
         imageUrl: "images/b777x-family.jpg",
         manufacturer: "Boeing",
         familyName: "777X Family",
@@ -587,6 +615,7 @@ const aircraftData = [
     // 787 Dreamliner (그룹 카드)
     {
         id: "b787-family",
+        photoVariant: "B787-9",
         imageUrl: "images/b787-family.jpg",
         manufacturer: "Boeing",
         familyName: "787 Dreamliner",
@@ -611,6 +640,7 @@ const aircraftData = [
     // CRJ Series (그룹 카드)
     {
         id: "crj-family",
+        photoVariant: "CRJ-700",
         imageUrl: "images/crj-family.jpeg",
         manufacturer: "Bombardier",
         familyName: "CRJ Series",
@@ -635,6 +665,7 @@ const aircraftData = [
     // Dash 8 Family (그룹 카드)
     {
         id: "dash-8-family",
+        photoVariant: "Dash 8-400",
         imageUrl: "images/dash-8-family.jpg",
         manufacturer: "Bombardier",
         familyName: "Dash 8 Series",
@@ -660,6 +691,7 @@ const aircraftData = [
     // ERJ Family (그룹 카드) — 신규 추가
     {
         id: "erj-family",
+        photoVariant: "ERJ-145XR",
         imageUrl: "images/erj-family.jpg",
         manufacturer: "Embraer",
         familyName: "ERJ Family",
@@ -682,6 +714,7 @@ const aircraftData = [
     // E-Jet Family (그룹 카드)
     {
         id: "e-jet-family",
+        photoVariant: "E175",
         imageUrl: "images/e-jet-family.webp",
         manufacturer: "Embraer",
         familyName: "E-Jet Family",
@@ -705,6 +738,7 @@ const aircraftData = [
     // E-Jet E2 Family (그룹 카드)
     {
         id: "e-jet-e2-family",
+        photoVariant: "E195-E2",
         imageUrl: "images/e-jet-e2-family.jpg",
         manufacturer: "Embraer",
         familyName: "E-Jet E2 Family",
@@ -729,6 +763,7 @@ const aircraftData = [
     // MD-11 Family (그룹 카드)
     {
         id: "md-11-family",
+        photoVariant: "MD-11F",
         imageUrl: "images/md-11-family.jpg",
         manufacturer: "McDonnell Douglas",
         familyName: "MD-11 Family",
@@ -750,6 +785,7 @@ const aircraftData = [
     // MD-80 / MD-90 Series (그룹 카드)
     {
         id: "md-80-family",
+        photoVariant: "MD-90",
         imageUrl: "images/md-80-family.jpg",
         manufacturer: "McDonnell Douglas",
         familyName: "MD-80 / MD-90 Series",

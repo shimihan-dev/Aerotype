@@ -377,7 +377,16 @@ function showAircraftDetail(aircraft) {
     }
 
     // 모달 HTML 생성
-    const modalImageHTML = aircraft.imageUrl ? `<img src="${aircraft.imageUrl}" alt="${aircraft.modelName} 사진" class="modal-image">` : `<div class="modal-image-placeholder">✈️</div>`;
+    let modalImageHTML = '';
+    if (aircraft.imageUrl) {
+        const photoVariantStr = aircraft.photoVariant ? `${aircraft.photoVariant}의 사진` : `${aircraft.modelName}의 사진`;
+        modalImageHTML = `
+            <img src="${aircraft.imageUrl}" alt="${aircraft.modelName} 사진" class="modal-image">
+            <div class="modal-image-caption">${photoVariantStr}</div>
+        `;
+    } else {
+        modalImageHTML = `<div class="modal-image-placeholder">✈️</div>`;
+    }
 
     modalBody.innerHTML = `
         ${modalImageHTML}
