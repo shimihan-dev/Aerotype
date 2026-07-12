@@ -483,6 +483,7 @@ const aircraftData = [
             { id: "B737-600", typeName: "737-600", seatsTypical: 130, range: 5648, firstFlight: 1998, productionStatus: "Retired" },
             { id: "B737-700", typeName: "737-700", seatsTypical: 149, range: 6370, firstFlight: 1997, productionStatus: "Retired" },
             { id: "B737-800", typeName: "737-800", seatsTypical: 189, range: 5765, firstFlight: 1997, productionStatus: "Retired" },
+            { id: "B737-900", typeName: "737-900", seatsTypical: 177, range: 5080, firstFlight: 2000, productionStatus: "Retired" },
             { id: "B737-900ER", typeName: "737-900ER", seatsTypical: 220, range: 5925, firstFlight: 2006, productionStatus: "Retired" }
         ]
     },
