@@ -168,7 +168,7 @@ const aircraftData = [
     },
     {
         id: "a321neo",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/HA-LVA%40PEK_%2820200403093313%29.jpg/500px-HA-LVA%40PEK_%2820200403093313%29.jpg",
+        imageUrl: "images/a321neo.jpg",
         manufacturer: "Airbus",
         familyName: "A320neo Family",
         isGroup: true,
