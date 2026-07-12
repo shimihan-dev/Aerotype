@@ -611,7 +611,7 @@ const aircraftData = [
     // CRJ Series (그룹 카드)
     {
         id: "crj-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Delta_Connection_CRJ-900.jpg/500px-Delta_Connection_CRJ-900.jpg",
+        imageUrl: "images/crj-family.jpeg",
         manufacturer: "Bombardier",
         familyName: "CRJ Series",
         isGroup: true,
@@ -635,7 +635,7 @@ const aircraftData = [
     // Dash 8 Family (그룹 카드)
     {
         id: "dash-8-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Horizon_Air_Bombardier_Dash_8_Q400_N443QX.jpg/500px-Horizon_Air_Bombardier_Dash_8_Q400_N443QX.jpg",
+        imageUrl: "images/dash-8-family.jpg",
         manufacturer: "Bombardier",
         familyName: "Dash 8 Series",
         isGroup: true,
@@ -660,7 +660,7 @@ const aircraftData = [
     // ERJ Family (그룹 카드) — 신규 추가
     {
         id: "erj-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/ExpressJet_ERJ-145XR.jpg/500px-ExpressJet_ERJ-145XR.jpg",
+        imageUrl: "images/erj-family.jpg",
         manufacturer: "Embraer",
         familyName: "ERJ Family",
         isGroup: true,
@@ -682,7 +682,7 @@ const aircraftData = [
     // E-Jet Family (그룹 카드)
     {
         id: "e-jet-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/JetBlue_Embraer_190.jpg/500px-JetBlue_Embraer_190.jpg",
+        imageUrl: "images/e-jet-family.webp",
         manufacturer: "Embraer",
         familyName: "E-Jet Family",
         isGroup: true,
