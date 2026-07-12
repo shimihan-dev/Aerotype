@@ -5,7 +5,7 @@ const aircraftData = [
     {
         id: "a220-family",
         photoVariant: "A220-300",
-        description: "캐나다 봄바디어 C시리즈를 에어버스가 인수하여 재탄생시킨 차세대 고효율 단거리용 소형 광동체급 협동체 항공기입니다. 소음이 매우 적고 연료 효율성이 높으며 넓은 좌석 폭을 자랑합니다.",
+        description: "캐나다 봄바디어 C시리즈를 에어버스가 인수하여 재탄생시킨 차세대 고효율 단거리 여객기입니다. 좌석을 절반만 채워도 수익을 낼 수 있을 정도로 압도적인 경제성을 자랑하며, 넓은 좌석 폭과 더불어 이륙 및 하강 시 엔진에서 발생하는 특유의 고래 울음소리 같은 독특한 공명음이 대표적인 특징입니다.",
         imageUrl: "images/A220-300.jpg",
         manufacturer: "Airbus",
         familyName: "A220 Family",
@@ -670,7 +670,7 @@ const aircraftData = [
     {
         id: "crj-family",
         photoVariant: "CRJ-700",
-        description: "캐나다 봄바디어(현재는 미쓰비시 항공)에서 개발한 전 세계 대표 중소형 지역 여객기(Regional Jet) 시리즈입니다. 소도시 간 빠른 연결 편을 제공하는 리전얼 노선에서 핵심 역할을 담당해 왔습니다.",
+        description: "캐나다 봄바디어(현재는 미쓰비시 항공)에서 개발한 전 세계 대표 중소형 지역 여객기(Regional Jet) 시리즈입니다. 소도시 간 빠른 연결 편을 제공하는 리저널 노선에서 핵심 역할을 담당해 왔습니다.",
         imageUrl: "images/crj-family.jpeg",
         manufacturer: "Bombardier",
         familyName: "CRJ Series",
@@ -723,7 +723,7 @@ const aircraftData = [
     {
         id: "erj-family",
         photoVariant: "ERJ-145XR",
-        description: "브라질의 엠브라에르사에서 제작한 소형 리전얼 제트 여객기 제품군입니다. 37~50인승 소규모 수송에 최적화되어 항공 여객 수요가 적은 중소도시 간 연결망 구축에 크게 기여했습니다.",
+        description: "브라질의 엠브라에르사에서 제작한 소형 리저널 제트 여객기 제품군입니다. 37~50인승 소규모 수송에 최적화되어 항공 여객 수요가 적은 중소도시 간 연결망 구축에 크게 기여했습니다.",
         imageUrl: "images/erj-family.jpg",
         manufacturer: "Embraer",
         familyName: "ERJ Family",
@@ -747,7 +747,7 @@ const aircraftData = [
     {
         id: "e-jet-family",
         photoVariant: "E175",
-        description: "엠브라에르의 대표적인 70~100인승급 대형 리전얼 제트기 패밀리입니다. 협동체 여객기에 버금가는 2-2 좌석 배치로 가운데 낀 좌석이 없으며 쾌적하고 넓은 기내 환경을 선사합니다.",
+        description: "엠브라에르의 대표적인 70~100인승급 대형 리저널 제트기 패밀리입니다. 협동체 여객기에 버금가는 2-2 좌석 배치로 가운데 낀 좌석이 없으며 쾌적하고 넓은 기내 환경을 선사합니다.",
         imageUrl: "images/e-jet-family.webp",
         manufacturer: "Embraer",
         familyName: "E-Jet Family",
@@ -772,7 +772,7 @@ const aircraftData = [
     {
         id: "e-jet-e2-family",
         photoVariant: "E195-E2",
-        description: "성공적인 E-Jet 제품군에 프랫앤휘트니사의 차세대 기어드 터보팬(GTF) 엔진과 초정밀 날개 설계를 적용한 고효율 리전얼 제트기입니다. 동급 시장에서 가장 친환경적이고 조용한 운항 성능을 제공합니다.",
+        description: "성공적인 E-Jet 제품군에 프랫앤휘트니사의 차세대 기어드 터보팬(GTF) 엔진과 초정밀 날개 설계를 적용한 고효율 리저널 제트기입니다. 동급 시장에서 가장 친환경적이고 조용한 운항 성능을 제공합니다.",
         imageUrl: "images/e-jet-e2-family.jpg",
         manufacturer: "Embraer",
         familyName: "E-Jet E2 Family",
