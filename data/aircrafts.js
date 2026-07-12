@@ -469,7 +469,7 @@ const aircraftData = [
     // 747 Family (그룹 카드)
     {
         id: "b747-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Lufthansa_Boeing_747-830_D-ABYA_FRA.jpg/500px-Lufthansa_Boeing_747-830_D-ABYA_FRA.jpg",
+        imageUrl: "images/b747-family.jpg",
         manufacturer: "Boeing",
         familyName: "747 Family",
         isGroup: true,
@@ -495,7 +495,7 @@ const aircraftData = [
     // 757 Family (그룹 카드)
     {
         id: "b757-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Delta_Air_Lines_Boeing_757-200_%28N6704Z%29_%282498263725%29.jpg/500px-Delta_Air_Lines_Boeing_757-200_%28N6704Z%29_%282498263725%29.jpg",
+        imageUrl: "images/b757-family.webp",
         manufacturer: "Boeing",
         familyName: "757 Family",
         isGroup: true,
@@ -516,7 +516,7 @@ const aircraftData = [
     // 767 Family (그룹 카드)
     {
         id: "b767-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Delta_Air_Lines_Boeing_767-300ER_%28N197DN%29.jpg/500px-Delta_Air_Lines_Boeing_767-300ER_%28N197DN%29.jpg",
+        imageUrl: "images/b767-family.jpg",
         manufacturer: "Boeing",
         familyName: "767 Family",
         isGroup: true,
@@ -541,7 +541,7 @@ const aircraftData = [
     // 777 Family (클래식 기종 및 화물기)
     {
         id: "b777-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/American_Airlines_Boeing_777-300_N718AN.jpg/500px-American_Airlines_Boeing_777-300_N718AN.jpg",
+        imageUrl: "images/b777-family.jpg",
         manufacturer: "Boeing",
         familyName: "777 Family",
         isGroup: true,
