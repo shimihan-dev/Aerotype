@@ -705,7 +705,7 @@ const aircraftData = [
     // E-Jet E2 Family (그룹 카드)
     {
         id: "e-jet-e2-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Helvetic_Airways_Embraer_E190-E2_%28HB-AZC%29.jpg/500px-Helvetic_Airways_Embraer_E190-E2_%28HB-AZC%29.jpg",
+        imageUrl: "images/e-jet-e2-family.jpg",
         manufacturer: "Embraer",
         familyName: "E-Jet E2 Family",
         isGroup: true,
@@ -750,7 +750,7 @@ const aircraftData = [
     // MD-80 / MD-90 Series (그룹 카드)
     {
         id: "md-80-family",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Delta_Air_Lines_McDonnell_Douglas_MD-88_N935DL_LGA_2013-10-23.jpg/500px-Delta_Air_Lines_McDonnell_Douglas_MD-88_N935DL_LGA_2013-10-23.jpg",
+        imageUrl: "images/md-80-family.jpg",
         manufacturer: "McDonnell Douglas",
         familyName: "MD-80 / MD-90 Series",
         isGroup: true,
