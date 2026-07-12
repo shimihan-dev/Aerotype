@@ -516,7 +516,7 @@ const aircraftData = [
     {
         id: "b747-family",
         photoVariant: "B747-8I",
-        description: "'하늘의 여왕(Queen of the Skies)'으로 불리는 세계 최초의 복층형 초대형 광동체 여객기입니다. 반세기 넘게 장거리 민항 시장의 상징으로 군림하며 전 세계 대규모 장거리 해외 여행 대중화를 이끌었습니다.",
+        description: "'하늘의 여왕(Queen of the Skies)'으로 불리는 세계 최초의 복층 초대형 여객기입니다. 앞부분이 튀어나온 트레이드마크로 많은 사람들에게 알려져 있으며, 반세기 넘게 장거리 항공기의 상징으로 군림하며 전 세계 대규모 장거리 해외 여행 대중화를 이끌었습니다.",
         imageUrl: "images/b747-family.jpg",
         manufacturer: "Boeing",
         familyName: "747 Family",
