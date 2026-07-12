@@ -554,6 +554,7 @@ const aircraftData = [
         range: 11825,
         firstFlight: 1981,
         productionStatus: "Active",
+        description: "보잉 최초의 광동체 쌍발 여객기이자 중장거리 시장을 개척한 베스트셀러 모델입니다. 특히 사진의 기종인 아시아나항공의 HL7528은 전 세계에서 마지막으로 운영되었던 여객용 767-300(non-ER) 항공기로, 국내선 김포-제주 노선을 중심으로 활약하다가 퇴역하여 많은 항공 팬들에게 특별한 기종으로 기억되고 있습니다.",
         variants: [
             { id: "B767-200", typeName: "767-200", seatsTypical: 216, range: 7200, firstFlight: 1981, productionStatus: "Retired" },
             { id: "B767-200ER", typeName: "767-200ER", seatsTypical: 224, range: 12200, firstFlight: 1984, productionStatus: "Retired" },

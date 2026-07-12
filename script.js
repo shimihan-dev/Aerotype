@@ -376,6 +376,18 @@ function showAircraftDetail(aircraft) {
         `;
     }
 
+    let descriptionHTML = '';
+    if (aircraft.description) {
+        descriptionHTML = `
+        <div class="detail-section">
+            <div class="detail-section-title">💡 기종 소개 및 특징</div>
+            <div class="detail-description" style="line-height: 1.7; color: var(--text-color); font-size: 0.95rem; background-color: var(--secondary-color); padding: 1rem; border-radius: 6px; border-left: 4px solid var(--primary-color);">
+                ${aircraft.description}
+            </div>
+        </div>
+        `;
+    }
+
     // 모달 HTML 생성
     let modalImageHTML = '';
     if (aircraft.imageUrl) {
@@ -437,6 +449,7 @@ function showAircraftDetail(aircraft) {
         </div>
 
         ${variantsHTML}
+        ${descriptionHTML}
 
         <div class="detail-section">
             <div class="detail-section-title">🔧 기술 정보</div>
