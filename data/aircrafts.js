@@ -842,6 +842,148 @@ const aircraftData = [
             { id: "MD-88", typeName: "MD-88", seatsTypical: 172, range: 4850, firstFlight: 1987, productionStatus: "Retired" },
             { id: "MD-90", typeName: "MD-90", seatsTypical: 172, range: 4445, firstFlight: 1993, productionStatus: "Retired" }
         ]
+    },
+
+    // ===== Douglas / McDonnell Douglas (클래식 기종) =====
+
+    // DC-10 Family (그룹 카드)
+    {
+        id: "dc-10-family",
+        photoVariant: "DC-10-30",
+        description: "맥도넬 더글라스의 대표적인 3발 대형 여객기입니다. 수직꼬리날개 중간을 관통하는 거대한 2번 엔진 설계가 특징이며, 수많은 장거리 노선에서 활약했고 이후 개량형인 MD-11 개발의 든든한 밑거름이 되었습니다.",
+        imageUrl: "images/dc-10-family.jpg",
+        manufacturer: "McDonnell Douglas",
+        familyName: "DC-10 Family",
+        isGroup: true,
+        modelName: "DC-10",
+        series: "DC-10",
+        classification: "Wide-body",
+        engines: 3,
+        seatsTypical: 380,
+        range: 9600,
+        firstFlight: 1970,
+        productionStatus: "Retired",
+        variants: [
+            { id: "DC-10-10", typeName: "DC-10-10", seatsTypical: 380, range: 6110, firstFlight: 1970, productionStatus: "Retired" },
+            { id: "DC-10-30", typeName: "DC-10-30", seatsTypical: 380, range: 9600, firstFlight: 1972, productionStatus: "Retired" }
+        ]
+    },
+
+    // DC-8 Family (그룹 카드)
+    {
+        id: "dc-8-family",
+        photoVariant: "DC-8-62",
+        description: "보잉 707과 경쟁하며 초기 민항 제트기 시대를 양분했던 더글라스의 4발 협동체 여객기입니다. 튼튼한 동체 설계 덕분에 수명이 매우 길어 여객 퇴역 후에도 화물기로 오랫동안 각광을 받았습니다.",
+        imageUrl: "images/dc-8-family.jpg",
+        manufacturer: "McDonnell Douglas",
+        familyName: "DC-8 Family",
+        isGroup: true,
+        modelName: "DC-8",
+        series: "DC-8",
+        classification: "Narrow-body",
+        engines: 4,
+        seatsTypical: 269,
+        range: 9600,
+        firstFlight: 1958,
+        productionStatus: "Retired",
+        variants: [
+            { id: "DC-8-30", typeName: "DC-8-30", seatsTypical: 177, range: 7410, firstFlight: 1958, productionStatus: "Retired" },
+            { id: "DC-8-60", typeName: "DC-8-60 (Super 60)", seatsTypical: 269, range: 8400, firstFlight: 1966, productionStatus: "Retired" },
+            { id: "DC-8-70", typeName: "DC-8-70 (Super 70)", seatsTypical: 269, range: 9600, firstFlight: 1981, productionStatus: "Retired" }
+        ]
+    },
+
+    // DC-9 Family (그룹 카드)
+    {
+        id: "dc-9-family",
+        photoVariant: "DC-9-30",
+        description: "더글라스가 단거리 노선의 제트화를 위해 개발한 쌍발 협동체 여객기입니다. 동체 후방의 제트 엔진 2개와 T자 꼬리날개 디자인이 특징이며, 훗날 MD-80, MD-90 및 보잉 717로 계승되는 전설적인 라인업의 시초입니다.",
+        imageUrl: "images/dc-9-family.jpg",
+        manufacturer: "McDonnell Douglas",
+        familyName: "DC-9 Family",
+        isGroup: true,
+        modelName: "DC-9",
+        series: "DC-9 Family",
+        classification: "Narrow-body",
+        engines: 2,
+        seatsTypical: 135,
+        range: 3300,
+        firstFlight: 1965,
+        productionStatus: "Retired",
+        variants: [
+            { id: "DC-9-10", typeName: "DC-9-10", seatsTypical: 90, range: 2340, firstFlight: 1965, productionStatus: "Retired" },
+            { id: "DC-9-30", typeName: "DC-9-30", seatsTypical: 115, range: 3030, firstFlight: 1966, productionStatus: "Retired" },
+            { id: "DC-9-50", typeName: "DC-9-50", seatsTypical: 135, range: 3300, firstFlight: 1974, productionStatus: "Retired" }
+        ]
+    },
+
+    // ===== Aerospatiale/BAC =====
+
+    // Concorde (단일 기종)
+    {
+        id: "concorde",
+        photoVariant: "Concorde",
+        description: "프랑스의 아에로스파시알과 영국의 BAC가 공동 개발한 최초이자 전설적인 초음속 여객기입니다. 마하 2.04의 속도로 대서양을 3시간 대에 횡단하며 럭셔리 비행의 극치를 보여주었으나, 높은 소음과 연비 문제로 2003년에 퇴역했습니다.",
+        imageUrl: "images/concorde.jpg",
+        manufacturer: "Aerospatiale/BAC",
+        familyName: "Concorde",
+        isGroup: false,
+        modelName: "Concorde",
+        series: "Concorde",
+        classification: "Narrow-body",
+        engines: 4,
+        seatsTypical: 128,
+        range: 7222,
+        firstFlight: 1969,
+        productionStatus: "Retired",
+        variants: []
+    },
+
+    // ===== Lockheed =====
+
+    // L-1011 TriStar (그룹 카드)
+    {
+        id: "l1011-tristar",
+        photoVariant: "L-1011-500",
+        description: "전투기 명가 록히드가 설계한 독창적인 3발 광동체 여객기입니다. 오토파일럿과 완전 자동 착륙 시스템 등 시대를 앞서간 혁신 기술을 아낌없이 도입했으나, 엔진 수급 지연 등으로 비운의 걸작으로 남았습니다.",
+        imageUrl: "images/l1011-tristar.jpg",
+        manufacturer: "Lockheed",
+        familyName: "L-1011 TriStar",
+        isGroup: true,
+        modelName: "L-1011",
+        series: "L-1011 TriStar",
+        classification: "Wide-body",
+        engines: 3,
+        seatsTypical: 400,
+        range: 9630,
+        firstFlight: 1970,
+        productionStatus: "Retired",
+        variants: [
+            { id: "L1011-1", typeName: "L-1011-1", seatsTypical: 400, range: 4960, firstFlight: 1970, productionStatus: "Retired" },
+            { id: "L1011-500", typeName: "L-1011-500", seatsTypical: 330, range: 9630, firstFlight: 1978, productionStatus: "Retired" }
+        ]
+    },
+
+    // ===== COMAC =====
+
+    // C919 (단일 기종)
+    {
+        id: "c919",
+        photoVariant: "C919",
+        description: "에어버스 A320neo 및 보잉 737 MAX와 경쟁하기 위해 중국이 야심 차게 개발한 최신 차세대 협동체 여객기입니다. 높은 연료 효율성과 기내 쾌적성을 바탕으로 글로벌 민항 독점 구도에 새 바람을 불어넣고 있습니다.",
+        imageUrl: "images/c919.jpg",
+        manufacturer: "COMAC",
+        familyName: "C919",
+        isGroup: false,
+        modelName: "C919",
+        series: "C919",
+        classification: "Narrow-body",
+        engines: 2,
+        seatsTypical: 192,
+        range: 5555,
+        firstFlight: 2017,
+        productionStatus: "Active",
+        variants: []
     }
 ];
 
