@@ -930,7 +930,7 @@ const aircraftData = [
         isGroup: false,
         modelName: "Concorde",
         series: "Concorde",
-        classification: "Narrow-body",
+        classification: "Narrow-body, Supersonic",
         engines: 4,
         seatsTypical: 128,
         range: 7222,
