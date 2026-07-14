@@ -356,6 +356,7 @@ function showAircraftDetail(aircraft) {
                     <thead>
                         <tr style="background-color: #f1f3f4; text-align: left;">
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">기종명</th>
+                            <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">엔진 옵션</th>
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">좌석 수 / 적재중량</th>
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">항속거리</th>
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">첫 비행</th>
@@ -366,6 +367,7 @@ function showAircraftDetail(aircraft) {
                         ${aircraft.variants.map(v => `
                         <tr style="border-bottom: 1px solid #eee;">
                             <td style="padding: 0.5rem; font-weight: 500;">${v.typeName}</td>
+                            <td style="padding: 0.5rem; font-size: 0.85rem; color: #5f6368;">${v.engineOptions ? v.engineOptions.join(', ') : '-'}</td>
                             <td style="padding: 0.5rem;">${v.isCargo ? v.seatsTypical + 't' : v.seatsTypical + '명'}</td>
                             <td style="padding: 0.5rem;">${v.range.toLocaleString()}km</td>
                             <td style="padding: 0.5rem;">${v.firstFlight}년</td>
@@ -444,9 +446,13 @@ function showAircraftDetail(aircraft) {
                     <div class="detail-label">대표 좌석 수</div>
                     <div class="detail-value">${aircraft.seatsTypical}명</div>
                 </div>
-                <div class="detail-item full-width">
+                <div class="detail-item">
                     <div class="detail-label">항속거리 (최대)</div>
                     <div class="detail-value">${aircraft.range.toLocaleString()}km</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">엔진 옵션</div>
+                    <div class="detail-value" style="font-size: 0.9rem;">${aircraft.engineOptions ? aircraft.engineOptions.join(', ') : '정보 없음'}</div>
                 </div>
             </div>
         </div>
