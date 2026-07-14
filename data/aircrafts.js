@@ -882,14 +882,22 @@ const aircraftData = [
         series: "DC-8",
         classification: "Narrow-body",
         engines: 4,
-        seatsTypical: 269,
-        range: 9600,
+        seatsTypical: 259,
+        range: 10100,
         firstFlight: 1958,
         productionStatus: "Retired",
         variants: [
-            { id: "DC-8-30", typeName: "DC-8-30", seatsTypical: 177, range: 7410, firstFlight: 1958, productionStatus: "Retired" },
-            { id: "DC-8-60", typeName: "DC-8-60 (Super 60)", seatsTypical: 269, range: 8400, firstFlight: 1966, productionStatus: "Retired" },
-            { id: "DC-8-70", typeName: "DC-8-70 (Super 70)", seatsTypical: 269, range: 9600, firstFlight: 1981, productionStatus: "Retired" }
+            { id: "DC-8-11", typeName: "DC-8-11", seatsTypical: 177, range: 3900, firstFlight: 1958, productionStatus: "Retired" },
+            { id: "DC-8-21", typeName: "DC-8-21", seatsTypical: 177, range: 5300, firstFlight: 1958, productionStatus: "Retired" },
+            { id: "DC-8-31", typeName: "DC-8-31", seatsTypical: 177, range: 7410, firstFlight: 1959, productionStatus: "Retired" },
+            { id: "DC-8-41", typeName: "DC-8-41", seatsTypical: 177, range: 7500, firstFlight: 1960, productionStatus: "Retired" },
+            { id: "DC-8-51", typeName: "DC-8-51", seatsTypical: 189, range: 8400, firstFlight: 1960, productionStatus: "Retired" },
+            { id: "DC-8-61", typeName: "DC-8-61 (Super 61)", seatsTypical: 259, range: 6000, firstFlight: 1966, productionStatus: "Retired" },
+            { id: "DC-8-62", typeName: "DC-8-62 (Super 62)", seatsTypical: 189, range: 9600, firstFlight: 1966, productionStatus: "Retired" },
+            { id: "DC-8-63", typeName: "DC-8-63 (Super 63)", seatsTypical: 259, range: 8500, firstFlight: 1967, productionStatus: "Retired" },
+            { id: "DC-8-71", typeName: "DC-8-71 (Super 71)", seatsTypical: 259, range: 6300, firstFlight: 1981, productionStatus: "Retired" },
+            { id: "DC-8-72", typeName: "DC-8-72 (Super 72)", seatsTypical: 189, range: 10100, firstFlight: 1981, productionStatus: "Retired" },
+            { id: "DC-8-73", typeName: "DC-8-73 (Super 73)", seatsTypical: 259, range: 8900, firstFlight: 1982, productionStatus: "Retired" }
         ]
     },
 
@@ -911,9 +919,13 @@ const aircraftData = [
         firstFlight: 1965,
         productionStatus: "Retired",
         variants: [
-            { id: "DC-9-10", typeName: "DC-9-10", seatsTypical: 90, range: 2340, firstFlight: 1965, productionStatus: "Retired" },
-            { id: "DC-9-30", typeName: "DC-9-30", seatsTypical: 115, range: 3030, firstFlight: 1966, productionStatus: "Retired" },
-            { id: "DC-9-50", typeName: "DC-9-50", seatsTypical: 135, range: 3300, firstFlight: 1974, productionStatus: "Retired" }
+            { id: "DC-9-11", typeName: "DC-9-11", seatsTypical: 90, range: 2340, firstFlight: 1965, productionStatus: "Retired" },
+            { id: "DC-9-15", typeName: "DC-9-15", seatsTypical: 90, range: 2600, firstFlight: 1965, productionStatus: "Retired" },
+            { id: "DC-9-21", typeName: "DC-9-21", seatsTypical: 90, range: 2900, firstFlight: 1968, productionStatus: "Retired" },
+            { id: "DC-9-31", typeName: "DC-9-31", seatsTypical: 115, range: 3030, firstFlight: 1966, productionStatus: "Retired" },
+            { id: "DC-9-32", typeName: "DC-9-32", seatsTypical: 115, range: 3000, firstFlight: 1967, productionStatus: "Retired" },
+            { id: "DC-9-41", typeName: "DC-9-41", seatsTypical: 125, range: 2870, firstFlight: 1967, productionStatus: "Retired" },
+            { id: "DC-9-51", typeName: "DC-9-51", seatsTypical: 135, range: 3300, firstFlight: 1974, productionStatus: "Retired" }
         ]
     },
 
