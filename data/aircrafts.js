@@ -821,8 +821,8 @@ const aircraftData = [
     // MD-80 / MD-90 Series (그룹 카드)
     {
         id: "md-80-family",
-        photoVariant: "MD-90",
-        description: "MD-80 및 MD-90 시리즈는 동체 후방에 장착된 2개의 엔진과 날렵한 기체 형상이 특징인 협동체 여객기입니다. 높은 신뢰성과 기내 후방 특유의 저소음(전방 기준) 승차감으로 한 시대를 풍미했습니다.",
+        photoVariant: "MD-83",
+        description: "MD-80 및 MD-90 시리즈는 동체 후방에 장착된 2개의 엔진과 날렵한 기체 형상이 특징인 협동체 여객기입니다. 특히 사진의 기종은 은빛 알루미늄 광택 리버리로 한 시대를 풍미했던 아메리칸 항공의 MD-83입니다. 개량형인 MD-90은 기존 JT8D 엔진 대신 고효율 저소음의 IAE V2500 엔진으로 변경하여 친환경성을 높였습니다. 높은 신뢰성과 기내 후방 특유의 저소음(전방 기준) 승차감으로 한 시대를 풍미했습니다.",
         imageUrl: "images/md-80-family.jpg",
         manufacturer: "McDonnell Douglas",
         familyName: "MD-80 / MD-90 Series",
@@ -872,8 +872,8 @@ const aircraftData = [
     // DC-8 Family (그룹 카드)
     {
         id: "dc-8-family",
-        photoVariant: "DC-8-62",
-        description: "보잉 707과 경쟁하며 초기 민항 제트기 시대를 양분했던 더글라스의 4발 협동체 여객기입니다. 튼튼한 동체 설계 덕분에 수명이 매우 길어 여객 퇴역 후에도 화물기로 오랫동안 각광을 받았습니다.",
+        photoVariant: "DC-8-61",
+        description: "보잉 707과 경쟁하며 초기 민항 제트기 시대를 양분했던 더글라스의 4발 협동체 여객기입니다. 특히 사진의 기종은 일본항공(JAL)이 도입하여 활약했던 동체 연장형 모델인 DC-8-61입니다. 튼튼한 동체 설계 덕분에 수명이 매우 길어 여객 퇴역 후에도 화물기로 오랫동안 각광을 받았습니다.",
         imageUrl: "images/dc-8-family.jpg",
         manufacturer: "McDonnell Douglas",
         familyName: "DC-8 Family",
@@ -956,8 +956,8 @@ const aircraftData = [
     // L-1011 TriStar (그룹 카드)
     {
         id: "l1011-tristar",
-        photoVariant: "L-1011-500",
-        description: "전투기 명가 록히드가 설계한 독창적인 3발 광동체 여객기입니다. 오토파일럿과 완전 자동 착륙 시스템 등 시대를 앞서간 혁신 기술을 아낌없이 도입했으나, 엔진 수급 지연 등으로 비운의 걸작으로 남았습니다.",
+        photoVariant: "L-1011-300",
+        description: "전투기 명가 록히드가 설계한 독창적인 3발 광동체 여객기입니다. 특히 사진의 기종은 록히드의 대표적인 중장거리 모델인 L-1011-300입니다. 오토파일럿과 완전 자동 착륙 시스템 등 시대를 앞서간 혁신 기술을 아낌없이 도입했으나, 엔진 수급 지연 등으로 비운의 걸작으로 남았습니다.",
         imageUrl: "images/l1011-tristar.jpg",
         manufacturer: "Lockheed Martin",
         familyName: "L-1011 TriStar",
@@ -972,6 +972,9 @@ const aircraftData = [
         productionStatus: "Retired",
         variants: [
             { id: "L1011-1", typeName: "L-1011-1", seatsTypical: 400, range: 4960, firstFlight: 1970, productionStatus: "Retired" },
+            { id: "L1011-100", typeName: "L-1011-100", seatsTypical: 400, range: 6900, firstFlight: 1975, productionStatus: "Retired" },
+            { id: "L1011-200", typeName: "L-1011-200", seatsTypical: 400, range: 6900, firstFlight: 1976, productionStatus: "Retired" },
+            { id: "L1011-300", typeName: "L-1011-300", seatsTypical: 330, range: 9630, firstFlight: 1978, productionStatus: "Retired" },
             { id: "L1011-500", typeName: "L-1011-500", seatsTypical: 330, range: 9630, firstFlight: 1978, productionStatus: "Retired" }
         ]
     },
