@@ -923,9 +923,9 @@ const aircraftData = [
     {
         id: "concorde",
         photoVariant: "Concorde",
-        description: "프랑스의 아에로스파시알과 영국의 BAC가 공동 개발한 최초이자 전설적인 초음속 여객기입니다. 마하 2.04의 속도로 대서양을 3시간 대에 횡단하며 럭셔리 비행의 극치를 보여주었으나, 높은 소음과 연비 문제로 2003년에 퇴역했습니다.",
+        description: "프랑스의 아에로스파시알과 영국의 BAC가 공동 개발한 최초이자 전설적인 초음속 여객기입니다. 마하 2.04의 속도로 대서양을 3시간 대에 횡단하며 럭셔리 비행의 극치를 보여주었으나, 높은 소음과 연비 문제로 2003년에 퇴역했습니다. 에어로스파시알은 현재 에어버스의 전신 회사입니다.",
         imageUrl: "images/concorde.jpg",
-        manufacturer: "Airbus",
+        manufacturer: "Aerospatiale/BAC",
         familyName: "Concorde",
         isGroup: false,
         modelName: "Concorde",

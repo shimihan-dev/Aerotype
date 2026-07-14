@@ -196,9 +196,12 @@ function applyFilters() {
     let filtered = allAircraftData;
 
     if (currentManufacturerFilter !== 'All') {
-        filtered = filtered.filter(aircraft => 
-            aircraft.manufacturer === currentManufacturerFilter
-        );
+        filtered = filtered.filter(aircraft => {
+            if (currentManufacturerFilter === 'Airbus') {
+                return aircraft.manufacturer === 'Airbus' || aircraft.manufacturer === 'Aerospatiale/BAC';
+            }
+            return aircraft.manufacturer === currentManufacturerFilter;
+        });
     }
 
     // 검색어 필터 적용
