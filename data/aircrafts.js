@@ -925,7 +925,7 @@ const aircraftData = [
         photoVariant: "Concorde",
         description: "프랑스의 아에로스파시알과 영국의 BAC가 공동 개발한 최초이자 전설적인 초음속 여객기입니다. 마하 2.04의 속도로 대서양을 3시간 대에 횡단하며 럭셔리 비행의 극치를 보여주었으나, 높은 소음과 연비 문제로 2003년에 퇴역했습니다.",
         imageUrl: "images/concorde.jpg",
-        manufacturer: "Aerospatiale/BAC",
+        manufacturer: "Airbus",
         familyName: "Concorde",
         isGroup: false,
         modelName: "Concorde",
@@ -939,7 +939,7 @@ const aircraftData = [
         variants: []
     },
 
-    // ===== Lockheed =====
+    // ===== Lockheed Martin =====
 
     // L-1011 TriStar (그룹 카드)
     {
@@ -947,7 +947,7 @@ const aircraftData = [
         photoVariant: "L-1011-500",
         description: "전투기 명가 록히드가 설계한 독창적인 3발 광동체 여객기입니다. 오토파일럿과 완전 자동 착륙 시스템 등 시대를 앞서간 혁신 기술을 아낌없이 도입했으나, 엔진 수급 지연 등으로 비운의 걸작으로 남았습니다.",
         imageUrl: "images/l1011-tristar.jpg",
-        manufacturer: "Lockheed",
+        manufacturer: "Lockheed Martin",
         familyName: "L-1011 TriStar",
         isGroup: true,
         modelName: "L-1011",
