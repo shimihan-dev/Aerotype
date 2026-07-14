@@ -821,7 +821,7 @@ const aircraftData = [
     {
         id: "md-80-family",
         photoVariant: "MD-83",
-        description: "MD-80 시리즈는 동체 후방에 장착된 2개의 엔진과 날렵한 기체 형상이 특징인 협동체 여객기입니다. 높은 신뢰성과 기내 후방 특유의 저소음(전방 기준) 승차감으로 한 시대를 풍미했습니다.",
+        description: "MD-80 시리즈는 동체 후방에 장착된 2개의 엔진과 날렵한 기체 형상이 특징인 협동체 여객기입니다. 높은 신뢰성과 기내 뒤쪽에 엔진이 달린 기체 구조 특유의 저소음(전방 기준)으로 한 시대를 풍미했습니다.",
         imageUrl: "images/md-80-family.jpg",
         manufacturer: "McDonnell Douglas",
         familyName: "MD-80 Series",
@@ -1044,24 +1044,27 @@ const aircraftData = [
 
     // ===== Fokker =====
 
-    // Fokker 100 (단일 기종)
+    // Fokker 70 / 100 (그룹 카드)
     {
         id: "fokker-100",
         photoVariant: "Fokker 100",
-        description: "네덜란드의 항공기 제작사 포커(Fokker)가 개발한 대표적인 100석급 리저널 제트 여객기입니다. 동급 리저널 항공기 중 가장 낮은 운영 소음과 높은 연비 효율을 자랑하여 전 세계 중단거리 노선에서 활약했으며, 국내에서도 국내선 수송력 강화를 위해 운항된 기록이 있습니다.",
+        description: "네덜란드의 항공기 제작사 포커(Fokker)가 개발한 대표적인 70~100석급 리저널 제트 여객기 제품군입니다. 동급 리저널 항공기 중 가장 낮은 운영 소음과 높은 연비 효율을 자랑하여 전 세계 중단거리 노선에서 활약했으며, 국내에서도 국내선 수송력 강화를 위해 운항된 기록이 있습니다.",
         imageUrl: "images/fokker-100.jpg",
         manufacturer: "Fokker",
-        familyName: "Fokker 100",
-        isGroup: false,
-        modelName: "Fokker 100",
-        series: "Fokker 100",
+        familyName: "Fokker 70 / 100",
+        isGroup: true,
+        modelName: "Fokker 70 / 100",
+        series: "Fokker 70 / 100",
         classification: "Regional Jet",
         engines: 2,
         seatsTypical: 122,
         range: 4300,
         firstFlight: 1986,
         productionStatus: "Retired",
-        variants: []
+        variants: [
+            { id: "Fokker-70", typeName: "Fokker 70", seatsTypical: 85, range: 3410, firstFlight: 1993, productionStatus: "Retired" },
+            { id: "Fokker-100", typeName: "Fokker 100", seatsTypical: 122, range: 4300, firstFlight: 1986, productionStatus: "Retired" }
+        ]
     }
 ];
 
