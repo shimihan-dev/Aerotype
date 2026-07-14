@@ -817,30 +817,49 @@ const aircraftData = [
         ]
     },
 
-    // MD-80 / MD-90 Series (그룹 카드)
+    // MD-80 Series (그룹 카드)
     {
         id: "md-80-family",
         photoVariant: "MD-83",
-        description: "MD-80 및 MD-90 시리즈는 동체 후방에 장착된 2개의 엔진과 날렵한 기체 형상이 특징인 협동체 여객기입니다. 개량형인 MD-90은 기존 JT8D 엔진 대신 고효율 저소음의 IAE V2500 엔진으로 변경하여 친환경성을 높였습니다. 높은 신뢰성과 기내 후방 특유의 저소음(전방 기준) 승차감으로 한 시대를 풍미했습니다.",
+        description: "MD-80 시리즈는 동체 후방에 장착된 2개의 엔진과 날렵한 기체 형상이 특징인 협동체 여객기입니다. 높은 신뢰성과 기내 후방 특유의 저소음(전방 기준) 승차감으로 한 시대를 풍미했습니다.",
         imageUrl: "images/md-80-family.jpg",
         manufacturer: "McDonnell Douglas",
-        familyName: "MD-80 / MD-90 Series",
+        familyName: "MD-80 Series",
         isGroup: true,
-        modelName: "MD-80 / MD-90",
-        series: "MD-80/90 Series",
+        modelName: "MD-80",
+        series: "MD-80 Series",
         classification: "Narrow-body",
         engines: 2,
         seatsTypical: 172,
-        range: 4445,
+        range: 4850,
         firstFlight: 1979,
         productionStatus: "Retired",
         variants: [
             { id: "MD-81", typeName: "MD-81", seatsTypical: 172, range: 2900, firstFlight: 1979, productionStatus: "Retired" },
             { id: "MD-82", typeName: "MD-82", seatsTypical: 172, range: 3800, firstFlight: 1980, productionStatus: "Retired" },
             { id: "MD-83", typeName: "MD-83", seatsTypical: 172, range: 4600, firstFlight: 1984, productionStatus: "Retired" },
-            { id: "MD-88", typeName: "MD-88", seatsTypical: 172, range: 4850, firstFlight: 1987, productionStatus: "Retired" },
-            { id: "MD-90", typeName: "MD-90", seatsTypical: 172, range: 4445, firstFlight: 1993, productionStatus: "Retired" }
+            { id: "MD-88", typeName: "MD-88", seatsTypical: 172, range: 4850, firstFlight: 1987, productionStatus: "Retired" }
         ]
+    },
+
+    // MD-90 (단일 기종)
+    {
+        id: "md-90",
+        photoVariant: "MD-90",
+        description: "기존 MD-80 시리즈의 후속 기종으로, 동체를 연장하고 소음 및 연료 효율이 우수한 IAE V2500 고바이패스 터보팬 엔진을 장착한 협동체 여객기입니다. 뛰어난 연비 성능과 쾌적한 기내 환경을 바탕으로 아시아와 미국 단거리 노선에서 활발히 운항되었습니다.",
+        imageUrl: "images/md-90.jpg",
+        manufacturer: "McDonnell Douglas",
+        familyName: "MD-90",
+        isGroup: false,
+        modelName: "MD-90",
+        series: "MD-90",
+        classification: "Narrow-body",
+        engines: 2,
+        seatsTypical: 172,
+        range: 4445,
+        firstFlight: 1993,
+        productionStatus: "Retired",
+        variants: []
     },
 
     // ===== Douglas / McDonnell Douglas (클래식 기종) =====
@@ -980,6 +999,29 @@ const aircraftData = [
 
     // ===== COMAC =====
 
+    // C909 (그룹 카드)
+    {
+        id: "c909-family",
+        photoVariant: "C909",
+        description: "중국 상하이 비행기 제조사(COMAC)가 독자 개발한 쌍발 리저널 제트기(기존 ARJ21에서 C909로 리브랜딩)입니다. 고지대 및 고온 기후 공항의 이착륙 성능을 강화하여 아시아 지역 내 다양한 단거리 루트에서 활약하고 있습니다.",
+        imageUrl: "images/c909-family.jpg",
+        manufacturer: "COMAC",
+        familyName: "C909 Series",
+        isGroup: true,
+        modelName: "C909",
+        series: "C909 (ARJ21)",
+        classification: "Regional Jet",
+        engines: 2,
+        seatsTypical: 97,
+        range: 3700,
+        firstFlight: 2008,
+        productionStatus: "Active",
+        variants: [
+            { id: "C909-700", typeName: "C909-700 (기본형)", seatsTypical: 90, range: 2225, firstFlight: 2008, productionStatus: "Active" },
+            { id: "C909-700ER", typeName: "C909-700ER (항속거리 연장형)", seatsTypical: 97, range: 3700, firstFlight: 2008, productionStatus: "Active" }
+        ]
+    },
+
     // C919 (단일 기종)
     {
         id: "c919",
@@ -997,6 +1039,28 @@ const aircraftData = [
         range: 5555,
         firstFlight: 2017,
         productionStatus: "Active",
+        variants: []
+    },
+
+    // ===== Fokker =====
+
+    // Fokker 100 (단일 기종)
+    {
+        id: "fokker-100",
+        photoVariant: "Fokker 100",
+        description: "네덜란드의 항공기 제작사 포커(Fokker)가 개발한 대표적인 100석급 리저널 제트 여객기입니다. 동급 리저널 항공기 중 가장 낮은 운영 소음과 높은 연비 효율을 자랑하여 전 세계 중단거리 노선에서 활약했으며, 국내에서도 국내선 수송력 강화를 위해 운항된 기록이 있습니다.",
+        imageUrl: "images/fokker-100.jpg",
+        manufacturer: "Fokker",
+        familyName: "Fokker 100",
+        isGroup: false,
+        modelName: "Fokker 100",
+        series: "Fokker 100",
+        classification: "Regional Jet",
+        engines: 2,
+        seatsTypical: 122,
+        range: 4300,
+        firstFlight: 1986,
+        productionStatus: "Retired",
         variants: []
     }
 ];
