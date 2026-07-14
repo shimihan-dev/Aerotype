@@ -14,13 +14,13 @@ const aircraftData = [
         series: "A220 Family",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 135,
+        seatsTypical: 160,
         range: 6297,
         firstFlight: 2013,
         productionStatus: "Active",
         variants: [
-            { id: "A220-100", typeName: "A220-100", seatsTypical: 120, range: 5460, firstFlight: 2013, productionStatus: "Active", isCargo: false },
-            { id: "A220-300", typeName: "A220-300", seatsTypical: 149, range: 6297, firstFlight: 2015, productionStatus: "Active", isCargo: false }
+            { id: "A220-100", typeName: "A220-100", seatsTypical: 135, range: 5460, firstFlight: 2013, productionStatus: "Active", isCargo: false },
+            { id: "A220-300", typeName: "A220-300", seatsTypical: 160, range: 6297, firstFlight: 2015, productionStatus: "Active", isCargo: false }
         ]
     },
 
@@ -86,7 +86,7 @@ const aircraftData = [
         series: "A318-100",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 107,
+        seatsTypical: 136,
         range: 5850,
         firstFlight: 2002,
         productionStatus: "Retired",
@@ -104,7 +104,7 @@ const aircraftData = [
         series: "A319-100",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 156,
+        seatsTypical: 160,
         range: 6850,
         firstFlight: 1995,
         productionStatus: "Retired",
@@ -122,8 +122,8 @@ const aircraftData = [
         series: "A320-200",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 194,
-        range: 6300,
+        seatsTypical: 180,
+        range: 6100,
         firstFlight: 1987,
         productionStatus: "Retired",
         variants: []
@@ -140,7 +140,7 @@ const aircraftData = [
         series: "A321-200",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 236,
+        seatsTypical: 220,
         range: 5600,
         firstFlight: 1993,
         productionStatus: "Retired",
@@ -196,14 +196,14 @@ const aircraftData = [
         series: "A321neo Family",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 206,
-        range: 7400,
+        seatsTypical: 244,
+        range: 8700,
         firstFlight: 2016,
         productionStatus: "Active",
         variants: [
-            { id: "A321neo", typeName: "A321neo (기본형)", seatsTypical: 206, range: 6500, firstFlight: 2016, productionStatus: "Active", isCargo: false },
-            { id: "A321LR", typeName: "A321LR", seatsTypical: 206, range: 7400, firstFlight: 2018, productionStatus: "Active", isCargo: false },
-            { id: "A321XLR", typeName: "A321XLR", seatsTypical: 206, range: 8700, firstFlight: 2024, productionStatus: "Active", isCargo: false }
+            { id: "A321neo", typeName: "A321neo (기본형)", seatsTypical: 244, range: 6500, firstFlight: 2016, productionStatus: "Active", isCargo: false },
+            { id: "A321LR", typeName: "A321LR", seatsTypical: 244, range: 7400, firstFlight: 2018, productionStatus: "Active", isCargo: false },
+            { id: "A321XLR", typeName: "A321XLR", seatsTypical: 244, range: 8700, firstFlight: 2024, productionStatus: "Active", isCargo: false }
         ]
     },
 
@@ -221,7 +221,7 @@ const aircraftData = [
         classification: "Wide-body",
         engines: 2,
         seatsTypical: 295,
-        range: 13450,
+        range: 11750,
         firstFlight: 1992,
         productionStatus: "Retired",
         variants: [
@@ -244,7 +244,7 @@ const aircraftData = [
         classification: "Wide-body",
         engines: 2,
         seatsTypical: 287,
-        range: 15094,
+        range: 13334,
         firstFlight: 2017,
         productionStatus: "Active",
         variants: [
@@ -266,8 +266,8 @@ const aircraftData = [
         series: "A340 Family",
         classification: "Wide-body",
         engines: 4,
-        seatsTypical: 295,
-        range: 14800,
+        seatsTypical: 380,
+        range: 14600,
         firstFlight: 1991,
         productionStatus: "Retired",
         variants: [
@@ -291,8 +291,8 @@ const aircraftData = [
         series: "A350 XWB",
         classification: "Wide-body",
         engines: 2,
-        seatsTypical: 325,
-        range: 15000,
+        seatsTypical: 369,
+        range: 16100,
         firstFlight: 2013,
         productionStatus: "Active",
         variants: [
@@ -335,13 +335,13 @@ const aircraftData = [
         series: "ATR Series",
         classification: "Turboprop",
         engines: 2,
-        seatsTypical: 72,
+        seatsTypical: 78,
         range: 1528,
         firstFlight: 1984,
         productionStatus: "Active",
         variants: [
-            { id: "ATR42", typeName: "ATR 42", seatsTypical: 48, range: 1326, firstFlight: 1984, productionStatus: "Active", isCargo: false },
-            { id: "ATR72", typeName: "ATR 72", seatsTypical: 72, range: 1528, firstFlight: 1988, productionStatus: "Active", isCargo: false }
+            { id: "ATR42", typeName: "ATR 42", seatsTypical: 50, range: 1326, firstFlight: 1984, productionStatus: "Active", isCargo: false },
+            { id: "ATR72", typeName: "ATR 72", seatsTypical: 78, range: 1528, firstFlight: 1988, productionStatus: "Active", isCargo: false }
         ]
     },
 
@@ -360,15 +360,15 @@ const aircraftData = [
         series: "707 Family",
         classification: "Narrow-body",
         engines: 4,
-        seatsTypical: 189,
-        range: 9650,
+        seatsTypical: 219,
+        range: 9265,
         firstFlight: 1957,
         productionStatus: "Retired",
         variants: [
-            { id: "B707-120", typeName: "707-120", seatsTypical: 137, range: 4240, firstFlight: 1957, productionStatus: "Retired" },
-            { id: "B707-320", typeName: "707-320", seatsTypical: 189, range: 6920, firstFlight: 1959, productionStatus: "Retired" },
-            { id: "B707-320B", typeName: "707-320B", seatsTypical: 189, range: 9265, firstFlight: 1962, productionStatus: "Retired" },
-            { id: "B707-320C", typeName: "707-320C", seatsTypical: 189, range: 9265, firstFlight: 1963, productionStatus: "Retired" }
+            { id: "B707-120", typeName: "707-120", seatsTypical: 189, range: 4240, firstFlight: 1957, productionStatus: "Retired" },
+            { id: "B707-320", typeName: "707-320", seatsTypical: 219, range: 6920, firstFlight: 1959, productionStatus: "Retired" },
+            { id: "B707-320B", typeName: "707-320B", seatsTypical: 219, range: 9265, firstFlight: 1962, productionStatus: "Retired" },
+            { id: "B707-320C", typeName: "707-320C", seatsTypical: 219, range: 9265, firstFlight: 1963, productionStatus: "Retired" }
         ]
     },
 
@@ -385,7 +385,7 @@ const aircraftData = [
         series: "717-200",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 117,
+        seatsTypical: 134,
         range: 2645,
         firstFlight: 1998,
         productionStatus: "Retired",
@@ -405,8 +405,8 @@ const aircraftData = [
         series: "727 Family",
         classification: "Narrow-body",
         engines: 3,
-        seatsTypical: 155,
-        range: 4170,
+        seatsTypical: 189,
+        range: 4020,
         firstFlight: 1963,
         productionStatus: "Retired",
         variants: [
@@ -428,12 +428,12 @@ const aircraftData = [
         series: "737-100 / -200",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 115,
+        seatsTypical: 136,
         range: 4260,
         firstFlight: 1967,
         productionStatus: "Retired",
         variants: [
-            { id: "B737-100", typeName: "737-100", seatsTypical: 103, range: 3440, firstFlight: 1967, productionStatus: "Retired" },
+            { id: "B737-100", typeName: "737-100", seatsTypical: 115, range: 3440, firstFlight: 1967, productionStatus: "Retired" },
             { id: "B737-200", typeName: "737-200", seatsTypical: 136, range: 4260, firstFlight: 1968, productionStatus: "Retired" }
         ]
     },
@@ -451,13 +451,13 @@ const aircraftData = [
         series: "737 Classic (-300/-400/-500)",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 149,
-        range: 5200,
+        seatsTypical: 188,
+        range: 5000,
         firstFlight: 1984,
         productionStatus: "Retired",
         variants: [
             { id: "B737-300", typeName: "737-300", seatsTypical: 149, range: 4400, firstFlight: 1984, productionStatus: "Retired" },
-            { id: "B737-400", typeName: "737-400", seatsTypical: 168, range: 5000, firstFlight: 1988, productionStatus: "Retired" },
+            { id: "B737-400", typeName: "737-400", seatsTypical: 188, range: 5000, firstFlight: 1988, productionStatus: "Retired" },
             { id: "B737-500", typeName: "737-500", seatsTypical: 132, range: 5200, firstFlight: 1989, productionStatus: "Retired" }
         ]
     },
@@ -475,15 +475,15 @@ const aircraftData = [
         series: "737 Next Generation (-600~-900)",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 162,
-        range: 6370,
+        seatsTypical: 220,
+        range: 5925,
         firstFlight: 1997,
         productionStatus: "Retired",
         variants: [
-            { id: "B737-600", typeName: "737-600", seatsTypical: 130, range: 5648, firstFlight: 1998, productionStatus: "Retired" },
+            { id: "B737-600", typeName: "737-600", seatsTypical: 145, range: 5648, firstFlight: 1998, productionStatus: "Retired" },
             { id: "B737-700", typeName: "737-700", seatsTypical: 149, range: 6370, firstFlight: 1997, productionStatus: "Retired" },
             { id: "B737-800", typeName: "737-800", seatsTypical: 189, range: 5765, firstFlight: 1997, productionStatus: "Retired" },
-            { id: "B737-900", typeName: "737-900", seatsTypical: 177, range: 5080, firstFlight: 2000, productionStatus: "Retired" },
+            { id: "B737-900", typeName: "737-900", seatsTypical: 189, range: 5080, firstFlight: 2000, productionStatus: "Retired" },
             { id: "B737-900ER", typeName: "737-900ER", seatsTypical: 220, range: 5925, firstFlight: 2006, productionStatus: "Retired" }
         ]
     },
@@ -501,8 +501,8 @@ const aircraftData = [
         series: "737 MAX 7/8/9/10",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 189,
-        range: 6570,
+        seatsTypical: 230,
+        range: 5740,
         firstFlight: 2016,
         productionStatus: "Active",
         variants: [
@@ -526,7 +526,7 @@ const aircraftData = [
         series: "747 Family",
         classification: "Wide-body",
         engines: 4,
-        seatsTypical: 416,
+        seatsTypical: 467,
         range: 14815,
         firstFlight: 1969,
         productionStatus: "Retired",
@@ -554,13 +554,13 @@ const aircraftData = [
         series: "757 Family",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 200,
-        range: 7222,
+        seatsTypical: 295,
+        range: 6421,
         firstFlight: 1982,
         productionStatus: "Retired",
         variants: [
-            { id: "B757-200", typeName: "757-200", seatsTypical: 200, range: 7222, firstFlight: 1982, productionStatus: "Retired" },
-            { id: "B757-300", typeName: "757-300", seatsTypical: 243, range: 6421, firstFlight: 1999, productionStatus: "Retired" }
+            { id: "B757-200", typeName: "757-200", seatsTypical: 239, range: 7222, firstFlight: 1982, productionStatus: "Retired" },
+            { id: "B757-300", typeName: "757-300", seatsTypical: 295, range: 6421, firstFlight: 1999, productionStatus: "Retired" }
         ]
     },
 
@@ -576,8 +576,8 @@ const aircraftData = [
         series: "767 Family",
         classification: "Wide-body",
         engines: 2,
-        seatsTypical: 290,
-        range: 11825,
+        seatsTypical: 304,
+        range: 10415,
         firstFlight: 1981,
         productionStatus: "Active",
         description: "보잉 최초의 광동체 쌍발 여객기이자 중장거리 시장을 개척한 베스트셀러 모델입니다. 특히 사진의 기종인 아시아나항공의 HL7528은 전 세계에서 마지막으로 운영되었던 여객용 767-300(non-ER) 항공기로, 국내선 김포-제주 노선을 중심으로 활약하다가 퇴역하여 많은 항공 팬들에게 특별한 기종으로 기억되고 있습니다.",
@@ -604,7 +604,7 @@ const aircraftData = [
         series: "777 Family",
         classification: "Wide-body",
         engines: 2,
-        seatsTypical: 368,
+        seatsTypical: 396,
         range: 13650,
         firstFlight: 1994,
         productionStatus: "Active",
@@ -632,7 +632,7 @@ const aircraftData = [
         classification: "Wide-body",
         engines: 2,
         seatsTypical: 426,
-        range: 16170,
+        range: 13500,
         firstFlight: 2020,
         productionStatus: "Development",
         variants: [
@@ -654,8 +654,8 @@ const aircraftData = [
         series: "787 Dreamliner",
         classification: "Wide-body",
         engines: 2,
-        seatsTypical: 296,
-        range: 14010,
+        seatsTypical: 330,
+        range: 11910,
         firstFlight: 2009,
         productionStatus: "Active",
         variants: [
@@ -680,14 +680,14 @@ const aircraftData = [
         series: "CRJ Series",
         classification: "Regional Jet",
         engines: 2,
-        seatsTypical: 70,
-        range: 3620,
+        seatsTypical: 104,
+        range: 2761,
         firstFlight: 1991,
         productionStatus: "Retired",
         variants: [
             { id: "CRJ100", typeName: "CRJ100", seatsTypical: 50, range: 2491, firstFlight: 1991, productionStatus: "Retired" },
             { id: "CRJ200", typeName: "CRJ200", seatsTypical: 50, range: 3148, firstFlight: 1995, productionStatus: "Retired" },
-            { id: "CRJ700", typeName: "CRJ700", seatsTypical: 70, range: 3620, firstFlight: 1999, productionStatus: "Retired" },
+            { id: "CRJ700", typeName: "CRJ700", seatsTypical: 78, range: 3620, firstFlight: 1999, productionStatus: "Retired" },
             { id: "CRJ900", typeName: "CRJ900", seatsTypical: 90, range: 2876, firstFlight: 2001, productionStatus: "Retired" },
             { id: "CRJ1000", typeName: "CRJ1000", seatsTypical: 104, range: 2761, firstFlight: 2008, productionStatus: "Retired" }
         ]
@@ -706,15 +706,15 @@ const aircraftData = [
         series: "Dash 8 Series",
         classification: "Turboprop",
         engines: 2,
-        seatsTypical: 78,
+        seatsTypical: 90,
         range: 2040,
         firstFlight: 1983,
         productionStatus: "Retired",
         variants: [
-            { id: "Dash8-100", typeName: "Dash 8-100", seatsTypical: 37, range: 1889, firstFlight: 1983, productionStatus: "Retired" },
-            { id: "Dash8-200", typeName: "Dash 8-200", seatsTypical: 37, range: 1713, firstFlight: 1995, productionStatus: "Retired" },
-            { id: "Dash8-300", typeName: "Dash 8-300", seatsTypical: 50, range: 1558, firstFlight: 1987, productionStatus: "Retired" },
-            { id: "Dash8-400", typeName: "Dash 8-400 (Q400)", seatsTypical: 78, range: 2040, firstFlight: 1998, productionStatus: "Retired" }
+            { id: "Dash8-100", typeName: "Dash 8-100", seatsTypical: 39, range: 1889, firstFlight: 1983, productionStatus: "Retired" },
+            { id: "Dash8-200", typeName: "Dash 8-200", seatsTypical: 39, range: 1713, firstFlight: 1995, productionStatus: "Retired" },
+            { id: "Dash8-300", typeName: "Dash 8-300", seatsTypical: 56, range: 1558, firstFlight: 1987, productionStatus: "Retired" },
+            { id: "Dash8-400", typeName: "Dash 8-400 (Q400)", seatsTypical: 90, range: 2040, firstFlight: 1998, productionStatus: "Retired" }
         ]
     },
 
@@ -733,7 +733,7 @@ const aircraftData = [
         series: "ERJ Family",
         classification: "Regional Jet",
         engines: 2,
-        seatsTypical: 44,
+        seatsTypical: 50,
         range: 3019,
         firstFlight: 1995,
         productionStatus: "Retired",
@@ -757,12 +757,12 @@ const aircraftData = [
         series: "E-Jet Family",
         classification: "Regional Jet",
         engines: 2,
-        seatsTypical: 100,
+        seatsTypical: 124,
         range: 4260,
         firstFlight: 2002,
         productionStatus: "Active",
         variants: [
-            { id: "E170", typeName: "E170", seatsTypical: 72, range: 3982, firstFlight: 2002, productionStatus: "Active" },
+            { id: "E170", typeName: "E170", seatsTypical: 78, range: 3982, firstFlight: 2002, productionStatus: "Active" },
             { id: "E175", typeName: "E175", seatsTypical: 88, range: 3704, firstFlight: 2004, productionStatus: "Active" },
             { id: "E190", typeName: "E190", seatsTypical: 114, range: 4537, firstFlight: 2004, productionStatus: "Active" },
             { id: "E195", typeName: "E195", seatsTypical: 124, range: 4260, firstFlight: 2004, productionStatus: "Active" }
@@ -782,8 +782,8 @@ const aircraftData = [
         series: "E-Jet E2 Family",
         classification: "Regional Jet",
         engines: 2,
-        seatsTypical: 136,
-        range: 5278,
+        seatsTypical: 146,
+        range: 4815,
         firstFlight: 2016,
         productionStatus: "Active",
         variants: [
@@ -831,15 +831,15 @@ const aircraftData = [
         series: "MD-80/90 Series",
         classification: "Narrow-body",
         engines: 2,
-        seatsTypical: 155,
-        range: 3800,
+        seatsTypical: 172,
+        range: 4445,
         firstFlight: 1979,
         productionStatus: "Retired",
         variants: [
-            { id: "MD-81", typeName: "MD-81", seatsTypical: 155, range: 2900, firstFlight: 1979, productionStatus: "Retired" },
-            { id: "MD-82", typeName: "MD-82", seatsTypical: 155, range: 3800, firstFlight: 1980, productionStatus: "Retired" },
-            { id: "MD-83", typeName: "MD-83", seatsTypical: 155, range: 4600, firstFlight: 1984, productionStatus: "Retired" },
-            { id: "MD-88", typeName: "MD-88", seatsTypical: 155, range: 4850, firstFlight: 1987, productionStatus: "Retired" },
+            { id: "MD-81", typeName: "MD-81", seatsTypical: 172, range: 2900, firstFlight: 1979, productionStatus: "Retired" },
+            { id: "MD-82", typeName: "MD-82", seatsTypical: 172, range: 3800, firstFlight: 1980, productionStatus: "Retired" },
+            { id: "MD-83", typeName: "MD-83", seatsTypical: 172, range: 4600, firstFlight: 1984, productionStatus: "Retired" },
+            { id: "MD-88", typeName: "MD-88", seatsTypical: 172, range: 4850, firstFlight: 1987, productionStatus: "Retired" },
             { id: "MD-90", typeName: "MD-90", seatsTypical: 172, range: 4445, firstFlight: 1993, productionStatus: "Retired" }
         ]
     }
