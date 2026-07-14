@@ -883,7 +883,7 @@ const aircraftData = [
         classification: "Narrow-body",
         engines: 4,
         seatsTypical: 259,
-        range: 10100,
+        range: 8500,
         firstFlight: 1958,
         productionStatus: "Retired",
         variants: [
@@ -966,7 +966,7 @@ const aircraftData = [
         series: "L-1011 TriStar",
         classification: "Wide-body",
         engines: 3,
-        seatsTypical: 400,
+        seatsTypical: 330,
         range: 9630,
         firstFlight: 1970,
         productionStatus: "Retired",
