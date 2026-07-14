@@ -579,6 +579,7 @@ const aircraftData = [
         seatsTypical: 304,
         range: 10415,
         firstFlight: 1981,
+        productionStatus: "Active",
         description: "보잉 최초의 광동체 쌍발 여객기이자 중장거리 시장을 개척한 베스트셀러 모델입니다.",
         variants: [
             { id: "B767-200", typeName: "767-200", seatsTypical: 216, range: 7200, firstFlight: 1981, productionStatus: "Retired" },
@@ -792,7 +793,90 @@ const aircraftData = [
         ]
     },
 
-    // ===== McDonnell Douglas =====
+    // ===== Douglas / McDonnell Douglas =====
+
+    // DC-8 Family (그룹 카드)
+    {
+        id: "dc-8-family",
+        photoVariant: "DC-8-61",
+        description: "보잉 707과 경쟁하며 초기 민항 제트기 시대를 양분했던 더글라스의 4발 협동체 여객기입니다. 튼튼한 동체 설계 덕분에 수명이 매우 길어 여객 퇴역 후에도 화물기로 오랫동안 각광을 받았습니다.",
+        imageUrl: "images/dc-8-family.jpg",
+        manufacturer: "McDonnell Douglas",
+        familyName: "DC-8 Family",
+        isGroup: true,
+        modelName: "DC-8",
+        series: "DC-8",
+        classification: "Narrow-body",
+        engines: 4,
+        seatsTypical: 259,
+        range: 8500,
+        firstFlight: 1958,
+        productionStatus: "Retired",
+        variants: [
+            { id: "DC-8-11", typeName: "DC-8-11", seatsTypical: 177, range: 3900, firstFlight: 1958, productionStatus: "Retired" },
+            { id: "DC-8-21", typeName: "DC-8-21", seatsTypical: 177, range: 5300, firstFlight: 1958, productionStatus: "Retired" },
+            { id: "DC-8-31", typeName: "DC-8-31", seatsTypical: 177, range: 7410, firstFlight: 1959, productionStatus: "Retired" },
+            { id: "DC-8-41", typeName: "DC-8-41", seatsTypical: 177, range: 7500, firstFlight: 1960, productionStatus: "Retired" },
+            { id: "DC-8-51", typeName: "DC-8-51", seatsTypical: 189, range: 8400, firstFlight: 1960, productionStatus: "Retired" },
+            { id: "DC-8-61", typeName: "DC-8-61 (Super 61)", seatsTypical: 259, range: 6000, firstFlight: 1966, productionStatus: "Retired" },
+            { id: "DC-8-62", typeName: "DC-8-62 (Super 62)", seatsTypical: 189, range: 9600, firstFlight: 1966, productionStatus: "Retired" },
+            { id: "DC-8-63", typeName: "DC-8-63 (Super 63)", seatsTypical: 259, range: 8500, firstFlight: 1967, productionStatus: "Retired" },
+            { id: "DC-8-71", typeName: "DC-8-71 (Super 71)", seatsTypical: 259, range: 6300, firstFlight: 1981, productionStatus: "Retired" },
+            { id: "DC-8-72", typeName: "DC-8-72 (Super 72)", seatsTypical: 189, range: 10100, firstFlight: 1981, productionStatus: "Retired" },
+            { id: "DC-8-73", typeName: "DC-8-73 (Super 73)", seatsTypical: 259, range: 8900, firstFlight: 1982, productionStatus: "Retired" }
+        ]
+    },
+
+    // DC-9 Family (그룹 카드)
+    {
+        id: "dc-9-family",
+        photoVariant: "DC-9-30",
+        description: "더글라스가 단거리 노선의 제트화를 위해 개발한 쌍발 협동체 여객기입니다. 동체 후방의 제트 엔진 2개와 T자 꼬리날개 디자인이 특징이며, 훗날 MD-80, MD-90 및 보잉 717로 계승되는 전설적인 라인업의 시초입니다.",
+        imageUrl: "images/dc-9-family.jpg",
+        manufacturer: "McDonnell Douglas",
+        familyName: "DC-9 Family",
+        isGroup: true,
+        modelName: "DC-9",
+        series: "DC-9 Family",
+        classification: "Narrow-body",
+        engines: 2,
+        seatsTypical: 135,
+        range: 3300,
+        firstFlight: 1965,
+        productionStatus: "Retired",
+        variants: [
+            { id: "DC-9-11", typeName: "DC-9-11", seatsTypical: 90, range: 2340, firstFlight: 1965, productionStatus: "Retired" },
+            { id: "DC-9-15", typeName: "DC-9-15", seatsTypical: 90, range: 2600, firstFlight: 1965, productionStatus: "Retired" },
+            { id: "DC-9-21", typeName: "DC-9-21", seatsTypical: 90, range: 2900, firstFlight: 1968, productionStatus: "Retired" },
+            { id: "DC-9-31", typeName: "DC-9-31", seatsTypical: 115, range: 3030, firstFlight: 1966, productionStatus: "Retired" },
+            { id: "DC-9-32", typeName: "DC-9-32", seatsTypical: 115, range: 3000, firstFlight: 1967, productionStatus: "Retired" },
+            { id: "DC-9-41", typeName: "DC-9-41", seatsTypical: 125, range: 2870, firstFlight: 1967, productionStatus: "Retired" },
+            { id: "DC-9-51", typeName: "DC-9-51", seatsTypical: 135, range: 3300, firstFlight: 1974, productionStatus: "Retired" }
+        ]
+    },
+
+    // DC-10 Family (그룹 카드)
+    {
+        id: "dc-10-family",
+        photoVariant: "DC-10-30",
+        description: "맥도넬 더글라스의 대표적인 3발 대형 여객기입니다. 수직꼬리날개 중간을 관통하는 거대한 2번 엔진 설계가 특징이며, 수많은 장거리 노선에서 활약했고 이후 개량형인 MD-11 개발의 든든한 밑거름이 되었습니다.",
+        imageUrl: "images/dc-10-family.jpg",
+        manufacturer: "McDonnell Douglas",
+        familyName: "DC-10 Family",
+        isGroup: true,
+        modelName: "DC-10",
+        series: "DC-10",
+        classification: "Wide-body",
+        engines: 3,
+        seatsTypical: 380,
+        range: 9600,
+        firstFlight: 1970,
+        productionStatus: "Retired",
+        variants: [
+            { id: "DC-10-10", typeName: "DC-10-10", seatsTypical: 380, range: 6110, firstFlight: 1970, productionStatus: "Retired" },
+            { id: "DC-10-30", typeName: "DC-10-30", seatsTypical: 380, range: 9600, firstFlight: 1972, productionStatus: "Retired" }
+        ]
+    },
 
     // MD-11 Family (그룹 카드)
     {
@@ -860,91 +944,6 @@ const aircraftData = [
         firstFlight: 1993,
         productionStatus: "Retired",
         variants: []
-    },
-
-    // ===== Douglas / McDonnell Douglas (클래식 기종) =====
-
-    // DC-10 Family (그룹 카드)
-    {
-        id: "dc-10-family",
-        photoVariant: "DC-10-30",
-        description: "맥도넬 더글라스의 대표적인 3발 대형 여객기입니다. 수직꼬리날개 중간을 관통하는 거대한 2번 엔진 설계가 특징이며, 수많은 장거리 노선에서 활약했고 이후 개량형인 MD-11 개발의 든든한 밑거름이 되었습니다.",
-        imageUrl: "images/dc-10-family.jpg",
-        manufacturer: "McDonnell Douglas",
-        familyName: "DC-10 Family",
-        isGroup: true,
-        modelName: "DC-10",
-        series: "DC-10",
-        classification: "Wide-body",
-        engines: 3,
-        seatsTypical: 380,
-        range: 9600,
-        firstFlight: 1970,
-        productionStatus: "Retired",
-        variants: [
-            { id: "DC-10-10", typeName: "DC-10-10", seatsTypical: 380, range: 6110, firstFlight: 1970, productionStatus: "Retired" },
-            { id: "DC-10-30", typeName: "DC-10-30", seatsTypical: 380, range: 9600, firstFlight: 1972, productionStatus: "Retired" }
-        ]
-    },
-
-    // DC-8 Family (그룹 카드)
-    {
-        id: "dc-8-family",
-        photoVariant: "DC-8-61",
-        description: "보잉 707과 경쟁하며 초기 민항 제트기 시대를 양분했던 더글라스의 4발 협동체 여객기입니다. 튼튼한 동체 설계 덕분에 수명이 매우 길어 여객 퇴역 후에도 화물기로 오랫동안 각광을 받았습니다.",
-        imageUrl: "images/dc-8-family.jpg",
-        manufacturer: "McDonnell Douglas",
-        familyName: "DC-8 Family",
-        isGroup: true,
-        modelName: "DC-8",
-        series: "DC-8",
-        classification: "Narrow-body",
-        engines: 4,
-        seatsTypical: 259,
-        range: 8500,
-        firstFlight: 1958,
-        productionStatus: "Retired",
-        variants: [
-            { id: "DC-8-11", typeName: "DC-8-11", seatsTypical: 177, range: 3900, firstFlight: 1958, productionStatus: "Retired" },
-            { id: "DC-8-21", typeName: "DC-8-21", seatsTypical: 177, range: 5300, firstFlight: 1958, productionStatus: "Retired" },
-            { id: "DC-8-31", typeName: "DC-8-31", seatsTypical: 177, range: 7410, firstFlight: 1959, productionStatus: "Retired" },
-            { id: "DC-8-41", typeName: "DC-8-41", seatsTypical: 177, range: 7500, firstFlight: 1960, productionStatus: "Retired" },
-            { id: "DC-8-51", typeName: "DC-8-51", seatsTypical: 189, range: 8400, firstFlight: 1960, productionStatus: "Retired" },
-            { id: "DC-8-61", typeName: "DC-8-61 (Super 61)", seatsTypical: 259, range: 6000, firstFlight: 1966, productionStatus: "Retired" },
-            { id: "DC-8-62", typeName: "DC-8-62 (Super 62)", seatsTypical: 189, range: 9600, firstFlight: 1966, productionStatus: "Retired" },
-            { id: "DC-8-63", typeName: "DC-8-63 (Super 63)", seatsTypical: 259, range: 8500, firstFlight: 1967, productionStatus: "Retired" },
-            { id: "DC-8-71", typeName: "DC-8-71 (Super 71)", seatsTypical: 259, range: 6300, firstFlight: 1981, productionStatus: "Retired" },
-            { id: "DC-8-72", typeName: "DC-8-72 (Super 72)", seatsTypical: 189, range: 10100, firstFlight: 1981, productionStatus: "Retired" },
-            { id: "DC-8-73", typeName: "DC-8-73 (Super 73)", seatsTypical: 259, range: 8900, firstFlight: 1982, productionStatus: "Retired" }
-        ]
-    },
-
-    // DC-9 Family (그룹 카드)
-    {
-        id: "dc-9-family",
-        photoVariant: "DC-9-30",
-        description: "더글라스가 단거리 노선의 제트화를 위해 개발한 쌍발 협동체 여객기입니다. 동체 후방의 제트 엔진 2개와 T자 꼬리날개 디자인이 특징이며, 훗날 MD-80, MD-90 및 보잉 717로 계승되는 전설적인 라인업의 시초입니다.",
-        imageUrl: "images/dc-9-family.jpg",
-        manufacturer: "McDonnell Douglas",
-        familyName: "DC-9 Family",
-        isGroup: true,
-        modelName: "DC-9",
-        series: "DC-9 Family",
-        classification: "Narrow-body",
-        engines: 2,
-        seatsTypical: 135,
-        range: 3300,
-        firstFlight: 1965,
-        productionStatus: "Retired",
-        variants: [
-            { id: "DC-9-11", typeName: "DC-9-11", seatsTypical: 90, range: 2340, firstFlight: 1965, productionStatus: "Retired" },
-            { id: "DC-9-15", typeName: "DC-9-15", seatsTypical: 90, range: 2600, firstFlight: 1965, productionStatus: "Retired" },
-            { id: "DC-9-21", typeName: "DC-9-21", seatsTypical: 90, range: 2900, firstFlight: 1968, productionStatus: "Retired" },
-            { id: "DC-9-31", typeName: "DC-9-31", seatsTypical: 115, range: 3030, firstFlight: 1966, productionStatus: "Retired" },
-            { id: "DC-9-32", typeName: "DC-9-32", seatsTypical: 115, range: 3000, firstFlight: 1967, productionStatus: "Retired" },
-            { id: "DC-9-41", typeName: "DC-9-41", seatsTypical: 125, range: 2870, firstFlight: 1967, productionStatus: "Retired" },
-            { id: "DC-9-51", typeName: "DC-9-51", seatsTypical: 135, range: 3300, firstFlight: 1974, productionStatus: "Retired" }
-        ]
     },
 
     // ===== Aerospatiale/BAC =====
