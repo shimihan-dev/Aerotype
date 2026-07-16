@@ -514,9 +514,9 @@ const aircraftData = [
     {
         id: "b737-max",
         engineOptions: ["CFM LEAP-1B"],
-        photoVariant: "B737 MAX 8",
+        photoVariant: "제주항공 B737 MAX 8",
         description: "최신 CFMI LEAP-1B 엔진과 독특한 분할형 윙렛(Split-Scimitar Winglet)을 장착하여 연비 효율을 극대화한 4세대 737 시리즈입니다. 뛰어난 항속거리로 장거리 단거리 노선을 동시 커버합니다.",
-        imageUrl: "images/737max8.jpg",
+        imageUrl: "images/737max.jpg",
         manufacturer: "Boeing",
         familyName: "737 MAX",
         isGroup: true,
@@ -700,9 +700,9 @@ const aircraftData = [
     {
         id: "crj-family",
         engineOptions: ["General Electric CF34"],
-        photoVariant: "CRJ-700",
+        photoVariant: "American Eagle CRJ-700",
         description: "캐나다 봄바디어(현재는 미쓰비시 항공)에서 개발한 전 세계 대표 중소형 지역 여객기(Regional Jet) 시리즈입니다. 소도시 간 빠른 연결 편을 제공하는 리저널 노선에서 핵심 역할을 담당해 왔습니다.",
-        imageUrl: "images/crj-family.jpeg",
+        imageUrl: "images/crj-family.jpg",
         manufacturer: "Bombardier",
         familyName: "CRJ Series",
         isGroup: true,
