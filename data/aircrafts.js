@@ -139,7 +139,7 @@ const aircraftData = [
         engineOptions: ["CFM56", "V2500"],
         photoVariant: "A321-200",
         description: "A320의 동체를 확장하여 좌석 공급량을 대폭 늘린 모델입니다. 협동체이면서도 높은 좌석당 경제성을 제공하여 전 세계 주요 고수요 단거리 노선의 핵심 기종으로 활약하고 있습니다.",
-        imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Airbus_A321-231%28w%29_%E2%80%98N915US%E2%80%99_American_Airlines_%2828442733186%29.jpg/500px-Airbus_A321-231%28w%29_%E2%80%98N915US%E2%80%99_American_Airlines_%2828442733186%29.jpg",
+        imageUrl: "images/a321-200.jpg",
         manufacturer: "Airbus",
         familyName: "A320 Family",
         isGroup: false,
