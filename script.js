@@ -8,6 +8,8 @@ let allAircraftData = [];              // 전체 항공기 데이터
 let filteredAircraftData = [];         // 필터링된 항공기 데이터
 let currentManufacturerFilter = 'All'; // 현재 선택된 제조사 필터
 let currentSearchQuery = '';            // 현재 검색어
+let compareSlot1 = null;               // 비교 대상 슬롯 1
+let compareSlot2 = null;               // 비교 대상 슬롯 2
 
 // ========== 페이지 로드 이벤트 ==========
 document.addEventListener('DOMContentLoaded', function() {
@@ -154,10 +156,33 @@ function attachEventListeners() {
         }
     });
 
+    // 비교 모달 닫기 버튼
+    const closeCompareModalBtn = document.getElementById('closeCompareModal');
+    if (closeCompareModalBtn) {
+        closeCompareModalBtn.addEventListener('click', closeCompareModal);
+    }
+
+    // 비교 모달 배경 클릭 시 닫기
+    const compareModal = document.getElementById('compareModal');
+    if (compareModal) {
+        compareModal.addEventListener('click', function(event) {
+            if (event.target === compareModal) {
+                closeCompareModal();
+            }
+        });
+    }
+
+    // 비교하기 버튼 클릭
+    const compareBtn = document.getElementById('compareBtn');
+    if (compareBtn) {
+        compareBtn.addEventListener('click', openCompareModal);
+    }
+
     // ESC 키로 모달 닫기
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
             closeModal();
+            closeCompareModal();
         }
     });
 }
@@ -361,6 +386,7 @@ function showAircraftDetail(aircraft) {
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">항속거리</th>
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">첫 비행</th>
                             <th style="padding: 0.5rem; border-bottom: 2px solid #ddd;">상태</th>
+                            <th style="padding: 0.5rem; border-bottom: 2px solid #ddd; text-align: center;">비교</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -372,11 +398,25 @@ function showAircraftDetail(aircraft) {
                             <td style="padding: 0.5rem;">${v.range.toLocaleString()}km</td>
                             <td style="padding: 0.5rem;">${v.firstFlight}년</td>
                             <td style="padding: 0.5rem;"><span class="card-status ${getStatusClass(v.productionStatus)}" style="font-size:0.75rem; padding: 0.2rem 0.5rem;">${translateStatus(v.productionStatus)}</span></td>
+                            <td style="padding: 0.5rem; text-align: center;">
+                                <button class="compare-add-btn" onclick="addVariantToCompare('${aircraft.id}', '${v.id}')" style="padding: 0.25rem 0.6rem; font-size: 0.75rem; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer;">비교 추가</button>
+                            </td>
                         </tr>
                         `).join('')}
                     </tbody>
                 </table>
             </div>
+        </div>
+        `;
+    }
+
+    let compareBtnHTML = '';
+    if (!aircraft.isGroup) {
+        compareBtnHTML = `
+        <div style="margin-top: 0.75rem;">
+            <button class="compare-add-btn" onclick="addVariantToCompare('${aircraft.id}', null)" style="padding: 0.4rem 0.8rem; font-size: 0.85rem; background-color: var(--primary-color); color: white; border: none; border-radius: 6px; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; font-weight: 600; box-shadow: 0 2px 6px rgba(0, 102, 204, 0.15);">
+                ⚖️ 이 기종 비교에 추가
+            </button>
         </div>
         `;
     }
@@ -411,6 +451,7 @@ function showAircraftDetail(aircraft) {
             <div class="modal-manufacturer">${aircraft.manufacturer}</div>
             <div class="modal-model">${aircraft.modelName}</div>
             <div class="modal-series">${aircraft.series}</div>
+            ${compareBtnHTML}
         </div>
 
         <div class="detail-section">
@@ -514,6 +555,461 @@ function updateResultsCount() {
     } else {
         resultsCount.textContent = `항공기 기종 ${count}개를 찾았습니다.`;
     }
+}
+
+// ========== 비교 기능 구현 ==========
+
+/**
+ * 비교 목록에 세부기종 추가
+ * @param {string} aircraftId - 대표기종 ID
+ * @param {string|null} variantId - 세부기종 ID (단일기종일 경우 null)
+ */
+function addVariantToCompare(aircraftId, variantId) {
+    const aircraft = allAircraftData.find(a => a.id === aircraftId);
+    if (!aircraft) return;
+
+    let targetVariant = null;
+    let displayName = '';
+
+    if (variantId && aircraft.variants) {
+        targetVariant = aircraft.variants.find(v => v.id === variantId);
+    }
+
+    if (targetVariant) {
+        displayName = `${aircraft.modelName} (${targetVariant.typeName})`;
+    } else {
+        displayName = aircraft.modelName;
+    }
+
+    const payload = {
+        aircraftId: aircraftId,
+        variantId: variantId,
+        name: displayName
+    };
+
+    // 중복 체크
+    if ((compareSlot1 && compareSlot1.aircraftId === aircraftId && compareSlot1.variantId === variantId) ||
+        (compareSlot2 && compareSlot2.aircraftId === aircraftId && compareSlot2.variantId === variantId)) {
+        alert('이미 비교 목록에 추가된 기종입니다.');
+        return;
+    }
+
+    // 빈 슬롯에 추가
+    if (!compareSlot1) {
+        compareSlot1 = payload;
+    } else if (!compareSlot2) {
+        compareSlot2 = payload;
+    } else {
+        // 둘 다 차 있으면 슬롯 1을 밀어내고 슬롯 2를 1로 보내고 2에 새 기종 추가
+        compareSlot1 = compareSlot2;
+        compareSlot2 = payload;
+    }
+
+    updateCompareBar();
+    
+    // 시각적 효과: 추가되었음을 조용히 알림
+    const compareBar = document.getElementById('compareBar');
+    compareBar.classList.add('active');
+}
+
+/**
+ * 비교 목록에서 기종 제거
+ * @param {number} slotIndex - 슬롯 인덱스 (1 또는 2)
+ */
+function removeVariantFromCompare(slotIndex) {
+    if (slotIndex === 1) {
+        compareSlot1 = compareSlot2;
+        compareSlot2 = null;
+    } else if (slotIndex === 2) {
+        compareSlot2 = null;
+    }
+
+    updateCompareBar();
+}
+
+/**
+ * 비교 대기바 UI 갱신
+ */
+function updateCompareBar() {
+    const compareBar = document.getElementById('compareBar');
+    const slot1El = document.getElementById('compareSlot1');
+    const slot2El = document.getElementById('compareSlot2');
+    const compareBtn = document.getElementById('compareBtn');
+
+    // 1번 슬롯 렌더링
+    if (compareSlot1) {
+        slot1El.innerHTML = `
+            <span>${compareSlot1.name}</span>
+            <button class="slot-remove" onclick="removeVariantFromCompare(1); event.stopPropagation();">&times;</button>
+        `;
+        slot1El.classList.add('filled');
+    } else {
+        slot1El.innerHTML = `<span class="slot-empty">비교 대상 1 선택 대기 중...</span>`;
+        slot1El.classList.remove('filled');
+    }
+
+    // 2번 슬롯 렌더링
+    if (compareSlot2) {
+        slot2El.innerHTML = `
+            <span>${compareSlot2.name}</span>
+            <button class="slot-remove" onclick="removeVariantFromCompare(2); event.stopPropagation();">&times;</button>
+        `;
+        slot2El.classList.add('filled');
+    } else {
+        slot2El.innerHTML = `<span class="slot-empty">비교 대상 2 선택 대기 중...</span>`;
+        slot2El.classList.remove('filled');
+    }
+
+    // 비교하기 버튼 활성화 여부
+    if (compareSlot1 && compareSlot2) {
+        compareBtn.removeAttribute('disabled');
+    } else {
+        compareBtn.setAttribute('disabled', 'true');
+    }
+
+    // 슬롯이 하나라도 찬 경우 표시, 없으면 내림
+    if (compareSlot1 || compareSlot2) {
+        compareBar.classList.add('active');
+    } else {
+        compareBar.classList.remove('active');
+    }
+}
+
+/**
+ * 비교 분석 모달 열기
+ */
+function openCompareModal() {
+    if (!compareSlot1 || !compareSlot2) return;
+    
+    // 메인 정보 상세 모달 닫기
+    closeModal();
+
+    const compareModal = document.getElementById('compareModal');
+    compareModal.classList.add('active');
+    
+    renderCompareDashboard();
+
+    // 포커스 설정
+    setTimeout(() => {
+        document.getElementById('closeCompareModal').focus();
+    }, 0);
+}
+
+/**
+ * 비교 분석 모달 닫기
+ */
+function closeCompareModal() {
+    const compareModal = document.getElementById('compareModal');
+    compareModal.classList.remove('active');
+}
+
+/**
+ * 비교 기종에 관한 상세 사양 조회
+ * @param {string} aircraftId 
+ * @param {string|null} variantId 
+ * @returns {Object} 사양 객체
+ */
+function getCompareSpecs(aircraftId, variantId) {
+    const aircraft = allAircraftData.find(a => a.id === aircraftId);
+    if (!aircraft) return null;
+
+    if (variantId && aircraft.variants) {
+        const variant = aircraft.variants.find(v => v.id === variantId);
+        if (variant) {
+            return {
+                manufacturer: aircraft.manufacturer,
+                modelName: aircraft.modelName,
+                typeName: variant.typeName,
+                engineOptions: variant.engineOptions,
+                seatsTypical: variant.seatsTypical,
+                range: variant.range,
+                firstFlight: variant.firstFlight,
+                productionStatus: variant.productionStatus,
+                isCargo: variant.isCargo,
+                engines: aircraft.engines,
+                classification: aircraft.classification
+            };
+        }
+    }
+
+    // 단일 기종이거나 세부 기종 매칭이 실패한 경우
+    return {
+        manufacturer: aircraft.manufacturer,
+        modelName: aircraft.modelName,
+        typeName: aircraft.modelName,
+        engineOptions: aircraft.engineOptions,
+        seatsTypical: aircraft.seatsTypical,
+        range: aircraft.range,
+        firstFlight: aircraft.firstFlight,
+        productionStatus: aircraft.productionStatus,
+        isCargo: false,
+        engines: aircraft.engines,
+        classification: aircraft.classification
+    };
+}
+
+/**
+ * 비교 모달 내부 비교표 및 비교 게이지 렌더링
+ */
+function renderCompareDashboard() {
+    const dashboard = document.getElementById('compareDashboard');
+    if (!compareSlot1 || !compareSlot2) return;
+
+    const spec1 = getCompareSpecs(compareSlot1.aircraftId, compareSlot1.variantId);
+    const spec2 = getCompareSpecs(compareSlot2.aircraftId, compareSlot2.variantId);
+
+    if (!spec1 || !spec2) return;
+
+    // 시각적 게이지 최대값 산출
+    const maxRange = Math.max(16500, spec1.range, spec2.range);
+    const maxSeats = Math.max(500, spec1.seatsTypical, spec2.seatsTypical);
+
+    // 게이지 비율 계산
+    const rangePercent1 = (spec1.range / maxRange) * 100;
+    const rangePercent2 = (spec2.range / maxRange) * 100;
+    const seatsPercent1 = (spec1.seatsTypical / maxSeats) * 100;
+    const seatsPercent2 = (spec2.seatsTypical / maxSeats) * 100;
+
+    // 우세 항목 판별용 클래스 결정
+    const rangeBetter1 = spec1.range > spec2.range ? 'better' : '';
+    const rangeBetter2 = spec2.range > spec1.range ? 'better' : '';
+    const seatsBetter1 = spec1.seatsTypical > spec2.seatsTypical ? 'better' : '';
+    const seatsBetter2 = spec2.seatsTypical > spec1.seatsTypical ? 'better' : '';
+
+    // 드롭다운 채우기 (Slot 1 & Slot 2)
+    const select1HTML = createCompareSelectorHTML(1, compareSlot1.aircraftId, compareSlot1.variantId);
+    const select2HTML = createCompareSelectorHTML(2, compareSlot2.aircraftId, compareSlot2.variantId);
+
+    dashboard.innerHTML = `
+        <div class="compare-grid">
+            <!-- 행 1: 헤더 (드롭다운 기종 선택) -->
+            <div class="compare-row">
+                <div class="compare-cell header column-header" style="background-color: #e2eafc; font-weight: 800; color: #0066cc;">비교 사양</div>
+                <div class="compare-cell col-data column-header">
+                    ${select1HTML}
+                </div>
+                <div class="compare-cell col-data column-header">
+                    ${select2HTML}
+                </div>
+            </div>
+
+            <!-- 행 2: 제조사 -->
+            <div class="compare-row">
+                <div class="compare-cell header">제조사</div>
+                <div class="compare-cell col-data">${spec1.manufacturer}</div>
+                <div class="compare-cell col-data">${spec2.manufacturer}</div>
+            </div>
+
+            <!-- 행 3: 체급/분류 -->
+            <div class="compare-row">
+                <div class="compare-cell header">분류</div>
+                <div class="compare-cell col-data">${spec1.classification}</div>
+                <div class="compare-cell col-data">${spec2.classification}</div>
+            </div>
+
+            <!-- 행 4: 대표 좌석수 -->
+            <div class="compare-row">
+                <div class="compare-cell header">좌석 수 / 적재중량</div>
+                <div class="compare-cell col-data">
+                    <div class="compare-gauge-container">
+                        <div class="compare-value-text ${seatsBetter1}">
+                            ${spec1.isCargo ? spec1.seatsTypical + 't (화물 수송량)' : spec1.seatsTypical + '명'}
+                        </div>
+                        <div class="compare-gauge-bar">
+                            <div class="compare-gauge-fill ${seatsBetter1}" style="width: ${seatsPercent1}%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-cell col-data">
+                    <div class="compare-gauge-container">
+                        <div class="compare-value-text ${seatsBetter2}">
+                            ${spec2.isCargo ? spec2.seatsTypical + 't (화물 수송량)' : spec2.seatsTypical + '명'}
+                        </div>
+                        <div class="compare-gauge-bar">
+                            <div class="compare-gauge-fill ${seatsBetter2}" style="width: ${seatsPercent2}%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 행 5: 최대 항속거리 -->
+            <div class="compare-row">
+                <div class="compare-cell header">최대 항속거리</div>
+                <div class="compare-cell col-data">
+                    <div class="compare-gauge-container">
+                        <div class="compare-value-text ${rangeBetter1}">${spec1.range.toLocaleString()}km</div>
+                        <div class="compare-gauge-bar">
+                            <div class="compare-gauge-fill ${rangeBetter1}" style="width: ${rangePercent1}%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-cell col-data">
+                    <div class="compare-gauge-container">
+                        <div class="compare-value-text ${rangeBetter2}">${spec2.range.toLocaleString()}km</div>
+                        <div class="compare-gauge-bar">
+                            <div class="compare-gauge-fill ${rangeBetter2}" style="width: ${rangePercent2}%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 행 6: 엔진 옵션 -->
+            <div class="compare-row">
+                <div class="compare-cell header">엔진 옵션 및 수</div>
+                <div class="compare-cell col-data">
+                    <div>
+                        <div style="font-weight: 500;">${spec1.engines}발 제트기</div>
+                        <div style="font-size: 0.85rem; color: #5f6368; margin-top: 0.2rem;">
+                            ${spec1.engineOptions ? spec1.engineOptions.join(', ') : '정보 없음'}
+                        </div>
+                    </div>
+                </div>
+                <div class="compare-cell col-data">
+                    <div>
+                        <div style="font-weight: 500;">${spec2.engines}발 제트기</div>
+                        <div style="font-size: 0.85rem; color: #5f6368; margin-top: 0.2rem;">
+                            ${spec2.engineOptions ? spec2.engineOptions.join(', ') : '정보 없음'}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 행 7: 첫 비행 연도 -->
+            <div class="compare-row">
+                <div class="compare-cell header">첫 비행</div>
+                <div class="compare-cell col-data">${spec1.firstFlight}년</div>
+                <div class="compare-cell col-data">${spec2.firstFlight}년</div>
+            </div>
+
+            <!-- 행 8: 생산 상태 -->
+            <div class="compare-row">
+                <div class="compare-cell header">생산 상태</div>
+                <div class="compare-cell col-data">
+                    <span class="card-status ${getStatusClass(spec1.productionStatus)}" style="font-size:0.8rem;">
+                        ${translateStatus(spec1.productionStatus)}
+                    </span>
+                </div>
+                <div class="compare-cell col-data">
+                    <span class="card-status ${getStatusClass(spec2.productionStatus)}" style="font-size:0.8rem;">
+                        ${translateStatus(spec2.productionStatus)}
+                    </span>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * 비교 모달 내부 셀렉터 드롭다운 HTML 생성
+ * @param {number} slotIndex - 1 또는 2
+ * @param {string} currentAircraftId 
+ * @param {string|null} currentVariantId 
+ * @returns {string} HTML 문자열
+ */
+function createCompareSelectorHTML(slotIndex, currentAircraftId, currentVariantId) {
+    // 1단계: 대표기종 드롭다운 생성
+    let aircraftSelectHTML = `<select class="compare-select" onchange="handleCompareFamilyChange(${slotIndex}, this.value)">`;
+    
+    // 제조사별 정렬
+    const sortedAircrafts = [...allAircraftData].sort((a, b) => {
+        if (a.manufacturer !== b.manufacturer) {
+            return a.manufacturer.localeCompare(b.manufacturer);
+        }
+        return a.modelName.localeCompare(b.modelName);
+    });
+
+    sortedAircrafts.forEach(a => {
+        const selected = a.id === currentAircraftId ? 'selected' : '';
+        aircraftSelectHTML += `<option value="${a.id}" ${selected}>[${a.manufacturer}] ${a.modelName}</option>`;
+    });
+    aircraftSelectHTML += `</select>`;
+
+    // 2단계: 세부기종 드롭다운 생성
+    const currentAircraft = allAircraftData.find(a => a.id === currentAircraftId);
+    let variantSelectHTML = '';
+    
+    if (currentAircraft && currentAircraft.variants && currentAircraft.variants.length > 0) {
+        variantSelectHTML = `<select class="compare-select" onchange="handleCompareVariantChange(${slotIndex}, '${currentAircraftId}', this.value)">`;
+        currentAircraft.variants.forEach(v => {
+            const selected = v.id === currentVariantId ? 'selected' : '';
+            variantSelectHTML += `<option value="${v.id}" ${selected}>${v.typeName}</option>`;
+        });
+        variantSelectHTML += `</select>`;
+    } else {
+        // 세부기종이 없는 단일 기종일 경우
+        variantSelectHTML = `<select class="compare-select" disabled><option value="">(세부기종 없음)</option></select>`;
+    }
+
+    return `
+        <div class="compare-dropdown-group">
+            ${aircraftSelectHTML}
+            ${variantSelectHTML}
+        </div>
+    `;
+}
+
+/**
+ * 비교창 내에서 대표 기종 변경 처리
+ * @param {number} slotIndex - 1 또는 2
+ * @param {string} newAircraftId 
+ */
+function handleCompareFamilyChange(slotIndex, newAircraftId) {
+    const aircraft = allAircraftData.find(a => a.id === newAircraftId);
+    if (!aircraft) return;
+
+    let defaultVariantId = null;
+    let displayName = aircraft.modelName;
+
+    // 만약 세부기종이 존재한다면 첫 번째 세부기종을 디폴트로 선택
+    if (aircraft.variants && aircraft.variants.length > 0) {
+        defaultVariantId = aircraft.variants[0].id;
+        displayName = `${aircraft.modelName} (${aircraft.variants[0].typeName})`;
+    }
+
+    const payload = {
+        aircraftId: newAircraftId,
+        variantId: defaultVariantId,
+        name: displayName
+    };
+
+    if (slotIndex === 1) {
+        compareSlot1 = payload;
+    } else {
+        compareSlot2 = payload;
+    }
+
+    updateCompareBar();
+    renderCompareDashboard();
+}
+
+/**
+ * 비교창 내에서 세부 기종 변경 처리
+ * @param {number} slotIndex - 1 또는 2
+ * @param {string} aircraftId 
+ * @param {string} newVariantId 
+ */
+function handleCompareVariantChange(slotIndex, aircraftId, newVariantId) {
+    const aircraft = allAircraftData.find(a => a.id === aircraftId);
+    if (!aircraft) return;
+
+    const variant = aircraft.variants.find(v => v.id === newVariantId);
+    if (!variant) return;
+
+    const displayName = `${aircraft.modelName} (${variant.typeName})`;
+    const payload = {
+        aircraftId: aircraftId,
+        variantId: newVariantId,
+        name: displayName
+    };
+
+    if (slotIndex === 1) {
+        compareSlot1 = payload;
+    } else {
+        compareSlot2 = payload;
+    }
+
+    updateCompareBar();
+    renderCompareDashboard();
 }
 
 // ========== 개발자 노트 ==========

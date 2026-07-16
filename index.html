@@ -93,6 +93,36 @@
         </div>
     </div>
 
+    <!-- 플로팅 비교 대기바 -->
+    <div class="compare-bar" id="compareBar">
+        <div class="compare-bar-content">
+            <div class="compare-slots">
+                <div class="compare-slot" id="compareSlot1">
+                    <span class="slot-empty">비교 대상 1 선택 대기 중...</span>
+                </div>
+                <div class="compare-vs">VS</div>
+                <div class="compare-slot" id="compareSlot2">
+                    <span class="slot-empty">비교 대상 2 선택 대기 중...</span>
+                </div>
+            </div>
+            <button class="compare-btn" id="compareBtn" disabled>사양 비교하기</button>
+        </div>
+    </div>
+
+    <!-- 비교 분석 모달 -->
+    <div class="modal compare-modal" id="compareModal">
+        <div class="modal-content compare-modal-content">
+            <button class="modal-close" id="closeCompareModal" aria-label="비교 창 닫기">&times;</button>
+            <div class="compare-modal-header">
+                <h2>📊 세부기종 맞비교</h2>
+                <p>두 기종의 상세 사양을 좌우로 직접 비교해 보세요.</p>
+            </div>
+            <div class="compare-dashboard" id="compareDashboard">
+                <!-- 동적으로 생성될 비교 테이블 및 시각화 게이지 -->
+            </div>
+        </div>
+    </div>
+
     <!-- 푸터 -->
     <footer class="footer">
         <p>AeroType © 2026 | 항공 데이터 기반 서비스 프로젝트</p>

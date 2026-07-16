@@ -505,11 +505,340 @@ body {
     font-size: 0.85rem;
     margin-top: 0.5rem;
 }
+/* ==========================================================================
+   비교 시스템 (Comparison System) 스타일
+   ========================================================================== */
+
+/* 플로팅 비교 대기바 */
+.compare-bar {
+    position: fixed;
+    bottom: -150px; /* Initially hidden below screen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 102, 204, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15), 0 0 0 1px rgba(0, 102, 204, 0.05);
+    padding: 1rem 1.5rem;
+    z-index: 999;
+    transition: bottom 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.compare-bar.active {
+    bottom: 24px; /* Slide up when active */
+}
+
+.compare-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.compare-slots {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    gap: 1rem;
+}
+
+.compare-slot {
+    flex: 1;
+    background: #ffffff;
+    border: 1px dashed var(--border-color);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-sizing: border-box;
+}
+
+.compare-slot.filled {
+    border-style: solid;
+    border-color: var(--primary-color);
+    background: rgba(0, 102, 204, 0.03);
+}
+
+.slot-empty {
+    color: var(--text-light);
+    font-style: italic;
+}
+
+.slot-remove {
+    background: none;
+    border: none;
+    color: #e53935;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    padding: 0 0.25rem;
+    margin-left: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.slot-remove:hover {
+    background-color: rgba(229, 57, 53, 0.1);
+}
+
+.compare-vs {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    letter-spacing: 0.05em;
+}
+
+.compare-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
+}
+
+.compare-btn:hover:not(:disabled) {
+    background-color: #0052a3;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.3);
+}
+
+.compare-btn:disabled {
+    background-color: #cccccc;
+    color: #888888;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* 비교 모달 */
+.compare-modal-content {
+    max-width: 900px !important;
+}
+
+.compare-modal-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.compare-modal-header h2 {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.compare-modal-header p {
+    margin: 0.25rem 0 0 0;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* 비교 대시보드 그리드 */
+.compare-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.compare-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr 2fr;
+    gap: 0.75rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.compare-row {
+    display: contents;
+}
+
+.compare-cell {
+    padding: 0.85rem 1rem;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.compare-cell.header {
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: var(--hover-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.compare-cell.col-data {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.compare-row:last-child .compare-cell.col-data {
+    border-bottom: none;
+}
+
+.compare-row:last-child .compare-cell.header {
+    border-bottom: none;
+}
+
+.compare-cell.column-header {
+    background-color: #f1f3f4;
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: 2px solid var(--border-color);
+    padding: 1rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.compare-dropdown-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.compare-select {
+    width: 100%;
+    padding: 0.4rem 0.5rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.compare-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* 게이지 시각화 */
+.compare-gauge-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.compare-gauge-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.compare-gauge-fill {
+    height: 100%;
+    background-color: var(--text-light);
+    border-radius: 4px;
+    transition: width 0.6s cubic-bezier(0.1, 0.8, 0.3, 1);
+}
+
+.compare-gauge-fill.better {
+    background-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 102, 204, 0.4);
+}
+
+.compare-value-text {
+    font-weight: 600;
+}
+
+.compare-value-text.better {
+    color: var(--primary-color);
+}
+
+/* 상세 모달 내 추가 버튼 스타일 */
+.compare-add-btn {
+    transition: all 0.2s ease;
+}
+
+.compare-add-btn:hover {
+    background-color: #0052a3 !important;
+    transform: scale(1.05);
+}
 
 /* ========== 반응형 디자인 ========== */
 
 /* 태블릿 (768px 이상) */
 @media (max-width: 768px) {
+    /* 비교 대시보드 모바일 대응 */
+    .compare-bar {
+        width: 95%;
+        padding: 0.75rem 1rem;
+        bottom: -180px;
+    }
+    
+    .compare-bar.active {
+        bottom: 12px;
+    }
+    
+    .compare-bar-content {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .compare-slots {
+        width: 100%;
+        gap: 0.5rem;
+    }
+    
+    .compare-slot {
+        padding: 0.4rem 0.6rem;
+        min-height: 36px;
+        font-size: 0.8rem;
+    }
+    
+    .compare-btn {
+        width: 100%;
+        padding: 0.6rem;
+        font-size: 0.9rem;
+    }
+    
+    .compare-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .compare-cell.header {
+        border-right: none;
+        border-bottom: none;
+        padding-top: 0.85rem;
+        padding-bottom: 0.1rem;
+        background-color: transparent;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: var(--primary-color);
+    }
+    
+    .compare-cell.col-data {
+        padding-top: 0.2rem;
+        padding-bottom: 0.85rem;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    .compare-cell.column-header {
+        background-color: #eef2f6;
+        border-bottom: 1px solid #ccd9e8;
+    }
+
     .logo {
         font-size: 2rem;
     }
