@@ -19,16 +19,24 @@
     <main class="main-container">
         <!-- 필터 및 검색 섹션 -->
         <section class="filters-section">
-            <!-- 검색창 -->
-            <div class="search-box">
-                <input 
-                    type="text" 
-                    id="searchInput" 
-                    class="search-input"
-                    placeholder="기종명으로 검색... (예: A320, 777, CRJ900)"
-                    aria-label="항공기 기종 검색"
-                >
-                <span class="search-icon">🔍</span>
+            <!-- 상단 검색 및 비교 버튼 바 -->
+            <div class="search-and-compare-bar">
+                <!-- 검색창 -->
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        class="search-input"
+                        placeholder="기종명으로 검색... (예: A320, 777, CRJ900)"
+                        aria-label="항공기 기종 검색"
+                    >
+                    <span class="search-icon">🔍</span>
+                </div>
+                
+                <!-- 메인 페이지 비교하기 버튼 -->
+                <button class="main-compare-btn" id="mainCompareBtn">
+                    ⚖️ 기종 사양 비교
+                </button>
             </div>
 
             <!-- 제조사 필터 -->

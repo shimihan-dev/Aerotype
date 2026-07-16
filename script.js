@@ -178,6 +178,12 @@ function attachEventListeners() {
         compareBtn.addEventListener('click', openCompareModal);
     }
 
+    // 메인 페이지 비교하기 버튼 클릭
+    const mainCompareBtn = document.getElementById('mainCompareBtn');
+    if (mainCompareBtn) {
+        mainCompareBtn.addEventListener('click', openCompareModal);
+    }
+
     // ESC 키로 모달 닫기
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape') {
@@ -679,8 +685,28 @@ function updateCompareBar() {
  * 비교 분석 모달 열기
  */
 function openCompareModal() {
-    if (!compareSlot1 || !compareSlot2) return;
-    
+    // 만약 비교 슬롯 중 하나라도 비어있다면 디폴트 기종으로 채워줌
+    if (!compareSlot1 && allAircraftData.length > 0) {
+        const aircraft = allAircraftData[0];
+        const defaultVariantId = aircraft.variants && aircraft.variants.length > 0 ? aircraft.variants[0].id : null;
+        const displayName = aircraft.modelName + (aircraft.variants && aircraft.variants.length > 0 ? ` (${aircraft.variants[0].typeName})` : '');
+        compareSlot1 = {
+            aircraftId: aircraft.id,
+            variantId: defaultVariantId,
+            name: displayName
+        };
+    }
+    if (!compareSlot2 && allAircraftData.length > 1) {
+        const aircraft = allAircraftData[1];
+        const defaultVariantId = aircraft.variants && aircraft.variants.length > 0 ? aircraft.variants[0].id : null;
+        const displayName = aircraft.modelName + (aircraft.variants && aircraft.variants.length > 0 ? ` (${aircraft.variants[0].typeName})` : '');
+        compareSlot2 = {
+            aircraftId: aircraft.id,
+            variantId: defaultVariantId,
+            name: displayName
+        };
+    }
+
     // 메인 정보 상세 모달 닫기
     closeModal();
 
@@ -688,10 +714,12 @@ function openCompareModal() {
     compareModal.classList.add('active');
     
     renderCompareDashboard();
+    updateCompareBar();
 
     // 포커스 설정
     setTimeout(() => {
-        document.getElementById('closeCompareModal').focus();
+        const closeBtn = document.getElementById('closeCompareModal');
+        if (closeBtn) closeBtn.focus();
     }, 0);
 }
 
