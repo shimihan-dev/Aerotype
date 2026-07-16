@@ -44,10 +44,10 @@ const aircraftData = [
         firstFlight: 1972,
         productionStatus: "Retired",
         variants: [
-            { id: "A300B2", engineOptions: ["CF6-50","JT9D-59A"], typeName: "A300B2", seatsTypical: 251, range: 3430, firstFlight: 1972, productionStatus: "Retired" },
-            { id: "A300B4", engineOptions: ["CF6-50","JT9D-59A"], typeName: "A300B4", seatsTypical: 251, range: 5375, firstFlight: 1974, productionStatus: "Retired" },
+            { id: "A300B2", engineOptions: ["CF6-50", "JT9D-59A"], typeName: "A300B2", seatsTypical: 251, range: 3430, firstFlight: 1972, productionStatus: "Retired" },
+            { id: "A300B4", engineOptions: ["CF6-50", "JT9D-59A"], typeName: "A300B4", seatsTypical: 251, range: 5375, firstFlight: 1974, productionStatus: "Retired" },
             { id: "A300-600", typeName: "A300-600", seatsTypical: 266, range: 7500, firstFlight: 1983, productionStatus: "Retired" },
-            { id: "A300-600R", engineOptions: ["CF6-80C2","PW4158"], typeName: "A300-600R", seatsTypical: 266, range: 7700, firstFlight: 1988, productionStatus: "Retired" },
+            { id: "A300-600R", engineOptions: ["CF6-80C2", "PW4158"], typeName: "A300-600R", seatsTypical: 266, range: 7700, firstFlight: 1988, productionStatus: "Retired" },
             { id: "A300-600F", typeName: "A300-600F (화물기)", seatsTypical: 54, range: 4850, firstFlight: 1993, productionStatus: "Retired", isCargo: true }
         ]
     },
@@ -71,15 +71,15 @@ const aircraftData = [
         firstFlight: 1982,
         productionStatus: "Retired",
         variants: [
-            { id: "A310-200", engineOptions: ["CF6-80A3","JT9D-7R4D1"], typeName: "A310-200", seatsTypical: 220, range: 6800, firstFlight: 1982, productionStatus: "Retired" },
-            { id: "A310-300", engineOptions: ["CF6-80C2","PW4156A"], typeName: "A310-300", seatsTypical: 240, range: 8050, firstFlight: 1985, productionStatus: "Retired" }
+            { id: "A310-200", engineOptions: ["CF6-80A3", "JT9D-7R4D1"], typeName: "A310-200", seatsTypical: 220, range: 6800, firstFlight: 1982, productionStatus: "Retired" },
+            { id: "A310-300", engineOptions: ["CF6-80C2", "PW4156A"], typeName: "A310-300", seatsTypical: 240, range: 8050, firstFlight: 1985, productionStatus: "Retired" }
         ]
     },
 
     // A320 Family (개별 카드 — 예외 처리)
     {
         id: "a318",
-        engineOptions: ["CFM56","PW6000"],
+        engineOptions: ["CFM56", "PW6000"],
         photoVariant: "A318",
         description: "A320 패밀리 중 가장 동체가 짧아 '베이비 버스(Baby Bus)'라는 별명을 가지고 있습니다. 런던 시티 공항 같이 활주로가 짧고 진입각이 가파른 공항에 이착륙할 수 있도록 특화 설계되었습니다.",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/F-GUGI_CDG_%2849806325246%29.jpg/500px-F-GUGI_CDG_%2849806325246%29.jpg",
@@ -98,7 +98,7 @@ const aircraftData = [
     },
     {
         id: "a319",
-        engineOptions: ["CFM56","V2500"],
+        engineOptions: ["CFM56", "V2500"],
         photoVariant: "A319",
         description: "A320을 약간 단축하여 항속거리를 늘린 모델입니다. 단거리 고수요 노선부터 중거리 노선까지 저비용 항공사(LCC)와 대형 항공사 모두에게 고루 인기를 끌었습니다.",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/United_Airbus_A319_%2813942617705%29.jpg/500px-United_Airbus_A319_%2813942617705%29.jpg",
@@ -117,7 +117,7 @@ const aircraftData = [
     },
     {
         id: "a320",
-        engineOptions: ["CFM56","V2500"],
+        engineOptions: ["CFM56", "V2500"],
         photoVariant: "A320-200",
         description: "에어버스의 초베스트셀러 협동체 기종으로, 여객기 최초로 디지털 플라이 바이 와이어(Fly-by-Wire) 조종 계통을 탑재하여 민항기 조종 역사의 새로운 패러다임을 연 항공기입니다.",
         imageUrl: "images/a320-200.jpg",
@@ -136,7 +136,7 @@ const aircraftData = [
     },
     {
         id: "a321",
-        engineOptions: ["CFM56","V2500"],
+        engineOptions: ["CFM56", "V2500"],
         photoVariant: "A321-200",
         description: "A320의 동체를 확장하여 좌석 공급량을 대폭 늘린 모델입니다. 협동체이면서도 높은 좌석당 경제성을 제공하여 전 세계 주요 고수요 단거리 노선의 핵심 기종으로 활약하고 있습니다.",
         imageUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Airbus_A321-231%28w%29_%E2%80%98N915US%E2%80%99_American_Airlines_%2828442733186%29.jpg/500px-Airbus_A321-231%28w%29_%E2%80%98N915US%E2%80%99_American_Airlines_%2828442733186%29.jpg",
@@ -157,7 +157,7 @@ const aircraftData = [
     // A320neo Family (개별 카드 — 예외 처리)
     {
         id: "a319neo",
-        engineOptions: ["CFM LEAP-1A","PW1100G"],
+        engineOptions: ["CFM LEAP-1A", "PW1100G"],
         photoVariant: "A319neo",
         description: "A320neo 패밀리의 가장 작은 모델로, 최신 엔진과 샤클렛(Sharklet)을 장착하여 연료 효율을 극대화했습니다. 뛰어난 항속거리 성능으로 특수 중장거리 노선에 적합합니다.",
         imageUrl: "images/a319neo.jpeg",
@@ -176,7 +176,7 @@ const aircraftData = [
     },
     {
         id: "a320neo",
-        engineOptions: ["CFM LEAP-1A","PW1100G"],
+        engineOptions: ["CFM LEAP-1A", "PW1100G"],
         photoVariant: "A320neo",
         description: "베스트셀러 A320에 차세대 엔진(New Engine Option)을 탑재하고 익단 날개인 샤클렛을 장착해 연료 소모와 탄소 배출을 20% 가까이 감축시킨 친환경 중단거리 항공기입니다.",
         imageUrl: "images/a320neo.jpg",
@@ -195,7 +195,7 @@ const aircraftData = [
     },
     {
         id: "a321neo",
-        engineOptions: ["CFM LEAP-1A","PW1100G"],
+        engineOptions: ["CFM LEAP-1A", "PW1100G"],
         photoVariant: "A321neo",
         description: "A321에 신형 엔진을 적용하여 효율성을 극대화한 기종입니다. 항속거리를 대폭 늘린 A321LR 및 A321XLR 등의 파생형을 통해 협동체로 장거리 대서양 횡단 및 대륙 간 노선을 개척하고 있습니다.",
         imageUrl: "images/a321neo.jpg",
@@ -211,9 +211,9 @@ const aircraftData = [
         firstFlight: 2016,
         productionStatus: "Active",
         variants: [
-            { id: "A321neo", typeName: "A321neo (기본형)", seatsTypical: 244, range: 6500, firstFlight: 2016, productionStatus: "Active", isCargo: false },
-            { id: "A321LR", typeName: "A321LR", seatsTypical: 244, range: 7400, firstFlight: 2018, productionStatus: "Active", isCargo: false },
-            { id: "A321XLR", typeName: "A321XLR", seatsTypical: 244, range: 8700, firstFlight: 2024, productionStatus: "Active", isCargo: false }
+            { id: "A321neo", engineOptions: ["CFM LEAP-1A", "PW1100G"], typeName: "A321neo (기본형)", seatsTypical: 244, range: 6500, firstFlight: 2016, productionStatus: "Active", isCargo: false },
+            { id: "A321LR", engineOptions: ["CFM LEAP-1A", "PW1100G"], typeName: "A321LR", seatsTypical: 244, range: 7400, firstFlight: 2018, productionStatus: "Active", isCargo: false },
+            { id: "A321XLR", engineOptions: ["CFM LEAP-1A", "PW1100G"], typeName: "A321XLR", seatsTypical: 244, range: 8700, firstFlight: 2024, productionStatus: "Active", isCargo: false }
         ]
     },
 
@@ -236,8 +236,8 @@ const aircraftData = [
         firstFlight: 1992,
         productionStatus: "Retired",
         variants: [
-            { id: "A330-200", engineOptions: ["CF6-80E1","PW4000","Trent 700"], typeName: "A330-200 (ceo)", seatsTypical: 247, range: 13450, firstFlight: 1997, productionStatus: "Retired" },
-            { id: "A330-300", engineOptions: ["CF6-80E1","PW4000","Trent 700"], typeName: "A330-300 (ceo)", seatsTypical: 295, range: 11750, firstFlight: 1992, productionStatus: "Retired" }
+            { id: "A330-200", engineOptions: ["CF6-80E1", "PW4000", "Trent 700"], typeName: "A330-200 (ceo)", seatsTypical: 247, range: 13450, firstFlight: 1997, productionStatus: "Retired" },
+            { id: "A330-300", engineOptions: ["CF6-80E1", "PW4000", "Trent 700"], typeName: "A330-300 (ceo)", seatsTypical: 295, range: 11750, firstFlight: 1992, productionStatus: "Retired" }
         ]
     },
 
@@ -260,8 +260,8 @@ const aircraftData = [
         firstFlight: 2017,
         productionStatus: "Active",
         variants: [
-            { id: "A330-800neo", typeName: "A330-800neo", seatsTypical: 257, range: 15094, firstFlight: 2018, productionStatus: "Active" },
-            { id: "A330-900neo", typeName: "A330-900neo", seatsTypical: 287, range: 13334, firstFlight: 2017, productionStatus: "Active" }
+            { id: "A330-800neo", engineOptions: ["Trent 7000"], typeName: "A330-800neo", seatsTypical: 257, range: 15094, firstFlight: 2018, productionStatus: "Active" },
+            { id: "A330-900neo", engineOptions: ["Trent 7000"], typeName: "A330-900neo", seatsTypical: 287, range: 13334, firstFlight: 2017, productionStatus: "Active" }
         ]
     },
 
@@ -311,7 +311,7 @@ const aircraftData = [
         productionStatus: "Active",
         variants: [
             { id: "A350-900", engineOptions: ["Trent XWB"], typeName: "A350-900", seatsTypical: 325, range: 15000, firstFlight: 2013, productionStatus: "Active" },
-            { id: "A350-900ULR", typeName: "A350-900ULR", seatsTypical: 253, range: 18000, firstFlight: 2018, productionStatus: "Active" },
+            { id: "A350-900ULR", engineOptions: ["Trent XWB"], typeName: "A350-900ULR", seatsTypical: 253, range: 18000, firstFlight: 2018, productionStatus: "Active" },
             { id: "A350-1000", engineOptions: ["Trent XWB"], typeName: "A350-1000", seatsTypical: 369, range: 16100, firstFlight: 2016, productionStatus: "Active" }
         ]
     },
@@ -319,7 +319,7 @@ const aircraftData = [
     // A380 (단일 기종)
     {
         id: "a380",
-        engineOptions: ["GP7200","Trent 900"],
+        engineOptions: ["GP7200", "Trent 900"],
         photoVariant: "A380-800",
         description: "하늘 위의 5성급 호텔이라 불리는 세계 최대의 2층 복층형 광동체 여객기입니다. 압도적인 수송량과 조용하고 쾌적한 객실 공간으로 장거리 허브 공항 간 수송의 정점을 찍은 초대형 점보 기종입니다.",
         imageUrl: "images/a380.jpg",
@@ -356,8 +356,8 @@ const aircraftData = [
         firstFlight: 1984,
         productionStatus: "Active",
         variants: [
-            { id: "ATR42", engineOptions: ["PW120","PW127"], typeName: "ATR 42", seatsTypical: 50, range: 1326, firstFlight: 1984, productionStatus: "Active", isCargo: false },
-            { id: "ATR72", engineOptions: ["PW124B","PW127"], typeName: "ATR 72", seatsTypical: 78, range: 1528, firstFlight: 1988, productionStatus: "Active", isCargo: false }
+            { id: "ATR42", engineOptions: ["PW120", "PW127"], typeName: "ATR 42", seatsTypical: 50, range: 1326, firstFlight: 1984, productionStatus: "Active", isCargo: false },
+            { id: "ATR72", engineOptions: ["PW124B", "PW127"], typeName: "ATR 72", seatsTypical: 78, range: 1528, firstFlight: 1988, productionStatus: "Active", isCargo: false }
         ]
     },
 
@@ -555,11 +555,11 @@ const aircraftData = [
         firstFlight: 1969,
         productionStatus: "Retired",
         variants: [
-            { id: "B747-100", engineOptions: ["JT9D","CF6-50","RB211"], typeName: "747-100", seatsTypical: 366, range: 9800, firstFlight: 1969, productionStatus: "Retired" },
-            { id: "B747-200", engineOptions: ["JT9D","CF6-50","RB211"], typeName: "747-200", seatsTypical: 366, range: 12700, firstFlight: 1971, productionStatus: "Retired" },
-            { id: "B747-300", engineOptions: ["JT9D","CF6-50","RB211"], typeName: "747-300", seatsTypical: 400, range: 12400, firstFlight: 1983, productionStatus: "Retired" },
-            { id: "B747-400", engineOptions: ["PW4056","CF6-80C2","RB211-524G"], typeName: "747-400", seatsTypical: 416, range: 13450, firstFlight: 1988, productionStatus: "Retired" },
-            { id: "B747-400F", engineOptions: ["PW4056","CF6-80C2","RB211-524G"], typeName: "747-400F (화물기)", seatsTypical: 113, range: 8240, firstFlight: 1993, productionStatus: "Retired", isCargo: true },
+            { id: "B747-100", engineOptions: ["JT9D", "CF6-50", "RB211"], typeName: "747-100", seatsTypical: 366, range: 9800, firstFlight: 1969, productionStatus: "Retired" },
+            { id: "B747-200", engineOptions: ["JT9D", "CF6-50", "RB211"], typeName: "747-200", seatsTypical: 366, range: 12700, firstFlight: 1971, productionStatus: "Retired" },
+            { id: "B747-300", engineOptions: ["JT9D", "CF6-50", "RB211"], typeName: "747-300", seatsTypical: 400, range: 12400, firstFlight: 1983, productionStatus: "Retired" },
+            { id: "B747-400", engineOptions: ["PW4056", "CF6-80C2", "RB211-524G"], typeName: "747-400", seatsTypical: 416, range: 13450, firstFlight: 1988, productionStatus: "Retired" },
+            { id: "B747-400F", engineOptions: ["PW4056", "CF6-80C2", "RB211-524G"], typeName: "747-400F (화물기)", seatsTypical: 113, range: 8240, firstFlight: 1993, productionStatus: "Retired", isCargo: true },
             { id: "B747-8I", engineOptions: ["GEnx-2B67"], typeName: "747-8 Intercontinental", seatsTypical: 467, range: 14815, firstFlight: 2011, productionStatus: "Retired" },
             { id: "B747-8F", engineOptions: ["GEnx-2B67"], typeName: "747-8F (화물기)", seatsTypical: 134, range: 8130, firstFlight: 2010, productionStatus: "Retired", isCargo: true }
         ]
@@ -584,8 +584,8 @@ const aircraftData = [
         firstFlight: 1982,
         productionStatus: "Retired",
         variants: [
-            { id: "B757-200", engineOptions: ["RB211-535","PW2000"], typeName: "757-200", seatsTypical: 239, range: 7222, firstFlight: 1982, productionStatus: "Retired" },
-            { id: "B757-300", engineOptions: ["RB211-535","PW2000"], typeName: "757-300", seatsTypical: 295, range: 6421, firstFlight: 1999, productionStatus: "Retired" }
+            { id: "B757-200", engineOptions: ["RB211-535", "PW2000"], typeName: "757-200", seatsTypical: 239, range: 7222, firstFlight: 1982, productionStatus: "Retired" },
+            { id: "B757-300", engineOptions: ["RB211-535", "PW2000"], typeName: "757-300", seatsTypical: 295, range: 6421, firstFlight: 1999, productionStatus: "Retired" }
         ]
     },
 
@@ -608,11 +608,11 @@ const aircraftData = [
         productionStatus: "Active",
         description: "보잉 최초의 광동체 쌍발 여객기이자 중장거리 시장을 개척한 베스트셀러 모델입니다.",
         variants: [
-            { id: "B767-200", engineOptions: ["CF6-80C2","PW4000","RB211-524"], typeName: "767-200", seatsTypical: 216, range: 7200, firstFlight: 1981, productionStatus: "Retired" },
-            { id: "B767-200ER", engineOptions: ["CF6-80C2","PW4000","RB211-524"], typeName: "767-200ER", seatsTypical: 224, range: 12200, firstFlight: 1984, productionStatus: "Retired" },
-            { id: "B767-300", engineOptions: ["CF6-80C2","PW4000","RB211-524"], typeName: "767-300", seatsTypical: 269, range: 7200, firstFlight: 1986, productionStatus: "Retired" },
-            { id: "B767-300ER", engineOptions: ["CF6-80C2","PW4000","RB211-524"], typeName: "767-300ER", seatsTypical: 269, range: 11070, firstFlight: 1988, productionStatus: "Retired" },
-            { id: "B767-300F", engineOptions: ["CF6-80C2","PW4000","RB211-524"], typeName: "767-300F (화물기)", seatsTypical: 52, range: 6025, firstFlight: 1995, productionStatus: "Active", isCargo: true },
+            { id: "B767-200", engineOptions: ["CF6-80C2", "PW4000", "RB211-524"], typeName: "767-200", seatsTypical: 216, range: 7200, firstFlight: 1981, productionStatus: "Retired" },
+            { id: "B767-200ER", engineOptions: ["CF6-80C2", "PW4000", "RB211-524"], typeName: "767-200ER", seatsTypical: 224, range: 12200, firstFlight: 1984, productionStatus: "Retired" },
+            { id: "B767-300", engineOptions: ["CF6-80C2", "PW4000", "RB211-524"], typeName: "767-300", seatsTypical: 269, range: 7200, firstFlight: 1986, productionStatus: "Retired" },
+            { id: "B767-300ER", engineOptions: ["CF6-80C2", "PW4000", "RB211-524"], typeName: "767-300ER", seatsTypical: 269, range: 11070, firstFlight: 1988, productionStatus: "Retired" },
+            { id: "B767-300F", engineOptions: ["CF6-80C2", "PW4000", "RB211-524"], typeName: "767-300F (화물기)", seatsTypical: 52, range: 6025, firstFlight: 1995, productionStatus: "Active", isCargo: true },
             { id: "B767-400ER", engineOptions: ["CF6-80C2"], typeName: "767-400ER", seatsTypical: 304, range: 10415, firstFlight: 2000, productionStatus: "Retired" }
         ]
     },
@@ -636,10 +636,10 @@ const aircraftData = [
         firstFlight: 1994,
         productionStatus: "Active",
         variants: [
-            { id: "B777-200", engineOptions: ["GE90","PW4000","Trent 800"], typeName: "777-200", seatsTypical: 305, range: 9700, firstFlight: 1994, productionStatus: "Retired", isCargo: false },
-            { id: "B777-200ER", engineOptions: ["GE90","PW4000","Trent 800"], typeName: "777-200ER", seatsTypical: 314, range: 13080, firstFlight: 1997, productionStatus: "Retired", isCargo: false },
+            { id: "B777-200", engineOptions: ["GE90", "PW4000", "Trent 800"], typeName: "777-200", seatsTypical: 305, range: 9700, firstFlight: 1994, productionStatus: "Retired", isCargo: false },
+            { id: "B777-200ER", engineOptions: ["GE90", "PW4000", "Trent 800"], typeName: "777-200ER", seatsTypical: 314, range: 13080, firstFlight: 1997, productionStatus: "Retired", isCargo: false },
             { id: "B777-200LR", engineOptions: ["GE90-110B"], typeName: "777-200LR", seatsTypical: 317, range: 15843, firstFlight: 2005, productionStatus: "Retired", isCargo: false },
-            { id: "B777-300", engineOptions: ["GE90","PW4000","Trent 800"], typeName: "777-300", seatsTypical: 368, range: 11121, firstFlight: 1998, productionStatus: "Retired", isCargo: false },
+            { id: "B777-300", engineOptions: ["GE90", "PW4000", "Trent 800"], typeName: "777-300", seatsTypical: 368, range: 11121, firstFlight: 1998, productionStatus: "Retired", isCargo: false },
             { id: "B777-300ER", engineOptions: ["GE90-115B"], typeName: "777-300ER", seatsTypical: 396, range: 13650, firstFlight: 2003, productionStatus: "Retired", isCargo: false },
             { id: "B777F", engineOptions: ["GE90-110B"], typeName: "777F (화물기)", seatsTypical: 102, range: 9200, firstFlight: 2008, productionStatus: "Active", isCargo: true }
         ]
@@ -672,7 +672,7 @@ const aircraftData = [
     // 787 Dreamliner (그룹 카드)
     {
         id: "b787-family",
-        engineOptions: ["GEnx-1B","Trent 1000"],
+        engineOptions: ["GEnx-1B", "Trent 1000"],
         photoVariant: "B787-9",
         description: "'드림라이너'라는 이름으로 친숙한 보잉의 혁신적인 친환경 중장거리 광동체 여객기입니다. 동체의 50% 이상에 탄소 복합 신소재를 적용하여 기압과 습도가 쾌적하게 유지되는 혁신적인 객실을 탑재했습니다.",
         imageUrl: "images/b787-family.jpg",
@@ -688,9 +688,9 @@ const aircraftData = [
         firstFlight: 2009,
         productionStatus: "Active",
         variants: [
-            { id: "B787-8", engineOptions: ["GEnx-1B","Trent 1000"], typeName: "787-8", seatsTypical: 242, range: 13621, firstFlight: 2009, productionStatus: "Active" },
-            { id: "B787-9", engineOptions: ["GEnx-1B","Trent 1000"], typeName: "787-9", seatsTypical: 296, range: 14010, firstFlight: 2013, productionStatus: "Active" },
-            { id: "B787-10", engineOptions: ["GEnx-1B","Trent 1000"], typeName: "787-10", seatsTypical: 330, range: 11910, firstFlight: 2017, productionStatus: "Active" }
+            { id: "B787-8", engineOptions: ["GEnx-1B", "Trent 1000"], typeName: "787-8", seatsTypical: 242, range: 13621, firstFlight: 2009, productionStatus: "Active" },
+            { id: "B787-9", engineOptions: ["GEnx-1B", "Trent 1000"], typeName: "787-9", seatsTypical: 296, range: 14010, firstFlight: 2013, productionStatus: "Active" },
+            { id: "B787-10", engineOptions: ["GEnx-1B", "Trent 1000"], typeName: "787-10", seatsTypical: 330, range: 11910, firstFlight: 2017, productionStatus: "Active" }
         ]
     },
 
@@ -911,7 +911,7 @@ const aircraftData = [
         productionStatus: "Retired",
         variants: [
             { id: "DC-10-10", engineOptions: ["CF6-6D"], typeName: "DC-10-10", seatsTypical: 380, range: 6110, firstFlight: 1970, productionStatus: "Retired" },
-            { id: "DC-10-30", engineOptions: ["CF6-50C","JT9D-59A"], typeName: "DC-10-30", seatsTypical: 380, range: 9600, firstFlight: 1972, productionStatus: "Retired" }
+            { id: "DC-10-30", engineOptions: ["CF6-50C", "JT9D-59A"], typeName: "DC-10-30", seatsTypical: 380, range: 9600, firstFlight: 1972, productionStatus: "Retired" }
         ]
     },
 
@@ -934,8 +934,8 @@ const aircraftData = [
         firstFlight: 1990,
         productionStatus: "Retired",
         variants: [
-            { id: "MD-11P", engineOptions: ["CF6-80C2","PW4460/4462"], typeName: "MD-11 (여객형)", seatsTypical: 298, range: 12670, firstFlight: 1990, productionStatus: "Retired", isCargo: false },
-            { id: "MD-11F", engineOptions: ["CF6-80C2","PW4460/4462"], typeName: "MD-11F (화물기)", seatsTypical: 93, range: 7240, firstFlight: 1991, productionStatus: "Retired", isCargo: true }
+            { id: "MD-11P", engineOptions: ["CF6-80C2", "PW4460/4462"], typeName: "MD-11 (여객형)", seatsTypical: 298, range: 12670, firstFlight: 1990, productionStatus: "Retired", isCargo: false },
+            { id: "MD-11F", engineOptions: ["CF6-80C2", "PW4460/4462"], typeName: "MD-11F (화물기)", seatsTypical: 93, range: 7240, firstFlight: 1991, productionStatus: "Retired", isCargo: true }
         ]
     },
 
