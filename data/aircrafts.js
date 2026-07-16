@@ -606,7 +606,7 @@ const aircraftData = [
         range: 10415,
         firstFlight: 1981,
         productionStatus: "Active",
-        description: "보잉 최초의 광동체 쌍발 여객기이자 중장거리 시장을 개척한 베스트셀러 모델입니다.",
+        description: "보잉 최초의 광동체 쌍발 여객기이자 중장거리 시장을 개척한 베스트셀러 모델입니다. 광동체 최초로 조종실 디지털화(글래스 콕핏)를 달성하여 항공기관사 승무가 필요 없는 '2인 조종사 체제'를 확립했습니다. 여객형 모델들은 점차 퇴역하고 있으나, 높은 신뢰성과 화물 적재 효율성 덕분에 767-300F 화물기는 전 세계 주요 특송 물류망의 주력 기종으로 여전히 활발히 생산 및 운항되고 있습니다.",
         variants: [
             { id: "B767-200", engineOptions: ["CF6-80C2", "PW4000", "RB211-524"], typeName: "767-200", seatsTypical: 216, range: 7200, firstFlight: 1981, productionStatus: "Retired" },
             { id: "B767-200ER", engineOptions: ["CF6-80C2", "PW4000", "RB211-524"], typeName: "767-200ER", seatsTypical: 224, range: 12200, firstFlight: 1984, productionStatus: "Retired" },
