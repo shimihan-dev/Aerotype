@@ -812,7 +812,7 @@ function renderCompareDashboard() {
         <div class="compare-grid">
             <!-- 행 1: 헤더 (드롭다운 기종 선택) -->
             <div class="compare-row">
-                <div class="compare-cell header column-header" style="background-color: #e2eafc; font-weight: 800; color: #0066cc;">비교 사양</div>
+                <div class="compare-cell compare-label column-header" style="background-color: #e2eafc; font-weight: 800; color: #0066cc;">비교 사양</div>
                 <div class="compare-cell col-data column-header">
                     ${select1HTML}
                 </div>
@@ -823,21 +823,21 @@ function renderCompareDashboard() {
 
             <!-- 행 2: 제조사 -->
             <div class="compare-row">
-                <div class="compare-cell header">제조사</div>
+                <div class="compare-cell compare-label">제조사</div>
                 <div class="compare-cell col-data">${spec1.manufacturer}</div>
                 <div class="compare-cell col-data">${spec2.manufacturer}</div>
             </div>
 
             <!-- 행 3: 체급/분류 -->
             <div class="compare-row">
-                <div class="compare-cell header">분류</div>
+                <div class="compare-cell compare-label">분류</div>
                 <div class="compare-cell col-data">${spec1.classification}</div>
                 <div class="compare-cell col-data">${spec2.classification}</div>
             </div>
 
             <!-- 행 4: 대표 좌석수 -->
             <div class="compare-row">
-                <div class="compare-cell header">좌석 수 / 적재중량</div>
+                <div class="compare-cell compare-label">좌석 수 / 적재중량</div>
                 <div class="compare-cell col-data">
                     <div class="compare-gauge-container">
                         <div class="compare-value-text ${seatsBetter1}">
@@ -862,7 +862,7 @@ function renderCompareDashboard() {
 
             <!-- 행 5: 최대 항속거리 -->
             <div class="compare-row">
-                <div class="compare-cell header">최대 항속거리</div>
+                <div class="compare-cell compare-label">최대 항속거리</div>
                 <div class="compare-cell col-data">
                     <div class="compare-gauge-container">
                         <div class="compare-value-text ${rangeBetter1}">${spec1.range.toLocaleString()}km</div>
@@ -883,7 +883,7 @@ function renderCompareDashboard() {
 
             <!-- 행 6: 엔진 옵션 -->
             <div class="compare-row">
-                <div class="compare-cell header">엔진 옵션 및 수</div>
+                <div class="compare-cell compare-label">엔진 옵션 및 수</div>
                 <div class="compare-cell col-data">
                     <div>
                         <div style="font-weight: 500;">${spec1.engines}발 제트기</div>
@@ -904,14 +904,14 @@ function renderCompareDashboard() {
 
             <!-- 행 7: 첫 비행 연도 -->
             <div class="compare-row">
-                <div class="compare-cell header">첫 비행</div>
+                <div class="compare-cell compare-label">첫 비행</div>
                 <div class="compare-cell col-data">${spec1.firstFlight}년</div>
                 <div class="compare-cell col-data">${spec2.firstFlight}년</div>
             </div>
 
             <!-- 행 8: 생산 상태 -->
             <div class="compare-row">
-                <div class="compare-cell header">생산 상태</div>
+                <div class="compare-cell compare-label">생산 상태</div>
                 <div class="compare-cell col-data">
                     <span class="card-status ${getStatusClass(spec1.productionStatus)}" style="font-size:0.8rem;">
                         ${translateStatus(spec1.productionStatus)}
